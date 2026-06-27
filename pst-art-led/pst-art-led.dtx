@@ -1,0 +1,2601 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 2026 by Amit Manohar Manthanwar <amit@desiign.in>
+% ---------------------------------------------------------------------------
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Amit Manohar Manthanwar.
+%
+% This work consists of the files pst-art-led.dtx and pst-art-led.ins
+% and the derived filebase pst-art-led.sty.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{pst-art-led.dtx}
+%</driver>
+%<package>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+%<package>\ProvidesPackage{pst-art-led}
+%<*package>
+    [<+date+> <+version+> <+description+>]
+%</package>
+%
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage{pst-art-led}[<+date+>]
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\maxdeadcycles=500
+\begin{document}
+  \DocInput{pst-art-led.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{5175}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%
+% \changes{<+version+>}{<+date+>}{Converted to DTX file}
+%
+% \DoNotIndex{\newcommand,\newenvironment}
+%
+% \providecommand*{\url}{\texttt}
+% \GetFileInfo{pst-art-led.dtx}
+% \title{The \textsf{pst-art-led} package}
+% \author{Amit Manohar Manthanwar \\ \url{amit@desiign.in}}
+% \date{\fileversion~from \filedate}
+%
+% \maketitle
+%
+% \input{pst-art-led.doc}
+%
+% \DescribeMacro{\fileN}
+%
+%
+% \DescribeMacro{\fileM}
+%
+%
+% \DescribeMacro{\fileP}
+%
+%
+% \DescribeMacro{\fileV}
+%
+%
+% \DescribeMacro{\fileR}
+%
+%
+% \DescribeMacro{\fileD}
+%
+%
+% \DescribeMacro{\fileA}
+%
+%
+% \DescribeMacro{\fileC}
+%
+%
+% \DescribeMacro{\fileG}
+%
+%
+% \DescribeMacro{\printMetadata}
+%
+%
+% \DescribeMacro{\arraystretch}
+%
+%
+% \DescribeMacro{\kv}
+%
+%
+% \DescribeMacro{\numtoalph}
+%
+%
+% \DescribeMacro{\numtoAlph}
+%
+%
+% \DescribeMacro{\psLedDisplay}
+%
+%
+% \DescribeMacro{\iX}
+%
+%
+% \DescribeMacro{\myChar}
+%
+%
+% \DescribeMacro{\psLedCharacterMap}
+%
+%
+% \DescribeMacro{\psLedCharacterMapSmall}
+%
+%
+% \DescribeMacro{\psLedBack}
+%
+%
+% \DescribeMacro{\psLedBlank}
+%
+%
+% \DescribeMacro{\psLedOff}
+%
+%
+% \DescribeMacro{\psLedOn}
+%
+%
+% \DescribeMacro{\psLedA}
+%
+%
+% \DescribeMacro{\psLedB}
+%
+%
+% \DescribeMacro{\psLedC}
+%
+%
+% \DescribeMacro{\psLedD}
+%
+%
+% \DescribeMacro{\psLedE}
+%
+%
+% \DescribeMacro{\psLedF}
+%
+%
+% \DescribeMacro{\psLedG}
+%
+%
+% \DescribeMacro{\psLedH}
+%
+%
+% \DescribeMacro{\psLedI}
+%
+%
+% \DescribeMacro{\psLedJ}
+%
+%
+% \DescribeMacro{\psLedK}
+%
+%
+% \DescribeMacro{\psLedL}
+%
+%
+% \DescribeMacro{\psLedM}
+%
+%
+% \DescribeMacro{\psLedN}
+%
+%
+% \DescribeMacro{\psLedO}
+%
+%
+% \DescribeMacro{\psLedP}
+%
+%
+% \DescribeMacro{\psLedQ}
+%
+%
+% \DescribeMacro{\psLedR}
+%
+%
+% \DescribeMacro{\psLedS}
+%
+%
+% \DescribeMacro{\psLedT}
+%
+%
+% \DescribeMacro{\psLedU}
+%
+%
+% \DescribeMacro{\psLedV}
+%
+%
+% \DescribeMacro{\psLedW}
+%
+%
+% \DescribeMacro{\psLedX}
+%
+%
+% \DescribeMacro{\psLedY}
+%
+%
+% \DescribeMacro{\psLedZ}
+%
+%
+% \DescribeMacro{\psLedNA}
+%
+%
+% \DescribeMacro{\psLedNB}
+%
+%
+% \DescribeMacro{\psLedNC}
+%
+%
+% \DescribeMacro{\psLedND}
+%
+%
+% \DescribeMacro{\psLedNE}
+%
+%
+% \DescribeMacro{\psLedNF}
+%
+%
+% \DescribeMacro{\psLedNG}
+%
+%
+% \DescribeMacro{\psLedNH}
+%
+%
+% \DescribeMacro{\psLedNI}
+%
+%
+% \DescribeMacro{\psLedNJ}
+%
+%
+% \DescribeMacro{\psLedExclamation}
+%
+%
+% \DescribeMacro{\psLedQuestion}
+%
+%
+% \DescribeMacro{\psLedColon}
+%
+%
+% \DescribeMacro{\psLedPeriod}
+%
+%
+% \DescribeMacro{\psLedDash}
+%
+%
+% \DescribeMacro{\psLedComma}
+%
+%
+% \DescribeMacro{\psLedBracketLeft}
+%
+%
+% \DescribeMacro{\psLedBracketRight}
+%
+%
+% \DescribeMacro{\psLedBracketAngleLeft}
+%
+%
+% \DescribeMacro{\psLedBracketAngleRight}
+%
+%
+% \DescribeMacro{\psLedBracketSquareLeft}
+%
+%
+% \DescribeMacro{\psLedBracketSquareRight}
+%
+%
+% \DescribeMacro{\psLedPercent}
+%
+%
+% \DescribeMacro{\psLedSlash}
+%
+%
+% \DescribeMacro{\psLedBackslash}
+%
+%
+% \DescribeMacro{\psLedDegree}
+%
+%
+% \DescribeMacro{\psLedPlus}
+%
+%
+% \DescribeMacro{\psLedMinus}
+%
+%
+% \DescribeMacro{\psLedMultiply}
+%
+%
+% \DescribeMacro{\psLedDivide}
+%
+%
+% \DescribeMacro{\psLedEqual}
+%
+%
+% \DescribeMacro{\psLedUnderscore}
+%
+%
+% \DescribeMacro{\psLedQuoteL}
+%
+%
+% \DescribeMacro{\psLedQuoteR}
+%
+%
+% \DescribeMacro{\psLedQuoteLD}
+%
+%
+% \DescribeMacro{\psLedQuoteRD}
+%
+%
+% \DescribeMacro{\psLedArrowL}
+%
+%
+% \DescribeMacro{\psLedArrowR}
+%
+%
+% \DescribeMacro{\psLedArrowU}
+%
+%
+% \DescribeMacro{\psLedArrowD}
+%
+%
+% \DescribeMacro{\psLedArrowNE}
+%
+%
+% \DescribeMacro{\psLedArrowNW}
+%
+%
+% \DescribeMacro{\psLedArrowSE}
+%
+%
+% \DescribeMacro{\psLedArrowSW}
+%
+%
+% \DescribeMacro{\psLedEUR}
+%
+%
+% \DescribeMacro{\psLedUSD}
+%
+%
+% \DescribeMacro{\psLedGBP}
+%
+%
+% \DescribeMacro{\psLedINR}
+%
+%
+% \DescribeMacro{\psLedYEN}
+%
+%
+% \DescribeMacro{\psLedRUB}
+%
+%
+% \DescribeMacro{\psLedWON}
+%
+%
+% \DescribeMacro{\psLedHash}
+%
+%
+% \DescribeMacro{\psLedAmpersand}
+%
+%
+% \DescribeMacro{\psLedSmiley}
+%
+%
+% \DescribeMacro{\psLedSmileySad}
+%
+%
+% \DescribeMacro{\psLeda}
+%
+%
+% \DescribeMacro{\psLedb}
+%
+%
+% \DescribeMacro{\psLedc}
+%
+%
+% \DescribeMacro{\psLedd}
+%
+%
+% \DescribeMacro{\psLede}
+%
+%
+% \DescribeMacro{\psLedf}
+%
+%
+% \DescribeMacro{\psLedg}
+%
+%
+% \DescribeMacro{\psLedh}
+%
+%
+% \DescribeMacro{\psLedi}
+%
+%
+% \DescribeMacro{\psLedj}
+%
+%
+% \DescribeMacro{\psLedk}
+%
+%
+% \DescribeMacro{\psLedl}
+%
+%
+% \DescribeMacro{\psLedm}
+%
+%
+% \DescribeMacro{\psLedn}
+%
+%
+% \DescribeMacro{\psLedo}
+%
+%
+% \DescribeMacro{\psLedp}
+%
+%
+% \DescribeMacro{\psLedq}
+%
+%
+% \DescribeMacro{\psLedr}
+%
+%
+% \DescribeMacro{\psLeds}
+%
+%
+% \DescribeMacro{\psLedt}
+%
+%
+% \DescribeMacro{\psLedu}
+%
+%
+% \DescribeMacro{\psLedv}
+%
+%
+% \DescribeMacro{\psLedw}
+%
+%
+% \DescribeMacro{\psLedx}
+%
+%
+% \DescribeMacro{\psLedy}
+%
+%
+% \DescribeMacro{\psLedz}
+%
+
+%
+% \StopEventually{}
+%
+% \section{Implementation}
+%
+% \iffalse
+%<*package>
+% \fi
+%
+%%
+%% This is file `pst-art-led.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% pst-art-led.dtx  (with options: `package')
+%%
+%% This is a generated file.
+%%
+%% Copyright (C) 2026 by Amit Manohar Manthanwar [amit@desiign.in]
+%
+%% --------------------------------------------------------------------------
+%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%    \begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{pst-art-led}
+    [<+date+> <+version+> <+description+>]
+%    \end{macrocode}
+%
+% \begin{macro}{\fileN}
+%    \begin{macrocode}
+\def\fileN{pst-art-led.sty}% name
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileM}
+%    \begin{macrocode}
+\def\fileM{pst-art-led.tex}% manual
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileP}
+%    \begin{macrocode}
+\def\fileP{pst-art-led}% package
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileV}
+%    \begin{macrocode}
+\def\fileV{1.0.0}% version
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileR}
+%    \begin{macrocode}
+\def\fileR{2026/06/26}% release date: yyyy/mm/dd or yyyy-mm-dd'
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileD}
+%    \begin{macrocode}
+\def\fileD{xcolor, pstricks}% dependencies
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileA}
+%    \begin{macrocode}
+\def\fileA{Amit Manohar Manthanwar}% author
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileC}
+%    \begin{macrocode}
+\def\fileC{amit@desiign.in}% contact
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\fileG}
+%    \begin{macrocode}
+\def\fileG{\href{https://github.com/manthanwar/pst-art}{github.com/manthanwar/pst-art}}% github
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}[2023-11-01]
+\ProvidesPackage{\fileP}[\fileR \fileV (c) Amit Manohar Manthanwar]
+%    \end{macrocode}
+%
+% \begin{macro}{\printMetadata}
+%    \begin{macrocode}
+\def\printMetadata{\section{Metadata}\begingroup
+\setlength{\tabcolsep}{4mm}
+\setlength{\extrarowheight}{0mm}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\arraystretch}
+%    \begin{macrocode}
+\renewcommand{\arraystretch}{1.25}
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\begin{tabular}{|m{30mm}|m{55mm}|}\hline
+Package File   & \fileN \\\hline
+Package Name   & \fileP \\\hline
+Version Number & \fileV \\\hline
+Release Date   & \fileR \\\hline
+Dependencies   & \fileD \\\hline
+Author Name    & \fileA \\\hline
+Contact Email  & \fileC \\\hline
+Repository & \fileG \\\hline
+\end{tabular}\endgroup}
+\RequirePackage{xkeyval}
+\RequirePackage{xcolor}
+\RequirePackage{pstricks}
+\RequirePackage{pst-all}
+\RequirePackage{pstricks-add}
+\RequirePackage{pst-xkey}
+\makeatletter
+%    \end{macrocode}
+%
+% \begin{macro}{\kv}
+%    \begin{macrocode}
+\def\kv#1#2{\define@key[psset]{pstricks}{#1}[#2]{%
+\expandafter\def\csname#1\endcsname{##1}}%
+\setkeys[psset]{pstricks}{#1}%
+}%
+\makeatother
+\kv{ledWidth}{10}%
+\kv{ledDistance}{20}%
+\kv{ledColorOn}{yellow}%
+\kv{ledColorOff}{black!80}%
+\kv{ledColorBacklit}{black}
+\makeatletter
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\numtoalph}
+%    \begin{macrocode}
+\newcommand{\numtoalph}[1]{\@alph{#1}}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\numtoAlph}
+%    \begin{macrocode}
+\newcommand{\numtoAlph}[1]{\@Alph{#1}}
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\makeatother
+\ExplSyntaxOn
+\tl_new:N \l_my_word_tl
+\str_new:N \l_my_word_str
+\int_new:N \l_my_length_int
+\int_new:N \l_my_counter_int
+\str_const:Nn \c_led_quoteL_str { quoteLeft }
+\str_const:Nn \c_led_quoteR_str { quoteRight }
+\str_const:Nn \c_led_quoteLD_str { doubleQuoteLeft }
+\str_const:Nn \c_led_quoteRD_str { doubleQuoteRight }
+\str_const:Nn \c_led_plus_str { additionSign }
+\str_const:Nn \c_led_minus_str { substractionSign }
+\str_const:Nn \c_led_multiply_str { multiplySign }
+\str_const:Nn \c_led_divide_str { divideSign }
+\str_const:Nn \c_led_smiley_str { smileySign }
+\str_const:Nn \c_led_smileySad_str { smileySadSign }
+\str_const:Nn \c_led_on_str { onSign }
+\str_const:Nn \c_led_off_str { offSign }
+\str_const:Nn \c_led_arrowL_str { arrowL }
+\str_const:Nn \c_led_arrowR_str { arrowR }
+\str_const:Nn \c_led_arrowU_str { arrowU }
+\str_const:Nn \c_led_arrowD_str { arrowD }
+\str_const:Nn \c_led_arrowNE_str { arrowNE }
+\str_const:Nn \c_led_arrowNW_str { arrowNW }
+\str_const:Nn \c_led_arrowSE_str { arrowSE }
+\str_const:Nn \c_led_arrowSW_str { arrowSW }
+\str_const:Nn \c_led_eur_str { eur }
+\str_const:Nn \c_led_gbp_str { gbp }
+\str_const:Nn \c_led_inr_str { inr }
+\str_const:Nn \c_led_rub_str { rub }
+\str_const:Nn \c_led_usd_str { usd }
+\str_const:Nn \c_led_won_str { won }
+\str_const:Nn \c_led_yen_str { yen }
+%    \end{macrocode}
+%
+% \begin{macro}{\psLedDisplay}
+%    \begin{macrocode}
+\newcommand{\psLedDisplay}[2][]{\psset{#1,unit=\fpeval{\ledWidth/20}mm}%
+    \tl_set:Nn \l_my_word_tl { #2 }
+    \tl_replace_all:Nnn \l_my_word_tl { \# } { \c_hash_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \% } { \c_percent_str}
+    \tl_replace_all:Nnn \l_my_word_tl { \backslash } { \c_backslash_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \quoteL } { \c_led_quoteL_str }    \tl_replace_all:Nnn \l_my_word_tl { \quoteR } { \c_led_quoteR_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \quoteLD } { \c_led_quoteLD_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \quoteRD } { \c_led_quoteR_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \plus } { \c_led_plus_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \minus } { \c_led_minus_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \multiply } { \c_led_multiply_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \divide } { \c_led_divide_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \smiley } { \c_led_smiley_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \smileySad } { \c_led_smileySad_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \on } { \c_led_on_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \off } { \c_led_off_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowL } { \c_led_arrowL_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowR } { \c_led_arrowR_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowU } { \c_led_arrowU_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowD } { \c_led_arrowD_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowNE } { \c_led_arrowNE_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowNW } { \c_led_arrowNW_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowSE } { \c_led_arrowSE_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \arrowSW } { \c_led_arrowSW_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \eur } { \c_led_eur_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \gbp } { \c_led_gbp_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \inr } { \c_led_inr_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \rub } { \c_led_rub_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \usd } { \c_led_usd_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \won } { \c_led_won_str }
+    \tl_replace_all:Nnn \l_my_word_tl { \yen } { \c_led_yen_str }
+\int_gzero:N \g_tmpa_int
+\fp_gzero:N \g_tmpa_fp
+\tl_map_inline:Nn \l_my_word_tl {
+\int_incr:N \g_tmpa_int
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\iX}
+%    \begin{macrocode}
+\def\iX{\fpeval{(\ledWidth+\ledDistance)*(20/\ledWidth)*\int_use:N \g_tmpa_int}}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\myChar}
+%    \begin{macrocode}
+\def\myChar{ ##1 }%
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\str_if_eq:eeTF {\myChar} {\c_tilde_str} {\rput(\iX,0){\psLedOff}}{
+\str_if_eq:eeTF {\myChar} {\c_colon_str}{\rput(\iX,0){\psLedColon}}{
+\str_if_eq:eeTF {\myChar} {\c_underscore_str}{\rput(\iX,0){\psLedUnderscore}}{
+\str_if_eq:eeTF {\myChar} {\c_hash_str}{\rput(\iX,0){\psLedHash}}{
+\str_if_eq:eeTF {\myChar} {\c_percent_str}{\rput(\iX,0){\psLedPercent}}{
+\str_if_eq:eeTF {\myChar} {\c_backslash_str}{\rput(\iX,0){\psLedBackslash}}{
+\str_if_eq:eeTF {\myChar} {/}{\rput(\iX,0){\psLedSlash}}{
+\str_if_eq:eeTF {\myChar} {?}{\rput(\iX,0){\psLedQuestion}}{
+\str_if_eq:eeTF {\myChar} {!}{\rput(\iX,0){\psLedExclamation}}{
+\str_if_eq:eeTF {\myChar} {.}{\rput(\iX,0){\psLedPeriod}}{
+\str_if_eq:eeTF {\myChar} {-}{\rput(\iX,0){\psLedDash}}{
+\str_if_eq:eeTF {\myChar} {,}{\rput(\iX,0){\psLedComma}}{
+\str_if_eq:eeTF {\myChar} {(}{\rput(\iX,0){\psLedBracketLeft}}{
+\str_if_eq:eeTF {\myChar} {)}{\rput(\iX,0){\psLedBracketRight}}{
+\str_if_eq:eeTF {\myChar} {<}{\rput(\iX,0){\psLedBracketAngleLeft}}{
+\str_if_eq:eeTF {\myChar} {>}{\rput(\iX,0){\psLedBracketAngleRight}}{
+\str_if_eq:eeTF {\myChar} {[}{\rput(\iX,0){\psLedBracketSquareLeft}}{
+\str_if_eq:eeTF {\myChar} {]}{\rput(\iX,0){\psLedBracketSquareRight}}{
+\str_if_eq:eeTF {\myChar} {+}{\rput(\iX,0){\psLedPlus}}{
+\str_if_eq:eeTF {\myChar} {=}{\rput(\iX,0){\psLedEqual}}{
+\str_if_eq:eeTF {\myChar} {@}{\rput(\iX,0){\psLedAmpersand}}{
+\str_if_eq:eeTF {\myChar} {\degree}{\rput(\iX,0){\psLedDegree}}{
+\str_if_eq:eeTF {\myChar} {\c_led_quoteL_str}{\rput(\iX,0){\psLedQuoteL}}{
+\str_if_eq:eeTF {\myChar} {\c_led_quoteR_str}{\rput(\iX,0){\psLedQuoteR}}{
+\str_if_eq:eeTF {\myChar} {\c_led_quoteLD_str}{\rput(\iX,0){\psLedQuoteLD}}{
+\str_if_eq:eeTF {\myChar} {\c_led_quoteRD_str}{\rput(\iX,0){\psLedQuoteRD}}{
+\str_if_eq:eeTF {\myChar} {\c_led_plus_str}{\rput(\iX,0){\psLedPlus}}{
+\str_if_eq:eeTF {\myChar} {\c_led_minus_str}{\rput(\iX,0){\psLedMinus}}{
+\str_if_eq:eeTF {\myChar} {\c_led_multiply_str}{\rput(\iX,0){\psLedMultiply}}{
+\str_if_eq:eeTF {\myChar} {\c_led_divide_str}{\rput(\iX,0){\psLedDivide}}{
+\str_if_eq:eeTF {\myChar} {\c_led_smiley_str}{\rput(\iX,0){\psLedSmiley}}{
+\str_if_eq:eeTF {\myChar} {\c_led_smileySad_str}{\rput(\iX,0){\psLedSmileySad}}{
+\str_if_eq:eeTF {\myChar} {\c_led_on_str}{\rput(\iX,0){\psLedOn}}{
+\str_if_eq:eeTF {\myChar} {\c_led_off_str}{\rput(\iX,0){\psLedOff}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowL_str}{\rput(\iX,0){\psLedArrowL}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowR_str}{\rput(\iX,0){\psLedArrowR}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowU_str}{\rput(\iX,0){\psLedArrowU}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowD_str}{\rput(\iX,0){\psLedArrowD}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowNE_str}{\rput(\iX,0){\psLedArrowNE}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowNW_str}{\rput(\iX,0){\psLedArrowNW}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowSE_str}{\rput(\iX,0){\psLedArrowSE}}{
+\str_if_eq:eeTF {\myChar} {\c_led_arrowSW_str}{\rput(\iX,0){\psLedArrowSW}}{
+\str_if_eq:eeTF {\myChar} {\c_led_eur_str}{\rput(\iX,0){\psLedEUR}}{
+\str_if_eq:eeTF {\myChar} {\c_led_gbp_str}{\rput(\iX,0){\psLedGBP}}{
+\str_if_eq:eeTF {\myChar} {\c_led_inr_str}{\rput(\iX,0){\psLedINR}}{
+\str_if_eq:eeTF {\myChar} {\c_led_rub_str}{\rput(\iX,0){\psLedRUB}}{
+\str_if_eq:eeTF {\myChar} {\c_led_usd_str}{\rput(\iX,0){\psLedUSD}}{
+\str_if_eq:eeTF {\myChar} {\c_led_won_str}{\rput(\iX,0){\psLedWON}}{
+\str_if_eq:eeTF {\myChar} {\c_led_yen_str}{\rput(\iX,0){\psLedYEN}}{
+        \IfInteger{\myChar} {%
+            \ifnum\myChar=0\relax\def\myChar{10}\fi%
+            \edef\currentLetter{\numtoAlph{\myChar}}%
+            \rput(\iX,0){\expandafter\csname psLedN\currentLetter\endcsname}%
+        }{
+            \def\myCharU{\text_uppercase:n {\myChar}}%
+            \rput(\iX,0){\expandafter\csname psLed\myCharU\endcsname}%
+        }% \IfInteger
+        }% ~ -> tilde
+        }% : -> colon
+        }% _ -> underscore
+        }% # => \# => hash
+        }% % => \% => percent
+        }% \ => \backslash
+        }% / -> forward slash
+        }% ? -> question
+        }% ! -> exclamation
+        }% . -> period
+        }% - -> dash or hyphen
+        }% , -> comma
+        }% ( -> bracket left or left parenthesis
+        }% ) -> bracket right or right parenthesis
+        }% < -> bracket angle left
+        }% > -> bracket angle right
+        }% [ -> bracket square left
+        }% ] -> bracket square right
+        }% + -> addition sign
+        }% = -> equal sign
+        }% @ -> ampersand
+        }% degree -> degree sign => \circ
+        }% ` -> back tick => \quoteLeft
+        }% ' -> single quote => \quoteRight
+        }% " -> 2 back ticks => \doubleQuoteLeft
+        }% " -> double quote => \doubleQuoteRight
+        }% + => \plus
+        }% - => \minus
+        }% x => \multiply
+        }% ÷ => \divide
+        }%   => \smiley
+        }%   => \smileySad
+        }%   => \on
+        }%   => \off
+        }%   => \arrowL
+        }%   => \arrowR
+        }%   => \arrowU
+        }%   => \arrowD
+        }%   => \arrowNE
+        }%   => \arrowNW
+        }%   => \arrowSE
+        }%   => \arrowSW
+        }%   => eur
+        }%   => gbp
+        }%   => inr
+        }%   => rub
+        }%   => usd
+        }%   => won
+        }%   => yen
+    }% \tl_map_inline
+}% \psLedDisplay
+\ExplSyntaxOn
+%    \end{macrocode}
+%
+% \begin{macro}{\psLedCharacterMap}
+%    \begin{macrocode}
+\newcommand{\psLedCharacterMap}{%
+\psset{ledWidth=20}%
+\multido{\iA=1+1,\iX=0+20}{10}{\edef\currentLetter{\numtoAlph{\iA}}%
+\rput(\iX,210){\expandafter\csname psLed\currentLetter\endcsname}}%
+\multido{\iA=11+1,\iX=0+20}{10}{\edef\currentLetter{\numtoAlph{\iA}}%
+\rput(\iX,180){\expandafter\csname psLed\currentLetter\endcsname}}%
+\multido{\iA=21+1,\iX=0+20}{6}{\edef\currentLetter{\numtoAlph{\iA}}%
+\rput(\iX,150){\expandafter\csname psLed\currentLetter\endcsname}}%
+\rput(120,150){\psLedExclamation}%
+\rput(140,150){\psLedQuestion}%
+\rput(160,150){\psLedColon}%
+\rput(180,150){\psLedPeriod}%
+\multido{\iA=1+1,\iX=0+20}{10}{\edef\currentLetter{\numtoAlph{\iA}}%
+\rput(\iX,120){\expandafter\csname psLedN\currentLetter\endcsname}}%
+\rput(000,90){\psLedDash}%
+\rput(020,90){\psLedComma}%
+\rput(040,90){\psLedBracketLeft}%
+\rput(060,90){\psLedBracketRight}%
+\rput(080,90){\psLedBracketSquareLeft}%
+\rput(100,90){\psLedBracketSquareRight}%
+\rput(120,90){\psLedBracketAngleLeft}%
+\rput(140,90){\psLedBracketAngleRight}%
+\rput(160,90){\psLedPercent}%
+\rput(180,90){\psLedDegree}%
+\rput(000,60){\psLedPlus}%
+\rput(020,60){\psLedMinus}%
+\rput(040,60){\psLedMultiply}%
+\rput(060,60){\psLedDivide}%
+\rput(080,60){\psLedEqual}%
+\rput(100,60){\psLedUnderscore}%
+\rput(120,60){\psLedQuoteL}%
+\rput(140,60){\psLedQuoteR}%
+\rput(160,60){\psLedQuoteLD}%
+\rput(180,60){\psLedQuoteRD}%
+\rput(000,30){\psLedArrowU}%
+\rput(020,30){\psLedArrowD}%
+\rput(040,30){\psLedArrowL}%
+\rput(060,30){\psLedArrowR}%
+\rput(080,30){\psLedArrowNE}%
+\rput(100,30){\psLedArrowSW}%
+\rput(120,30){\psLedArrowNW}%
+\rput(140,30){\psLedArrowSE}%
+\rput(160,30){\psLedSlash}%
+\rput(180,30){\psLedBackslash}%
+\rput(000,0){\psLedEUR}%
+\rput(020,0){\psLedUSD}%
+\rput(040,0){\psLedGBP}%
+\rput(060,0){\psLedINR}%
+\rput(080,0){\psLedYEN}%
+\rput(100,0){\psLedRUB}%
+\rput(120,0){\psLedWON}%
+\rput(140,0){\psLedHash}%
+\rput(160,0){\psLedAmpersand}%
+\rput(180,0){\psLedOn}%
+}% \psLedCharacterMap
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedCharacterMapSmall}
+%    \begin{macrocode}
+\newcommand{\psLedCharacterMapSmall}{%
+\psset{ledWidth=20}%
+\rput(000,90){\psLedEUR}%
+\rput(020,90){\psLedGBP}%
+\rput(040,90){\psLedINR}%
+\rput(060,90){\psLedRUB}%
+\rput(080,90){\psLedUSD}%
+\rput(100,90){\psLedWON}%
+\rput(120,90){\psLedYEN}%
+\rput(140,90){\psLedSmiley}%
+\rput(160,90){\psLedSmileySad}%
+\rput(180,90){\psLedOff}%
+\multido{\iA=1+1,\iX=0+20}{10}{\edef\currentLetter{\numtoalph{\iA}}%
+\rput(\iX,60){\expandafter\csname psLed\currentLetter\endcsname}}%
+\multido{\iA=11+1,\iX=0+20}{10}{\edef\currentLetter{\numtoalph{\iA}}%
+\rput(\iX,30){\expandafter\csname psLed\currentLetter\endcsname}}%
+\multido{\iA=21+1,\iX=0+20}{6}{\edef\currentLetter{\numtoalph{\iA}}%
+\rput(\iX,0){\expandafter\csname psLed\currentLetter\endcsname}}%
+}% \psLedCharacterMap
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBack}
+%    \begin{macrocode}
+\newcommand{\psLedBack}[1][]{\psset{dimen=middle,linestyle=none,fillstyle=solid,fillcolor=\ledColorBacklit}\psset{#1}%
+\psframe(0,0)(20,26)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBlank}
+%    \begin{macrocode}
+\newcommand{\psLedBlank}[1][]{\psset{linestyle=none,fillstyle=solid,fillcolor=\ledColorOff}\psset{#1}%
+\multirput(0,0)(0,3){7}{\multirput(2,2)(3,0){5}{\pscircle(0,0){1}}}%
+}%
+\NewDocumentCommand{\ledLit}{O{} D(){1,1}}{%\psset{#1}%
+\StrBefore{#2}{,}[\litX]\StrBehind{#2}{,}[\litY]%
+\psset{linestyle=none,fillstyle=solid,fillcolor=\ledColorOff}\psset{#1}%
+\multido{\iY=0+1,\iB=2+3}{7}{\multido{\iX=0+1,\iA=2+3}{5}{%
+\ifnum\iX=\litX\relax\ifnum\iY=\litY\relax%
+\pscircle[fillcolor=\ledColorOn](\iA,\iB){1}\else\pscircle(\iA,\iB){1}\fi%
+\else\pscircle(\iA,\iB){1}\fi%
+}}}%
+\NewDocumentCommand{\ledOn}{O{0} D(){1,1}}{%
+\ifnum#1=1\relax\psset{fillcolor=\ledColorOn}%
+\else\psset{fillcolor=\ledColorOff}\fi%
+\StrBefore{#2}{,}[\litX]\StrBehind{#2}{,}[\litY]%
+\pscircle(\fpeval{4 + 3*\litX},\fpeval{4 + 3*\litY}){1}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedOff}
+%    \begin{macrocode}
+\newcommand{\psLedOff}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedOn}
+%    \begin{macrocode}
+\newcommand{\psLedOn}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[1](1,5) \ledOn[1](2,5) \ledOn[1](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[1](1,1) \ledOn[1](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedA}
+%    \begin{macrocode}
+\newcommand{\psLedA}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedB}
+%    \begin{macrocode}
+\newcommand{\psLedB}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedC}
+%    \begin{macrocode}
+\newcommand{\psLedC}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedD}
+%    \begin{macrocode}
+\newcommand{\psLedD}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedE}
+%    \begin{macrocode}
+\newcommand{\psLedE}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedF}
+%    \begin{macrocode}
+\newcommand{\psLedF}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedG}
+%    \begin{macrocode}
+\newcommand{\psLedG}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedH}
+%    \begin{macrocode}
+\newcommand{\psLedH}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedI}
+%    \begin{macrocode}
+\newcommand{\psLedI}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedJ}
+%    \begin{macrocode}
+\newcommand{\psLedJ}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedK}
+%    \begin{macrocode}
+\newcommand{\psLedK}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedL}
+%    \begin{macrocode}
+\newcommand{\psLedL}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedM}
+%    \begin{macrocode}
+\newcommand{\psLedM}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedN}
+%    \begin{macrocode}
+\newcommand{\psLedN}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedO}
+%    \begin{macrocode}
+\newcommand{\psLedO}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedP}
+%    \begin{macrocode}
+\newcommand{\psLedP}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQ}
+%    \begin{macrocode}
+\newcommand{\psLedQ}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedR}
+%    \begin{macrocode}
+\newcommand{\psLedR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedS}
+%    \begin{macrocode}
+\newcommand{\psLedS}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedT}
+%    \begin{macrocode}
+\newcommand{\psLedT}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedU}
+%    \begin{macrocode}
+\newcommand{\psLedU}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedV}
+%    \begin{macrocode}
+\newcommand{\psLedV}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedW}
+%    \begin{macrocode}
+\newcommand{\psLedW}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedX}
+%    \begin{macrocode}
+\newcommand{\psLedX}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedY}
+%    \begin{macrocode}
+\newcommand{\psLedY}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedZ}
+%    \begin{macrocode}
+\newcommand{\psLedZ}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNA}
+%    \begin{macrocode}
+\newcommand{\psLedNA}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNB}
+%    \begin{macrocode}
+\newcommand{\psLedNB}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNC}
+%    \begin{macrocode}
+\newcommand{\psLedNC}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedND}
+%    \begin{macrocode}
+\newcommand{\psLedND}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNE}
+%    \begin{macrocode}
+\newcommand{\psLedNE}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNF}
+%    \begin{macrocode}
+\newcommand{\psLedNF}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNG}
+%    \begin{macrocode}
+\newcommand{\psLedNG}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNH}
+%    \begin{macrocode}
+\newcommand{\psLedNH}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNI}
+%    \begin{macrocode}
+\newcommand{\psLedNI}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedNJ}
+%    \begin{macrocode}
+\newcommand{\psLedNJ}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedExclamation}
+%    \begin{macrocode}
+\newcommand{\psLedExclamation}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQuestion}
+%    \begin{macrocode}
+\newcommand{\psLedQuestion}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedColon}
+%    \begin{macrocode}
+\newcommand{\psLedColon}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedPeriod}
+%    \begin{macrocode}
+\newcommand{\psLedPeriod}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedDash}
+%    \begin{macrocode}
+\newcommand{\psLedDash}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedComma}
+%    \begin{macrocode}
+\newcommand{\psLedComma}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketLeft}
+%    \begin{macrocode}
+\newcommand{\psLedBracketLeft}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketRight}
+%    \begin{macrocode}
+\newcommand{\psLedBracketRight}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketAngleLeft}
+%    \begin{macrocode}
+\newcommand{\psLedBracketAngleLeft}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketAngleRight}
+%    \begin{macrocode}
+\newcommand{\psLedBracketAngleRight}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketSquareLeft}
+%    \begin{macrocode}
+\newcommand{\psLedBracketSquareLeft}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBracketSquareRight}
+%    \begin{macrocode}
+\newcommand{\psLedBracketSquareRight}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedPercent}
+%    \begin{macrocode}
+\newcommand{\psLedPercent}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedSlash}
+%    \begin{macrocode}
+\newcommand{\psLedSlash}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedBackslash}
+%    \begin{macrocode}
+\newcommand{\psLedBackslash}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedDegree}
+%    \begin{macrocode}
+\newcommand{\psLedDegree}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedPlus}
+%    \begin{macrocode}
+\newcommand{\psLedPlus}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedMinus}
+%    \begin{macrocode}
+\newcommand{\psLedMinus}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedMultiply}
+%    \begin{macrocode}
+\newcommand{\psLedMultiply}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedDivide}
+%    \begin{macrocode}
+\newcommand{\psLedDivide}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedEqual}
+%    \begin{macrocode}
+\newcommand{\psLedEqual}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedUnderscore}
+%    \begin{macrocode}
+\newcommand{\psLedUnderscore}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQuoteL}
+%    \begin{macrocode}
+\newcommand{\psLedQuoteL}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQuoteR}
+%    \begin{macrocode}
+\newcommand{\psLedQuoteR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQuoteLD}
+%    \begin{macrocode}
+\newcommand{\psLedQuoteLD}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedQuoteRD}
+%    \begin{macrocode}
+\newcommand{\psLedQuoteRD}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowL}
+%    \begin{macrocode}
+\newcommand{\psLedArrowL}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowR}
+%    \begin{macrocode}
+\newcommand{\psLedArrowR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowU}
+%    \begin{macrocode}
+\newcommand{\psLedArrowU}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowD}
+%    \begin{macrocode}
+\newcommand{\psLedArrowD}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowNE}
+%    \begin{macrocode}
+\newcommand{\psLedArrowNE}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[1](2,5) \ledOn[1](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowNW}
+%    \begin{macrocode}
+\newcommand{\psLedArrowNW}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[1](1,5) \ledOn[1](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowSE}
+%    \begin{macrocode}
+\newcommand{\psLedArrowSE}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[1](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedArrowSW}
+%    \begin{macrocode}
+\newcommand{\psLedArrowSW}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[1](1,1) \ledOn[1](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedEUR}
+%    \begin{macrocode}
+\newcommand{\psLedEUR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedUSD}
+%    \begin{macrocode}
+\newcommand{\psLedUSD}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedGBP}
+%    \begin{macrocode}
+\newcommand{\psLedGBP}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedINR}
+%    \begin{macrocode}
+\newcommand{\psLedINR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedYEN}
+%    \begin{macrocode}
+\newcommand{\psLedYEN}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedRUB}
+%    \begin{macrocode}
+\newcommand{\psLedRUB}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[1](1,1) \ledOn[1](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedWON}
+%    \begin{macrocode}
+\newcommand{\psLedWON}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedHash}
+%    \begin{macrocode}
+\newcommand{\psLedHash}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedAmpersand}
+%    \begin{macrocode}
+\newcommand{\psLedAmpersand}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedSmiley}
+%    \begin{macrocode}
+\newcommand{\psLedSmiley}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[1](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedSmileySad}
+%    \begin{macrocode}
+\newcommand{\psLedSmileySad}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLeda}
+%    \begin{macrocode}
+\newcommand{\psLeda}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedb}
+%    \begin{macrocode}
+\newcommand{\psLedb}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedc}
+%    \begin{macrocode}
+\newcommand{\psLedc}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedd}
+%    \begin{macrocode}
+\newcommand{\psLedd}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLede}
+%    \begin{macrocode}
+\newcommand{\psLede}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedf}
+%    \begin{macrocode}
+\newcommand{\psLedf}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedg}
+%    \begin{macrocode}
+\newcommand{\psLedg}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedh}
+%    \begin{macrocode}
+\newcommand{\psLedh}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedi}
+%    \begin{macrocode}
+\newcommand{\psLedi}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[1](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[2](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedj}
+%    \begin{macrocode}
+\newcommand{\psLedj}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedk}
+%    \begin{macrocode}
+\newcommand{\psLedk}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedl}
+%    \begin{macrocode}
+\newcommand{\psLedl}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedm}
+%    \begin{macrocode}
+\newcommand{\psLedm}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[1](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedn}
+%    \begin{macrocode}
+\newcommand{\psLedn}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedo}
+%    \begin{macrocode}
+\newcommand{\psLedo}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedp}
+%    \begin{macrocode}
+\newcommand{\psLedp}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedq}
+%    \begin{macrocode}
+\newcommand{\psLedq}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedr}
+%    \begin{macrocode}
+\newcommand{\psLedr}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLeds}
+%    \begin{macrocode}
+\newcommand{\psLeds}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[0](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedt}
+%    \begin{macrocode}
+\newcommand{\psLedt}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[1](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[1](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedu}
+%    \begin{macrocode}
+\newcommand{\psLedu}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedv}
+%    \begin{macrocode}
+\newcommand{\psLedv}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedw}
+%    \begin{macrocode}
+\newcommand{\psLedw}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedx}
+%    \begin{macrocode}
+\newcommand{\psLedx}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedy}
+%    \begin{macrocode}
+\newcommand{\psLedy}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[1](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[1](4,3)%
+\ledOn[0](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[1](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \begin{macro}{\psLedz}
+%    \begin{macrocode}
+\newcommand{\psLedz}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
+}%
+\endinput
+%    \end{macrocode}
+% \end{macro}
+%
+
+%
+% \iffalse
+%</package>
+% \fi
+%
+% \Finale
+\endinput
