@@ -1,0 +1,313 @@
+%===============================================================================
+% region header
+%-------------------------------------------------------------------------------
+% File Name     : pst-art-led.tex
+% File Created  : 2026-06-23 21:54 UTC +02:00
+% Description   : Documentation for pst-art-led.sty
+%-------------------------------------------------------------------------------
+% Author        : Amit Manohar Manthanwar
+% Address       : Pune, Maharashtra, India
+% Email         : manthanwar@hotmail.com
+% Website       : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2026 Amit Manohar Manthanwar
+% License       : Restricted
+% License       : LaTeX Project Public License
+%-------------------------------------------------------------------------------
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN archives
+% in directory macros/latex/base/lppl.txt.
+%---------------+---------+-----------------------------------------------------
+% Revision Log  | Author  | Description
+%---------------+---------+-----------------------------------------------------
+% 23-Jun-2026   | AMM     | Initial Version
+%---------------+---------+-----------------------------------------------------
+% Usage: make -f $makefile file=pst-art-led runlatex n=3
+% endregion header
+%===============================================================================
+
+%===============================================================================
+% region article preamble - pst-art
+%------------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{pst-art}
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Packages by Amit M. Manthanwar
+\RequirePackage{pst-art-led}% /TexMF/tex/latex/pst-art/Electronics/
+%------------------------------------------------------------------------------
+\title{\textsf{pst-art-led}: PostScript LED Display}
+\author{Amit Manohar Manthanwar\\[1mm]amit@desiign.in}
+% \date{\today}
+\date{26 June 2026}
+\copyRight{\href{https://desiign.in/}{desiign.in}}
+%------------------------------------------------------------------------------
+\begin{document}
+\tableofcontents
+\printMetadata
+%------------------------------------------------------------------------------
+\setlength{\parskip}{15pt}
+\setlength{\baselineskip}{13pt}
+\setlength{\LTpre}{10pt}% space before longtable
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% endregion article preamble - pst-art
+%===============================================================================
+
+
+%===============================================================================
+% region Sections
+%------------------------------------------------------------------------------
+\begin{figure}[!ht]
+\centering%
+\resizebox{0.8\textwidth}{!}{%
+\sffamily%\scriptsize\tiny%
+%\psset{unit=10mm}
+\begin{pspicture}[saveNodeCoors](0,0)(20,36)
+%-------------------------------------------------------------------------------
+% \psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm]% griddots=4,subgriddots=10,
+%-------------------------------------------------------------------------------
+\psset{unit=1mm,dimen=middle,linecap=1,linejoin=1}%
+\psset{linestyle=none,fillstyle=solid, ledColorOn=yellow,ledWidth=20}%
+%-------------------------------------------------------------------------------
+\rput(2,2){%\psscalebox{1}{%
+\rput(0,120){\psLedCharacterMap}%
+\rput(0,0){\psLedCharacterMapSmall}%
+}%}
+%-------------------------------------------------------------------------------
+% \rput(180,30){\psLedOff}%
+%-------------------------------------------------------------------------------
+% \rput(0,90,0){\psLeda}%
+%-------------------------------------------------------------------------------
+\end{pspicture}%
+}% \resizebox
+% \caption{}
+\end{figure}
+
+% \clearpage
+
+\section{Introduction}
+An LED 5 x 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. It acts as a single, highly customizable display module used to show alphanumeric characters, simple graphics, or symbols in electronic projects. Because they are bright, compact, and affordable, they are widely used in hobbyist DIY builds and industrial panels as information boards or displays.
+
+This PostScript package handles the input string and maps character data, translating text strings into precise column and row signals to lit the led using simple \verb|ledColorOn=<color-name>| option passed to the \verb|\psLed<csname>[<options>]{<string>}| command. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
+
+\section{String to LED Display}
+\subsection{Example 1}
+\begin{minipage}{0.8\textwidth}
+\begin{verbatim}\psset{unit=1mm,fillstyle=solid,linestyle=none}
+\psset{ledColorOn=yellow,ledWidth=8,ledDistance=12}
+\rput(10mm,-8mm){\psLedDisplay{Volt}}
+\end{verbatim}\end{minipage}
+
+\psset{unit=1mm,fillstyle=solid,linestyle=none,dimen=middle}%
+\psset{ledColorOn=yellow,ledWidth=8,ledDistance=0}%
+
+\rput(0,-8mm){\psLedDisplay{Volt ~ : ~ 0123 V}}
+
+\par\vspace{\parskip}
+
+\subsection{Example 2}
+\begin{minipage}{0.8\textwidth}\begin{verbatim}
+\rput(0,-8mm){\psLedDisplay{Temp ~ : ~ 1.5 \degree C}}
+\end{verbatim}\end{minipage}
+
+\rput(0,-8mm){\psLedDisplay{Temp ~ : ~ 1.5 \degree C}}
+
+\par\vspace{\parskip}
+
+\subsection{Symbols}
+\begin{minipage}{0.8\textwidth}\begin{verbatim}
+\rput(0,-8mm){\psLedDisplay{? ! @ - + , _ .
+\quoteL \quoteR \quoteLD \quoteRD \smiley \smileySad \on \off}}
+\end{verbatim}\end{minipage}
+
+\rput(0,-8mm){\psLedDisplay{? ! @ - + , _ \quoteL\quoteR\quoteLD\quoteRD .\smiley \smileySad \on \off}}
+
+\par\vspace{\parskip}
+
+\begin{minipage}{0.8\textwidth}\begin{verbatim}
+\rput(0,-8mm){\psLedDisplay{\plus \minus \multiply \divide
+    = ( ) [ ] < > \backslash / \# \% \degree \on \off}}
+\end{verbatim}\end{minipage}
+
+\rput(0,-8mm){\psLedDisplay{\plus\minus\multiply\divide=()[]<>\backslash/\#\%\degree}}
+
+\par\vspace{\parskip}
+
+Notice two different ways to get the plus sing using: \verb|+| and \verb|\plus|. Also, either \verb|~| or \verb|\off| results in space or led turned off.
+
+
+\subsection{Arrows and Currencies}
+\begin{minipage}{0.8\textwidth}\begin{verbatim}
+\rput(0,-8mm){\psLedDisplay{\arrowL \arrowR \arrowU \arrowD
+    \arrowNE \arrowNW \arrowSE \arrowSW
+    \inr \eur \usd \gbp \rub \yen \won}}
+\end{verbatim}\end{minipage}
+
+\rput(0,-8mm){\psLedDisplay{\arrowL \arrowR \arrowU \arrowD \arrowNE \arrowNW \arrowSE \arrowSW \inr \eur \usd \gbp \rub \yen \won}}
+
+\par\vspace{\parskip}
+
+\subsection{Single Character}
+
+\psset{unit=1mm,fillstyle=solid,linestyle=none,ledColorOn=yellow,ledWidth=3}%
+This \rput(-4mm,0){\psLedDisplay[ledWidth=4,ledColorOn=green]{A}} \;\;\;\;  character `A' is lit by \verb|\rput(-4mm,0){\psLedDisplay[ledWidth=4, ledColorOn=green]{A}}|. Notice the clever user of \verb|\rput| to precisely position the led. Make sure that the command options are set to \verb|\psset{unit=1mm, fillstyle=solid,linestyle=none, ledColorOn=yellow, ledWidth=3}| prior to calling the command. We recommend you set these options globally. Note that the \verb|ledWidth| is given in mm. The default led size is 20 mm and unit set to 1 mm. We recommend you use mm unit or convert other units for appropriate scaling before using.
+
+\section{Commands}
+% \texttt{$\backslash$psLedDisplay\{<string>\}}
+
+ The settings \verb|\psset{<options>}| followed by command \verb|\psLedDisplay{<string>}| or combined together \verb|\psLedDisplay[<options>]{<string>}|  achieves required results. This \verb|\psLedDisplay| command internally uses the following set of characters.
+
+\psset{linestyle=none,fillstyle=solid}%
+\psset{unit=0.5mm,ledColorOn=yellow}
+\def\pad{\\[2mm]\hline}%
+\def\rad#1{\rule[8mm]{0pt}{7mm}\rput(-4mm,0mm){#1}}%
+% \setlength{\extrarowheight}{1mm}
+% \renewcommand{\arraystretch}{2}
+\newenvironment{makeTable}{\begin{longtable}{|m{50mm}|>{\centering\arraybackslash}m{30mm}|m{30mm}|}\hline
+Command & Output & Remark \\\hline
+% \endfirsthead%
+% \hline Command & Output & Remarks \\\hline
+\endhead%
+% \hline
+% \endfoot
+% \hline
+% \endlastfoot
+}%
+{\end{longtable}}
+
+
+\subsection{Command options}
+The following options control the behaviour of the script. They can be set by using \verb|\psset{key=value}|. They can also be grouped
+together with comma separated key value pairs, i.e. a single comma followed by multiple `option=value' pairs.
+
+
+\begin{longtable}{|m{30mm}|>{\centering\arraybackslash}m{30mm}|m{50mm}|}\hline
+Key & Value & Remark \\\hline
+ledColorOn & color & \rput[l](0,2.7mm){\texttt{$\backslash$psset\{ledColorOn=red\}}} \rule[6mm]{0pt}{2pt}\pad
+ledColorOff & color & \rule[6mm]{0pt}{2pt}\pad
+ledColorBacklit & color & \rput[l](0,2.7mm){background color}\rule[6mm]{0pt}{2pt} \pad
+ledWidth & color & \rput[l](0,2.7mm){}\rule[6mm]{0pt}{2pt} \pad
+ledDistance & color & \rput[l](0,2.7mm){width + separation}\rule[6mm]{0pt}{2pt} \pad
+\end{longtable}
+For the choices of color names refer to \href{https://ctan.org/pkg/xcolor}{xcolor} package that provides driver-independent access to advanced color definitions, tinting, and blending.
+
+\subsection{Letters}
+
+\begin{longtable}{|m{50mm}|>{\centering\arraybackslash}m{30mm}|>{\centering\arraybackslash}m{30mm}|}\hline
+Command & Uppercase & Lowercase \\\hline\endhead%
+\verb|\psLedA| \verb|\psLeda| &  \rad{\psLedA} & \rad{\psLeda} \pad
+\verb|\psLedB| \verb|\psLedb| &  \rad{\psLedB} & \rad{\psLedb} \pad
+\verb|\psLedC| \verb|\psLedc| &  \rad{\psLedC} & \rad{\psLedc} \pad
+\verb|\psLedD| \verb|\psLedd| &  \rad{\psLedD} & \rad{\psLedd} \pad
+\verb|\psLedE| \verb|\psLede| &  \rad{\psLedE} & \rad{\psLede} \pad
+\verb|\psLedF| \verb|\psLedf| &  \rad{\psLedF} & \rad{\psLedf} \pad
+\verb|\psLedG| \verb|\psLedg| &  \rad{\psLedG} & \rad{\psLedg} \pad
+\verb|\psLedH| \verb|\psLedh| &  \rad{\psLedH} & \rad{\psLedh} \pad
+\verb|\psLedI| \verb|\psLedi| &  \rad{\psLedI} & \rad{\psLedi} \pad
+\verb|\psLedJ| \verb|\psLedj| &  \rad{\psLedJ} & \rad{\psLedj} \pad
+\verb|\psLedK| \verb|\psLedk| &  \rad{\psLedK} & \rad{\psLedk} \pad
+\verb|\psLedL| \verb|\psLedl| &  \rad{\psLedL} & \rad{\psLedl} \pad
+\verb|\psLedM| \verb|\psLedm| &  \rad{\psLedM} & \rad{\psLedm} \pad
+\verb|\psLedN| \verb|\psLedn| &  \rad{\psLedN} & \rad{\psLedn} \pad
+\verb|\psLedO| \verb|\psLedo| &  \rad{\psLedO} & \rad{\psLedo} \pad
+\verb|\psLedP| \verb|\psLedp| &  \rad{\psLedP} & \rad{\psLedp} \pad
+\verb|\psLedQ| \verb|\psLedq| &  \rad{\psLedQ} & \rad{\psLedq} \pad
+\verb|\psLedR| \verb|\psLedr| &  \rad{\psLedR} & \rad{\psLedr} \pad
+\verb|\psLedS| \verb|\psLeds| &  \rad{\psLedS} & \rad{\psLeds} \pad
+\verb|\psLedT| \verb|\psLedt| &  \rad{\psLedT} & \rad{\psLedt} \pad
+\verb|\psLedU| \verb|\psLedu| &  \rad{\psLedU} & \rad{\psLedu} \pad
+\verb|\psLedV| \verb|\psLedv| &  \rad{\psLedV} & \rad{\psLedv} \pad
+\verb|\psLedW| \verb|\psLedw| &  \rad{\psLedW} & \rad{\psLedw} \pad
+\verb|\psLedX| \verb|\psLedx| &  \rad{\psLedX} & \rad{\psLedx} \pad
+\verb|\psLedY| \verb|\psLedy| &  \rad{\psLedY} & \rad{\psLedy} \pad
+\verb|\psLedZ| \verb|\psLedz| &  \rad{\psLedZ} & \rad{\psLedz} \pad
+\end{longtable}
+
+\subsection{Numbers}
+
+\begin{makeTable}
+\verb|\psLedNA| & \rad{\psLedNA} & \pad
+\verb|\psLedNB| & \rad{\psLedNB} & \pad
+\verb|\psLedNC| & \rad{\psLedNC} & \pad
+\verb|\psLedND| & \rad{\psLedND} & \pad
+\verb|\psLedNE| & \rad{\psLedNE} & \pad
+\verb|\psLedNF| & \rad{\psLedNF} & \pad
+\verb|\psLedNG| & \rad{\psLedNG} & \pad
+\verb|\psLedNH| & \rad{\psLedNH} & \pad
+\verb|\psLedNI| & \rad{\psLedNI} & \pad
+\verb|\psLedNJ| & \rad{\psLedNJ} & \pad
+\end{makeTable}
+
+\subsection{Symbols}
+
+\begin{makeTable}
+\verb|\psLedExclamation| & \rad{\psLedExclamation} & \pad
+\verb|\psLedQuestion| & \rad{\psLedQuestion} & \pad
+\verb|\psLedColon| & \rad{\psLedColon} & \pad
+\verb|\psLedPeriod| & \rad{\psLedPeriod} & \pad
+\verb|\psLedDash| & \rad{\psLedDash} & \pad
+\verb|\psLedComma| & \rad{\psLedComma} & \pad
+\verb|\psLedQuoteL| & \rad{\psLedQuoteL} & single quote left\pad
+\verb|\psLedQuoteR| & \rad{\psLedQuoteR} & single quote right\pad
+\verb|\psLedQuoteLD| & \rad{\psLedQuoteLD} & double quote left\pad
+\verb|\psLedQuoteRD| & \rad{\psLedQuoteRD} & double quote right\pad
+\verb|\psLedPercent| & \rad{\psLedPercent} & \pad
+\verb|\psLedSlash| & \rad{\psLedSlash} & \pad
+\verb|\psLedBackslash| & \rad{\psLedBackslash} & \pad
+\verb|\psLedDegree| & \rad{\psLedDegree} & \pad
+\verb|\psLedUnderscore| & \rad{\psLedUnderscore} & \pad
+\verb|\psLedBracketLeft| & \rad{\psLedBracketLeft} & \pad
+\verb|\psLedBracketRight| & \rad{\psLedBracketRight} & \pad
+\verb|\psLedBracketSquareLeft| & \rad{\psLedBracketSquareLeft} & \pad
+\verb|\psLedBracketSquareRight| & \rad{\psLedBracketSquareRight} & \pad
+\verb|\psLedBracketAngleLeft| & \rad{\psLedBracketAngleLeft} & \pad
+\verb|\psLedBracketAngleRight| & \rad{\psLedBracketAngleRight} & \pad
+\verb|\psLedPlus| & \rad{\psLedPlus} & \pad
+\verb|\psLedMinus| & \rad{\psLedMinus} & \pad
+\verb|\psLedMultiply| & \rad{\psLedMultiply} & \pad
+\verb|\psLedDivide| & \rad{\psLedDivide} & \pad
+\verb|\psLedEqual| & \rad{\psLedEqual} & \pad
+\verb|\psLedHash| & \rad{\psLedHash} & \pad
+\verb|\psLedAmpersand| & \rad{\psLedAmpersand} & \pad
+\verb|\psLedSmiley| & \rad{\psLedSmiley} & \pad
+\verb|\psLedSmileySad| & \rad{\psLedSmileySad} & \pad
+\verb|\psLedOn| & \rad{\psLedOn} & \pad
+\verb|\psLedOff| & \rad{\psLedOff} & \pad
+\end{makeTable}
+
+\subsection{Arrows}
+
+\begin{makeTable}
+\verb|\psLedArrowL|   & \rad{\psLedArrowL} & left\pad
+\verb|\psLedArrowR|   & \rad{\psLedArrowR} & right\pad
+\verb|\psLedArrowU|   & \rad{\psLedArrowU} & up\pad
+\verb|\psLedArrowD|   & \rad{\psLedArrowD} & down\pad
+\verb|\psLedArrowNE|  & \rad{\psLedArrowNE} & north east\pad
+\verb|\psLedArrowNW|  & \rad{\psLedArrowNW} & north west\pad
+\verb|\psLedArrowSE|  & \rad{\psLedArrowSE} & south east\pad
+\verb|\psLedArrowSW|  & \rad{\psLedArrowSW} & south west\pad%
+\end{makeTable}
+
+\subsection{Currency}
+
+\begin{makeTable}
+\verb|\psLedEUR| & \rad{\psLedEUR} &  Euro   \pad
+\verb|\psLedGBP| & \rad{\psLedGBP} &  Pound  \pad
+\verb|\psLedINR| & \rad{\psLedINR} &  Rupee  \pad
+\verb|\psLedRUB| & \rad{\psLedRUB} &  Rubble \pad
+\verb|\psLedUSD| & \rad{\psLedUSD} &  Dollar \pad
+\verb|\psLedWON| & \rad{\psLedWON} &  Won    \pad
+\verb|\psLedYEN| & \rad{\psLedYEN} &  Yen/Yuan    \pad
+\end{makeTable}
+
+
+%------------------------------------------------------------------------------
+% endregion Sections
+%==============================================================================
+
+%==============================================================================
+\end{document}
+%==============================================================================
+
+
+https://www.vectorstock.com/royalty-free-vector/led-dot-matrix-panel-letters-numbers-vector-23937501
