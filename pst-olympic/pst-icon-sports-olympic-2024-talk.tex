@@ -1,0 +1,1215 @@
+%===============================================================================
+% File Name     : <letterMaterichTemplate.tex>
+% Description   : Materich Letter using <letterMaterich.cls>
+%-------------------------------------------------------------------------------
+% Author  : Amit Manohar Manthanwar (AMM)
+% Locale  : Pune, Maharashtra, India
+% Mailer  : manthanwar@hotmail.com
+% Caller  : Skype: mnthanwar@hotmail.com
+% Mobile  : +91.853.081.3398
+% WebURL  : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2023 Amit Manohar Manthanwar
+% License : Restricted Confidential
+%===============================================================================
+%---------------+---------+-----------------------------------------------------
+% Revision Log  | Author  | Description
+%---------------+---------+-----------------------------------------------------
+% 19-Dec-2023   | AMM     | Initial Version
+%---------------+---------+-----------------------------------------------------
+%---------------+---------+-----------------------------------------------------
+%---------------+---------+-----------------------------------------------------
+%===============================================================================
+\documentclass{ammTalk}
+\usepackage{pst-icon-sports-olympic-2024}
+\usepackage{listings-macros}
+% \DeclareSIUnit\ppl{inhabitants}
+% \sisetup{per-mode=symbol}
+% \usepackage{amm-wbs}
+%-------------------------------------------------------------------------------
+% \usepackage{pstricks-add}
+% \usepackage{psfrag}
+% \usepackage{amm-pst-icons-heritage}
+% \usepackage{amm-pst-icons-mobile}
+%===============================================================================
+\begin{document}
+%===============================================================================
+\renewcommand{\talkLine}{130mm}
+\renewcommand{\talkPart}{\LaTeX\ Programming for Drawing}% in urban areas
+\renewcommand{\talkHead}{Olympic 2024 Pictograms}
+\renewcommand{\talkName}{On the Mathematics of Art and Logical Art Design}
+\renewcommand{\talkHost}{Strategic Vision and Implementation Roadmap}
+\renewcommand{\talkDate}{\today}
+\renewcommand{\talkNote}{A Proposal for Discussions and Further Actions}
+\renewcommand{\copyAuth}{Manthanwar}
+%-------------------------------------------------------------------------------
+\author{
+Amit Manohar Manthanwar\\[0mm]
+\footnotesize{Principal Investigator}
+% Amit Manthanwar {\textrm{\emph{\&}}} Sabina Ziemian\\[0mm]
+% \scriptsize{Principal Investigator {\textrm{\emph{\&}}} Consortium Coordinator}%\\ Founder CEO Manthawnar
+% Amit Manohar Manthanwar\\[0mm]
+% \scriptsize{Coordinator and Principal Investigator}%\\ Founder CEO Manthawnar Consultancy Services
+%\and
+%\textbf{The Other Dude}\\ His Company / University
+}
+%-------------------------------------------------------------------------------
+\maketitle
+\clearpage
+\pagestyle{slideDesign}
+\confidential{}
+%===============================================================================
+\baselineskip = 18pt
+%===============================================================================
+\slideTitle{Disclaimer}
+\begin{itemize}[label={\psBall(-0.2,0.2){gray}{0.14}},before=\Large\normalfont]
+\color{Gray}{
+\item This presentation contains information for internal use only by the recipients.
+\item If you are not the intended recipient, you should not review, use, disclose, copy, or forward this information.
+\item If you have received this presentation in error, please notify the sender immediately and delete all copies.
+\item Statements of fact, views, and opinions expressed in this presentation and on the following slides are solely those of the author and presenter and not necessarily those of the individuals, organizations, companies, or cosponsors mentioned.
+\item Although the information in this presentation has been produced and processed from sources believed to be reliable, no warranty, express or implied, is made regarding the accuracy, adequacy, completeness, legality, reliability, or usefulness of any information. We assume no liability for errors or omissions in the presentation.
+\item This information is under ``Fair Use'' for purposes such as criticism, comment, teaching, scholarship, and research.
+\item All rights and credit go directly to the rightful owners. No copyright infringement is intended. If you wish to use any copyrighted material for purposes of your own that go beyond fair use, you must obtain permission from the copyright owner.\\[10mm]
+\small{Amit M. Manthanwar}\\[-2mm]
+\scriptsize{\emph{Principal Investigator}}\\[2mm]
+\footnotesize{Digitally signed on \talkDate}
+}
+\end{itemize}
+%===============================================================================
+\slideTitle{Antitrust Guidelines}
+% \begin{itemize}[label={\psBall(-0.2,0.2){gray}{0.16}}]\large\normalfont
+\begin{itemize}[label={\psBall(-0.2,0.2){gray}{0.14}},before=\Large\normalfont]
+\color{Gray}{%
+\item All consortium meetings, whether held at a physical location or virtually, must be conducted in accordance with the relevant competition and antitrust laws of the \href{https://competition-policy.ec.europa.eu/antitrust_en} {EU Antitrust Policy of the Treaty on the Functioning of the European Union}.
+
+\item As a condition of participation in these meetings, you agree that you will at all times refrain from discussing any information which is confidential to your organisation and/or which is likely to affect the commercial strategy or activities of your organisation  and/or its members.
+
+\item You will \textcolor{Maroon}{not use this forum for exchanging commercially sensitive or confidential information}, whether in person, or through virtual means of communication, such as chat functions.
+
+\item You are in the best position to judge what is, and what is not, commercially sensitive or confidential and so responsibility lies with you in the first place.
+
+\item You are also reminded not to discuss topics outside the previously circulated and reviewed agenda.
+
+\item Failure to follow these guidelines may bring serious consequences for you as an individual and/or your organization.
+
+\item Each participant is \textcolor{teal}{obligated to speak up immediately} for the purpose of preventing any discussion falling outside the constraints of antitrust laws.}
+\end{itemize}
+%===============================================================================
+\slideTitle{Outline}
+\begin{itemize}[before=\LARGE\normalfont]
+\item Introduction and Background %, Scope and Objectives
+%\item Key Challenges and Problem Statements
+\item Key Challenges and Problem Statements
+\item Basics of Visual and Logical Design Process
+% \item Multidisciplinary Consortium and Capabilities
+\item Proposed Creative and Innovative Solutions
+% \item Work Packages and Tasks
+% \item Resources and Budget
+\item Impacts and Value Propositions
+\item Discussions and Immediate Actions
+\end{itemize}
+%===============================================================================
+\slideTitle{Introduction and Background}
+
+\begin{itemize}[itemsep=6mm]\LARGE
+\item \href{https://olympics.com/ioc/news/the-olympic-pictograms-a-long-and-fascinating-story}{The Olympic Pictograms, a long and fascinating story}
+% \begin{itemize}\large
+% \item \href{https://olympics.com/ioc/news/the-olympic-pictograms-a-long-and-fascinating-story}{\textcolor{black}{https://olympics.com/ioc/news/the-olympic-pictograms-a-long-and-fascinating-story}}
+% \end{itemize}
+
+\item   \href{https://www.theolympicdesign.com/olympic-games/pictograms/}{Historical Olympic Pictograms}
+% \begin{itemize}\large
+% \item \href{https://www.theolympicdesign.com/olympic-games/pictograms/}{\textcolor{black}{https://www.theolympicdesign.com/olympic-games/pictograms/}}
+% \end{itemize}
+% https://mediamadegreat.com/olympic-pictograms/
+
+\item   \href{https://olympics.com/en/paris-2024/the-games/the-brand/pictograms}{Olympic 2024 Pictograms}
+\begin{itemize}\large
+% \item \href{https://olympics.com/en/paris-2024/the-games/the-brand/pictograms}{\textcolor{black}{https://olympics.com/en/paris-2024/the-games/the-brand/pictograms}}
+\item \textbf{\textcolor{Maroon}{Head of Design:} Joachim Roncin}
+\item Copyright \textcopyright\ The International Olympic Committee
+\end{itemize}
+
+\end{itemize}
+%===============================================================================
+\slideTitle{Challenges, Scope, Objectives and Outcomes}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Key Challenges and Problem Statement
+\begin{itemize}[before=\large]
+\item Holistic approaches for effective visual designing of art
+\end{itemize}
+
+\item Scope: Traditional and Emerging Design Principles
+\begin{itemize}[before=\large]
+\item Classical art and industrial design concepts
+\item Persistent digital design concepts
+\end{itemize}
+\item Specific Objectives
+\begin{itemize}[before=\Large]
+\item Design Using Vector Graphics
+\begin{itemize}[nosep,before=\normalfont\large]
+\item Develop integrated and harmonised approach
+\item Demonstrate a system-wide whole system approach in any operational environment and print media
+\item Explore synergies between the mathematics of art and art of mathematics
+\end{itemize}
+\item Digital Tools
+\begin{itemize}[nosep,before=\normalfont\large]
+\item Manage bigdata: secured storage and open access
+\item For the screen using \href{https://en.wikipedia.org/wiki/SVG}{Scalable Vector Graphics}
+\item For the screen and print using \href{https://en.wikipedia.org/wiki/PostScript}{PostScript}, \href{https://en.wikipedia.org/wiki/TeX}{\TeX}, \href{https://en.wikipedia.org/wiki/LaTeX}{\LaTeX} and friends
+\end{itemize}
+\item Capacity Building - Knowledge and Technology Transfer
+\end{itemize}
+\item Expected Outcomes
+\begin{itemize}[before=\large]
+\item Develop dynamic digital tools for screen and print media
+\item Guidance for adaptation and policy making
+\item Digital Tools for Holistic Design: Digital Twin, Data-driven, and Model-based solutions
+\end{itemize}
+\end{itemize}
+%===============================================================================
+
+%===============================================================================
+\listingsTeX%
+% \lstset{linewidth=180mm,basicstyle={\large\ttfamily},}%
+\lstset{linewidth=100mm,rulecolor=\color{gray},
+title=\hspace{-240mm}{\textsf{\LaTeX\ Code}}}%
+\newsavebox{\mybox}
+\begin{lrbox}{\mybox}%
+\begin{lstlisting}
+\newcommand{\ringA}[1]{\pscustom[fillcolor=#1]{
+\psarc(14.5,7){6}{104.8828}{-3.2007}
+\psarc(22,13.5){7}{257.5472}{265.7683}
+\psarcn(14.5,7){7}{-3.9401}{102.4528}
+\psarcn(7,13.5){6}{3.2007}{-6.7094}}}
+
+\newcommand{\ringB}[1]{\pscustom[fillcolor=#1]{
+\psarc(7,13.5){7}{-4.2848}{3.9401}
+\psarcn(14.5,7){7}{94.2317}{4.2848}
+\psarcn(22,13.5){6}{265.0322}{255.1172}
+\psarc(14.5,7){6}{6.7094}{94.9678}}}
+
+\psset{linestyle=solid,linewidth=1,fillstyle=none}
+\pscircle[linecolor=blueOlympic](7,13.5){6.5}
+\pscircle[linecolor=redOlympic](37,13.5){6.5}
+
+\ringA{yellowOlympic}
+\ringB{yellowOlympic}
+
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringA{black}}}
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringB{black}}}
+
+\rput(15,0){\ringA{greenOlympic}}
+\rput(15,0){\ringB{greenOlympic}}
+\end{lstlisting}%
+\end{lrbox}%
+%===============================================================================
+\slideTitle{The Olympic Logo}
+\begin{figure}[!h]
+\centering\vspace{-5mm}%
+\resizebox{0.98\textwidth}{!}{%
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(17,9)%
+% \psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm]%
+% \psSet{iconWidth=120}%
+\rput{0}(0,2.1){\psOlympicXxivLogo[iconWidth=100]}%
+%
+\rput[l](11,4.7){\psscalebox{0.6}{\usebox{\mybox}}}%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+\newcommand{\makeLogo}[4][0]{\slideTitle{#2}
+\begin{figure}[!h]
+\centering\vspace{-5mm}%
+\resizebox{0.98\textwidth}{!}{%
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(17,9)%
+% \psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm]%
+\psSet{iconWidth=70}%
+%\rput{0}(0,2.1){\psOlympicXxivLogo[iconWidth=100]}%
+\rput{#1}(8.5,4.5){#3}%
+#4%
+%
+%\rput[l](11,4.7){\psscalebox{0.6}{\usebox{\mybox}}}%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+}
+%===============================================================================
+%\makeLogo{Logo}{\psOlympicXxivLogo}{}
+\makeLogo{Archery}{\psOlympicXxivArchery}{}
+\makeLogo{Artistic Gymnastics}{\psOlympicXxivArtisticGymnastics}{}
+\makeLogo{Artistic Swimming}{\psOlympicXxivArtisticSwimming[fillStyle=solid,fillColor=black,lineColor=black,lineWidth=0.2,lineColorA=white,lineWidthA=0.5]}{}
+\makeLogo{Athletics}{\psOlympicXxivAthletics[fillStyle=none,fillStyleA=none,fillStyleB=none,fillColorShoeTop=black]}{}
+\makeLogo[45]{Badminton}{\psOlympicXxivBadminton[iconWidth=98]}{}
+\makeLogo[45]{Basketball}{\psOlympicXxivBasketball[iconWidth=70,
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,lineColor=black,
+%
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+%
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.3,
+%
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+%
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,,lineColorD=black,lineWidthD=0.1,
+%
+fillStyleBall=solid,fillColorBall=black,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+%
+fillStyleBallLines=none,fillColorBall=black,lineStyleBallLines=solid,,lineColorBallLines=white,lineWidthBallLines=0.8]}{}
+\makeLogo[45]{Basketball Three}{\psOlympicXxivBasketballThree[iconWidth=70,
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+%
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+% Court Big B
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.3,
+%
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+%
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,,lineColorD=black,lineWidthD=0.1,
+%
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=white,lineWidthE=1,
+%
+fillStyleBall=solid,fillColorBall=black,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+%
+fillStyleBallLines=none,fillColorBall=black,lineStyleBallLines=solid,,lineColorBallLines=white,lineWidthBallLines=0.8]}{}
+\makeLogo[45]{Beach Volleyball}{\psOlympicXxivBeachVolleyball[iconWidth=70,
+fillStyleStrip=none,
+fillStyle=solid,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.2,
+%
+fillStyleA=none,fillColorA=lime,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+%
+fillStyleB=solid,fillColorB=black,lineStyleB=none,lineColorB=black,lineWidthB=0,lineWidthBallLines=0.5,lineWidthBall=1]}{}
+\makeLogo[-45]{Boxing}{\psOlympicXxivBoxing[iconWidth=78,
+fillStyle=none,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.4,
+%
+fillStyleA=solid,fillColorA=lime,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+%
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.4,
+%
+fillStyleGlove=solid,fillColorGlove=black,lineStyleGlove=solid,lineColorGlove=white,lineWidthGlove=1]}{}
+\makeLogo[-45]{Breaking}{\psOlympicXxivBreaking[iconWidth=78,
+fillStyle=none,fillColor=red,lineStyle=solid,lineColor=black,lineWidth=0.4,
+%
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+%
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=white,lineWidthB=0.2,
+%
+fillStyleShoeSole=solid,fillColorShoeSole=black,lineStyleShoeSole=none,lineColorShoeSole=white,lineWidthShoeSole=0,
+%
+fillStyleShoeMidSole=solid,fillColorShoeMidSole=white,lineStyleShoeMidSole=none,lineColorShoeMidSole=black,lineWidthShoeMidSole=0,
+%
+fillStyleShoeTop=solid,fillColorShoeTop=black,lineStyleShoeTop=none,lineColorShoeTop=white,lineWidthShoeTop=0]}{}
+\makeLogo[45]{Canoe Slalom}{\psOlympicXxivCanoeSlalom[iconWidth=78,
+fillStyle=solid,fillColor=red,lineStyle=solid,lineColor=black,lineWidth=0.2,
+%
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.5,
+%
+fillStyleCanoeBoat=solid,fillColorCanoeBoat=black,lineStyleCanoeBoat=none,lineColorCanoeBoat=black,lineWidthCanoeBoat=0,
+%
+fillStyleCanoeSeat=solid,fillColorCanoeSeat=white,lineStyleCanoeSeat=none,lineColorCanoeSeat=black,lineWidthCanoeSeat=0,
+%
+fillStyleCanoePaddle=solid,fillColorCanoePaddle=black,lineStyleCanoePaddle=none,lineColorCanoePaddle=white,lineWidthCanoePaddle=0]}{}
+\makeLogo[45]{Canoe Sprint}{\psOlympicXxivCanoeSprint[iconWidth=78,
+fillStyle=solid,fillColor=red,lineStyle=solid,lineColor=black,lineWidth=0.3,
+%
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+%
+fillStyleCanoeBoat=solid,fillColorCanoeBoat=black,lineStyleCanoeBoat=none,lineColorCanoeBoat=black,lineWidthCanoeBoat=0,
+%
+fillStyleCanoeSeat=solid,fillColorCanoeSeat=white,lineStyleCanoeSeat=none,lineColorCanoeSeat=black,lineWidthCanoeSeat=0,
+%
+fillStyleCanoePaddle=solid,fillColorCanoePaddle=black,lineStyleCanoePaddle=solid,lineColorCanoePaddle=white,lineWidthCanoePaddle=1]}{}
+\makeLogo[180]{Cycling BMX Freestyle}{\psOlympicXxivCyclingBmxFreestyle[iconWidth=70,
+multiColorTrue = 1,
+% Cycle Tire
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Handle
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Cycle Seat
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.01,
+% Helmet = D
+fillStyleD=solid,fillColorD=black,lineStyleD=solid,lineColorD=black,lineWidthD=0.01,
+% Helmet Hole = E
+fillStyleE=solid,fillColorE=white,lineStyleE=solid,lineColorE=black,lineWidthE=0.01,
+% Lines = F
+lineStyleF=solid,lineColorF=black,lineWidthF=0.15,
+% Cross Line = G
+lineStyleG=solid,lineColorG=black,lineWidthG=0.3,
+]}{}
+\makeLogo{Cycling BMX Racing}{\psOlympicXxivCyclingBmxRacing[
+multiColorTrue = 1,
+% Cycle Tire
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame = A
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Handle = B
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Cycle Seat = C
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.01,
+% Helmet Head = D
+fillStyleD=solid,fillColorD=black,lineStyleD=solid,lineColorD=black,lineWidthD=0.01,
+% Helmet Chin = E
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.01,
+% Helmet Goggle = F
+fillStyleF=solid,fillColorF=black,lineStyleF=solid,lineColorF=black,lineWidthF=0.01,
+% Cross Line = G
+lineStyleG=solid,lineColorG=black,lineWidthG=0.3,
+]}{}
+\makeLogo{Cycling Mountain Bike}{\psOlympicXxivCyclingMountainBike[
+multiColorTrue = 1,
+% Cycle Tire
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Handle
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Cycle Seat
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.01,
+% Helmet Top = D
+fillStyleD=solid,fillColorD=black,lineStyleD=solid,lineColorD=black,lineWidthD=0.01,
+% Helmet Middle = E
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.01,
+% Helmet Bottom = F
+fillStyleF=solid,fillColorF=black,lineStyleF=solid,lineColorF=black,lineWidthF=0.01,
+% Helmet Hole = G
+fillStyleG=solid,fillColorG=white,lineStyleG=solid,lineColorG=black,lineWidthG=0.01,
+% Lines = H
+lineStyleH=solid,lineColorH=black,lineWidthH=0.15,
+% Cross Line = I
+lineStyleI=solid,lineColorI=black,lineWidthI=0.3,
+]}{}
+\makeLogo{Cycling Road}{\psOlympicXxivCyclingRoad[
+% Cycle Tire
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Hole Mask
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Track Outer
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.25,
+% Track Middle
+fillStyleD=solid,fillColorD=white,lineStyleD=dashed,lineColorD=black,lineWidthD=0.15,lineDashD={0.5 0.5},
+% Track Lines Outer
+lineStyleE=solid,lineColorE=black,lineWidthE=0.15,
+% Cross Line
+lineStyleF=solid,lineColorF=black,lineWidthF=0.3,
+]}{}
+\makeLogo{Cycling Track}{\psOlympicXxivCyclingTrack[
+% Cycle Tire
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Hole Mask
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Track Outer
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.3,
+% Track Middle
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.15,
+% Track Inner
+fillStyleE=solid,fillColorE=white,lineStyleE=solid,lineColorE=black,lineWidthE=0.1,
+% Track Lines Outer
+lineStyleF=solid,lineColorF=black,lineWidthF=0.12,
+% Cross Line
+lineStyleG=solid,lineColorG=black,lineWidthG=0.2,
+]}{}
+\makeLogo{Diving}{\psOlympicXxivDiving[
+% Dive Column
+fillStyle=solid,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.4,
+% Railing
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Dive Board
+lineStyleB=solid,lineColorB=black,lineWidthB=0.8,
+% Water Waves
+lineStyleC=solid,lineColorC=black,lineWidthC=0.3,
+% Cross Line Mask
+lineStyleMask=solid,lineColorMask=white,lineWidthMask=0.8,
+% Cross Line
+lineStyleD=solid,lineColorD=black,lineWidthD=0.5,
+]}{}
+\makeLogo{Equestrian Dressage}{\psOlympicXxivEquestrianDressage[
+% Horse Hust
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=brown,lineWidth=0.1,
+% Helmet Head
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Helmet Ear
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Cross Line
+lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+]}{}
+\makeLogo{Equestrian Eventing}{\psOlympicXxivEquestrianEventing[
+% Horse Hust
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=brown,lineWidth=0.1,
+% Helmet Head
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Helmet Ear
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Flag + Flag Pole
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.3,
+% Bar Lines
+lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Water Waves
+lineStyleE=solid,lineColorE=black,lineWidthE=0.3,
+]}{}
+\makeLogo{Equestrian Jumping}{\psOlympicXxivEquestrianJumping[
+% Horse Hust
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=brown,lineWidth=0.1,
+% Flag + Flag Pole
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+% Bar Lines
+lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% Cross Line
+lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+]}{}
+\makeLogo{Fencing}{\psOlympicXxivFencing[
+% Sword
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.4,
+% Sword
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.4,
+% Sword
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.4,
+% Helmet
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Helmet Hole
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.2]}{}
+\makeLogo{Football}{\psOlympicXxivFootball[
+% Field
+fillStyle=solid,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Goal Post
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Corner and Half Line
+lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% Lines
+lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Cross Lines
+lineStyleD=solid,lineColorD=black,lineWidthD=0.4,
+% Ball
+fillStyleBall=solid,fillColorBall=black,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+% Ball Lines
+fillStyleBallLines=solid,fillColorBallLines=black,lineStyleBallLines=solid,lineColorBallLines=black,lineWidthBallLines=0.2,
+% Mask Ball
+fillStyleMask=solid,fillColorMask=white,lineStyleMask=solid,lineColorMask=white,lineWidthMask=0.8]}{}
+\makeLogo{Golf}{\psOlympicXxivGolf[
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Flag
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,
+lineWidthA=0.2,
+% Hole
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+%
+fillStyleC=none,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=1,
+% Club
+fillStyleD=solid,fillColorD=black,lineStyleD=solid,lineColorD=black,lineWidthD=0.4]}{}
+\makeLogo{Handball}{\psOlympicXxivHandball[
+% Hand Ball
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Hand Ball Patches
+fillStyleA=solid,fillColorA=white!50,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Goal Post
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% Field Area D
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Field Diamond
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Field Lines inside Diamond
+lineStyleE=solid,lineColorE=black,lineWidthE=0.2,lineDashE={1 1},
+% Cross Lines
+lineStyleF=solid,lineColorF=black,lineWidthF=0.4,
+]}{}
+\makeLogo{Hockey}{\psOlympicXxivHockey[iconWidth=80,
+% Stick
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Stick Handle
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Stick band
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Court Center
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=1,
+% Court Outer
+fillStyleD=solid,fillColorD=white,lineStyleD=dashed,lineColorD=black,lineWidthD=0.4,lineDashD={2 2},
+%
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.1,
+%
+fillStyleF=none,fillColorF=black,lineStyleF=solid,lineColorF=black,lineWidthF=1,
+% Ball
+fillStyleG=solid,fillColorG=black,lineStyleG=solid,lineColorG=Green,lineWidthG=0.1]}{}
+\makeLogo{Judo}{\psOlympicXxivJudo[
+% Judogi A black
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Judogi A white
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Judogi B white
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Judogi B black
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+%
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=1,
+%
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.4
+]}{}
+\makeLogo{Marathon Swimming}{\psOlympicXxivMarathonSwimming[
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+%
+lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+%
+lineStyleB=solid,lineColorB=black,lineWidthB=0.2]}{}
+\makeLogo{Modern Pentathlon}{\psOlympicXxivModernPentathlon[iconWidth=66,
+% Pistol
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Sword
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Horse Bust
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Waves
+lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Shoe Sole
+fillStyleShoeSole=solid,fillColorShoeSole=black,lineStyleShoeSole=solid,lineColorShoeSole=black,lineWidthShoeSole=0.2,
+% Shoe Sole Mid
+fillStyleShoeMidSole=solid,fillColorShoeMidSole=white,lineStyleShoeMidSole=solid,lineColorShoeMidSole=white,lineWidthShoeMidSole=0.2,
+% Shoe Top
+fillStyleShoeTop=solid,fillColorShoeTop=black,lineStyleShoeTop=solid,lineColorShoeTop=black,lineWidthShoeTop=0.2,
+]}{}
+\makeLogo{Rhythmic Gymnastics}{\psOlympicXxivRhythmicGymnastics[iconWidth=58,
+% Club
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Club Inner
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Ball
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Ribbon Handle
+lineColorC=black,lineWidthC=1,
+% Ribbon Handle Top
+lineColorD=black,lineWidthD=2,
+% Ribbon
+lineColorE=black,lineWidthE=2,
+% Circle
+lineColorF=black,lineWidthF=1,
+]}{}
+\makeLogo{Rowing}{\psOlympicXxivRowing[
+% Boat
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Boat Seat
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Paddle
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+%
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+%
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=white,lineWidthD=1,
+%
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.4
+]}{}
+\makeLogo[45]{Rugby Sevens}{\psOlympicXxivRugbySevens[iconWidth=78,
+% Ball
+fillStyleBall=solid,fillColorBall=black,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0,
+% % Ball Strip
+fillColorStrip=white!50,
+% Thick Line
+lineColor=black,lineWidth=1.5,
+% Thin Lines
+lineColorA=black,lineWidthA=0.4,
+% Dash Lines
+lineStyleB=dashed,lineDashB={0.5 0.5},lineColorB=black,lineWidthB=0.4,
+% Thin Line Top
+lineColorC=black,lineWidthC=0.4,
+% Cross Line Vertical
+lineColorC=black,lineWidthC=0.3]}{}
+\makeLogo{Sailing}{\psOlympicXxivSailing[iconWidth=60,
+% Hull
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Keel
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Sail
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Sail Top
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Sail Bottom
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Waves
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=0.8
+]}{}
+\makeLogo{Shooting}{\psOlympicXxivShooting[
+% Target Square
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Target Bull's Eye
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.04,
+% Big Circle
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Small Circle
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.1,
+% Cross Lines Long
+lineStyleD=solid,lineColorD=black,lineWidthD=0.3,
+% Cross Lines
+lineStyleE=solid,lineColorE=black,lineWidthE=0.4,
+]}{}
+\makeLogo[45]{Skateboarding}{\psOlympicXxivSkateboarding[iconWidth=78,
+% Skate Board
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Skate Board Holes
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.04,
+% Wheel Rim
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% Wheel Hub
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.1,
+% WHeel Bore
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.1,
+% Wall Angled
+fillStyleE=solid,fillColorE=white,lineStyleE=solid,lineColorE=black,lineWidthE=0.1,
+% Wall Curved
+fillStyleF=none,fillColorF=black,lineStyleF=solid,lineColorF=black,lineWidthF=0.2,
+% WHeel Bore
+% Cross Lines
+lineStyleG=solid,lineColorG=black,lineWidthG=0.4,
+]}{}
+\makeLogo{Sport Climbing}{\psOlympicXxivSportClimbing[
+% Rock A
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Rpck B
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+% Cross Lines
+lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+]}{}
+\makeLogo{Surfing}{\psOlympicXxivSurfing[
+% Surf Board
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% Lines
+lineColorA=black,lineWidthA=0.2,
+lineColorB=black,lineWidthB=0.2,
+lineColorC=black,lineWidthC=0.2,
+lineColorD=black,lineWidthD=0.2,
+lineColorE=black,lineWidthE=0.4]}{}
+\makeLogo{Swimming}{\psOlympicXxivSwimming[
+% Cap
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Pool
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+%
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.2]}{}
+\makeLogo[45]{Table Tennis}{\psOlympicXxivTableTennis[iconWidth=78,
+% Bat
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Ball
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Table
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% Net
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Cross Lines
+lineStyleD=solid,lineColorD=black,lineWidthD=0.4]}{}
+\makeLogo{Taekwondo}{\psOlympicXxivTaekwondo[
+% Head
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.4,
+% face
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.4,
+% shirt
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=black,lineWidthB=0.4,
+% neck
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=0.4,
+% arms
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.4,
+% cross lines
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=black,lineWidthE=1
+]}{}
+\makeLogo[45]{Tennis}{\psOlympicXxivTennis[iconWidth=86,
+% Bat
+fillStyle=solid,fillColor=black,lineStyle=none,lineColor=black,lineWidth=0.2,
+% Bat Ellipse
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Bat Net Lines
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=white,lineWidthB=0.2,
+% Bat Handle End A
+fillStyleC=solid,fillColorC=black,lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Bat Handle End B
+fillStyleD=solid,fillColorD=black,lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Ball Color + Border
+fillStyleE=solid,fillColorE=black,lineStyleE=solid,lineColorE=white,lineWidthE=0.2,
+% Ball Seam
+fillStyleF=solid,fillColorF=white,lineStyleF=solid,lineColorF=white,lineWidthF=1]}{}
+\makeLogo[45]{Trampoline}{\psOlympicXxivTrampoline[iconWidth=78,
+% Net
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Cross Lines
+lineStyleA=solid,lineColorA=black,lineWidthA=0.4]}{}
+\makeLogo{Triathlon}{\psOlympicXxivTriathlon[
+% Cycle Frame
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=white,lineWidth=0.2,
+% Cycle Frame Hole = Background
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=white,lineWidthA=0.2,
+% Road
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% Road Line
+lineStyleC=dashed,lineDashC={0.6 0.3},lineColorC=black,lineWidthC=0.2,
+% Waves
+lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Shoe Sole
+fillStyleShoeSole=solid,fillColorShoeSole=black,lineStyleShoeSole=solid,lineColorShoeSole=black,lineWidthShoeSole=0.2,
+% Shoe Sole Mid
+fillStyleShoeMidSole=solid,fillColorShoeMidSole=white,lineStyleShoeMidSole=solid,lineColorShoeMidSole=white,lineWidthShoeMidSole=0.2,
+% Shoe Top
+fillStyleShoeTop=solid,fillColorShoeTop=black,lineStyleShoeTop=solid,lineColorShoeTop=black,lineWidthShoeTop=0.2,
+% Cap
+fillStyleCap=solid,fillColorCap=black,lineStyleCap=solid,lineColorCap=black,lineWidthCap=0.2,
+% Cap Band
+fillStyleCapBand=solid,fillColorCapBand=white,lineStyleCapBand=solid,lineColorCapBand=white,lineWidthCapBand=0.2,
+% Cap Goggle
+fillStyleGoggle=solid,fillColorGoggle=black,lineStyleGoggle=solid,lineColorGoggle=black,lineWidthGoggle=0.2,
+% % Cross Lines
+% % Net
+% fillStyleNet=solid,fillColorNet=green!50,lineStyleNet=solid,lineColorNet=black,lineWidthNet=0.2,
+% % Net Band
+% fillStyleNetBand=solid,fillColorNetBand=cyan!50,lineStyleNetBand=solid,lineColorNetBand=black,lineWidthNetBand=0.2,
+% % Ball
+% fillStyleBall=solid,fillColorBall=Gold,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+% % Ball
+% fillStyleStrip=solid,fillColorStrip=Navy,lineStyleStrip=solid,lineColorStrip=black,lineWidthStrip=0.2,
+% Cross Line
+lineStyleE=solid,lineColorE=black,lineWidthE=0.4]}{}
+\makeLogo[45]{Volleyball}{\psOlympicXxivVolleyball[iconWidth=70,
+% Court
+fillStyle=solid,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Net
+fillStyleNet=solid,fillColorNet=white,lineStyleNet=solid,lineColorNet=black,lineWidthNet=0.2,
+% Net Band
+fillStyleNetBand=solid,fillColorNetBand=white,lineStyleNetBand=solid,lineColorNetBand=black,lineWidthNetBand=0.2,
+% Ball
+fillStyleBall=solid,fillColorBall=black,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+% Ball
+fillStyleStrip=solid,fillColorStrip=white,lineStyleStrip=solid,lineColorStrip=black,lineWidthStrip=0.2,
+% Cross Line
+lineStyleA=solid,lineColorA=black,lineWidthA=0.4]}{}
+\makeLogo{Water Polo}{\psOlympicXxivWaterPolo[
+% Cap Head
+fillStyle=solid,fillColor=black,lineStyle=solid,lineColor=black,lineWidth=0.2,
+% Cap Ear
+fillStyleA=solid,fillColorA=black,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% Cap String
+fillStyleB=solid,fillColorB=black,lineStyleB=solid,lineColorB=white,lineWidthB=0.1,
+% Ball Strip
+fillStyleStrip=none,
+fillColorStripAa=white,fillColorStripBa=green!20,fillColorStripCa=cyan!20,
+fillColorStripAb=red!20,fillColorStripBb=green!20,fillColorStripCb=cyan!20,
+fillColorStripAc=red!20,fillColorStripBc=green!20,fillColorStripCc=cyan!20,
+% Ball Seam Lines
+lineStyleBallLines=solid,lineColorBallLines=black,lineWidthBallLines=0.4,
+% Ball
+fillStyleBall=solid,fillColorBall=white,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.8,
+% Waves
+lineStyleC=solid,lineColorC=black,lineWidthC=0.2,
+% Diamond
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% Net A
+fillStyleE=solid,fillColorE=white,lineStyleE=solid,lineColorE=black,lineWidthE=0.2,
+% Net A Line
+lineStyleF=dashed,lineColorF=black,lineWidthF=0.2,lineDashF={0.5 0.5},
+% Net B
+fillStyleG=solid,fillColorG=white,lineStyleG=solid,lineColorG=black,lineWidthG=0.2,
+% Cross Lines
+lineStyleH=solid,lineColorH=black,lineWidthH=0.4]}{}
+\makeLogo[45]{Weightlifting}{\psOlympicXxivWeightlifting[iconWidth=94,
+% Bar
+fillStyle=solid,fillColor=black,lineStyle=none,lineColor=black,lineWidth=0,
+% Weights
+fillStyleA=solid,fillColorA=black,lineStyleA=none,lineColorA=blue,lineWidthA=0,
+% Holes
+fillStyleB=solid,fillColorB=white,lineStyleB=none,lineColorB=black,lineWidthB=0]}{}
+\makeLogo[-45]{Wrestling}{\psOlympicXxivWrestling[iconWidth=78,
+% Costume
+fillStyle=solid,fillColor=white,lineStyle=solid,lineColor=black,lineWidth=0.6,
+% Costume shorts
+fillStyleA=solid,fillColorA=white,lineStyleA=solid,lineColorA=black,lineWidthA=2,
+% Field Square + Line
+fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.4,
+% Field Outer Circle
+fillStyleC=solid,fillColorC=white,lineStyleC=solid,lineColorC=black,lineWidthC=2,
+% Field Inner Circle
+fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.3,
+% Line Mask
+fillStyleE=solid,fillColorE=white,lineStyleE=solid,lineColorE=white,lineWidthE=1]}{}
+%===============================================================================
+%===============================================================================
+\slideTitle{Expected Impacts}
+\begin{itemize}[itemsep=5mm]\LARGE
+\item Innovation and Promotion of Mathematics of Art
+\begin{itemize}\large
+\item Contribute to art design underpinning an open digital ecosystem that provides the tools and services for research and innovation
+\item Contribute to the socioeconomic and technological sustainability, and projecting logical design concepts and values at home and abroad
+\end{itemize}
+
+\item Utilisation of Emerging Technologies for Design and Digital Transformations
+\begin{itemize}\large
+\item Preserves design  ecosystem and diversity with new endeavours and digital initiatives
+\item Derives benefit from the digitalisation and bigdata intelligent analytics to contribute to its advancement and promotion
+\end{itemize}
+
+\item Positive Impact on Technology Integration and Societal Evolution
+\begin{itemize}\large
+\item Foster art, science and technology in social inclusion, increase local and region technological capabilities
+\item Increased interest in new technologies, including those applied to art
+\item Bridge the gender gap and promote mathematics and computer programming to youth, especially girls.
+\end{itemize}
+
+\item Skill Development, Awareness and Capacity Building
+\begin{itemize}\large
+\item Provide new skills that are engaging and easy to acquire underpinning an economy generating more employment where high-skilled workforce is needed
+\item Empower youth in the new emerging areas of technology innovation with deep roots in art, science and technology.
+\item Creation of employment for youth, women and disadvantaged minorities
+\end{itemize}
+
+% \item Capacity Building
+% \begin{itemize} \large
+% \item Strengthen  cooperation between different sectors of economy and between the academic institutions, industry and national labs
+% \item Build new training facilities for knowledge and technology transfer
+% \end{itemize}
+
+\item Economic and Environmental Impacts
+\begin{itemize} \large
+\item Support direct and indirect economic growth with specific focus on digital art and policy directives
+\item Assessment of climate impacts including promotion of climate change awareness
+\end{itemize}
+\end{itemize}
+%===============================================================================
+%===============================================================================
+\clearpage
+\pagestyle{plain}
+\slideTitle{Contact}
+\begin{listII}
+\large \ttfamily
+% \item Post: Markt 29, 03226 Brandenburg - Vetschau, Germany
+% \item Find: \href{http://maps.google.com/?q=Markt 29, 03226 Brandenburg - Vetschau, Germany}{Vetschau, Brandenburg, Germany}
+\item Mail: \href{amailto:manthanwar@hotmail.com}{manthanwar@hotmail.com} %materich@outlook.de,manthanwar@hotmail.com
+% \item Call: +49.160.871.1056 %+91.853.081.3398 %
+% \item Talk: \href{https://twitter.com/MaterichUG}{Twitter}, \href{https://www.facebook.com/people/Materich/100075876893601/}{Facebook}
+\item Surf: \href{https://materich.onrender.com/}{materich.com}
+\item Read: \href{https://materich.onrender.com//publications}{publications}
+\item Repo: \href{https://github.com/manthanwar}{manthanwar}
+\item jSvg: \href{https://www.npmjs.com/package/js-svg-client}{js-svg-client}
+\item ctan: \href{https://ctan.org/pkg/pst-flags?lang=en}{pst-flags}
+\end{listII}
+
+\vspace{-5mm}
+\setlength{\fboxsep}{4mm}
+\hypersetup{urlcolor=teal!75}
+\centering{%
+\rput(-1.5,-7){%
+\rput(1.5,1.5){\qrcode[hyperlink,height=26mm]{https://materich.onrender.com/}}%
+\psframe[linecolor=teal](0,0)(3,3)%
+\rput(1.5,-0.4){%
+\href{https://materich.onrender.com/}{\textcolor{teal}{\textbf{materich.com}}}}%
+}}
+%===============================================================================
+%===============================================================================
+\end{document}
+%===============================================================================
+%===============================================================================
+%===============================================================================
+\clearpage
+\pagestyle{plain}
+\slideTitle{Contact}
+\begin{listII}
+\large \ttfamily
+\item Post: Markt 29, 03226 Brandenburg - Vetschau, Germany
+\item Find: \href{http://maps.google.com/?q=Markt 29, 03226 Brandenburg - Vetschau, Germany}{Vetschau, Brandenburg, Germany}
+\item Mail: \href{mailto:ceo@materich.com}{ceo@materich.com} %materich@outlook.de,manthanwar@hotmail.com
+\item Call: +49.160.871.1056 %+91.853.081.3398 %
+\item Talk: \href{https://twitter.com/MaterichUG}{Twitter}, \href{https://www.facebook.com/people/Materich/100075876893601/}{Facebook}
+\item Surf: \href{http://materich.com}{materich.com}
+\item Read: \href{http://materich.com/publications}{materich.com/publications}
+\end{listII}
+
+\vspace{-5mm}
+\setlength{\fboxsep}{4mm}
+\hypersetup{urlcolor=teal!75}
+\centering{
+\rput(-1.5,-7){
+\rput(1.5,1.5){\qrcode[hyperlink,height=26mm]{http://materich.com}}
+\psframe[linecolor=teal](0,0)(3,3)
+\rput(1.5,-0.4){%
+\href{http://materich.com}{\textcolor{teal}{\textbf{materich.com}}}}
+}}
+%===============================================================================
+%===============================================================================
+%===============================================================================
+\slideTitle{EU Award Criteria}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Excellence (Threshold: 4.5/5, Weight: 80\%)
+\begin{itemize}\large
+\item \emph{Objectives and relevance to the Challenge}: How clear are the project’s objectives? How relevant are they in contributing to the overall goal and the specific objectives of the Challenge?
+\item \emph{Novelty}: To what extent is the proposed work ambitious and goes beyond the state-of-the-art?
+\item \emph{Plausibility of the methodology}: How sound is the proposed methodology, including the underlying concepts, models, assumptions, appropriate consideration of the gender dimension in research content, and the quality of open science practices?
+\end{itemize}
+\item Impact (Threshold: 4/5, Weight: 20\%)
+\begin{itemize}\large
+\item \emph{Potential Impact}: How credible are the pathways to achieve the expected outcomes and impacts of the Challenge? To what extent would the successful completion of the project contribute to this?
+\item \emph{Innovation potential}: How adequate are the proposed measures for protection of results and any other exploitation measures to facilitate future translation of research results into innovations with positive societal, economic or environmental impact? How suitable are the proposed measures for involving and empowering key actors that have the potential to take the lead in translating research into innovations in the future?
+\item \emph{Communication and Dissemination}: How suitable are the proposed measures, including communication activities, to maximise expected outcomes and impacts for raising awareness about the project results’ potential to establish new markets and/or address global challenges?
+\end{itemize}
+\end{itemize}
+%===============================================================================
+\slideTitle{Consortia Capabilities: Multi-Institutional and Multidisciplinary Expertise}
+\confidential{Confidential}
+\begin{itemize}\Large
+\item Project Acronym: \textbf{\textcolor{Maroon}{Deep} Analytics for \textcolor{Maroon}{Water} Quality Monitoring (\textcolor{Maroon}{DEEPWATER})}
+
+\item Subject Matter Expertise
+\begin{itemize}\large
+\item Management and Policy
+\item Statistics and Econometrics
+% \item Physical and Life Sciences
+\item Chemistry and Material Science
+\item Life Sciences and Biotechnology
+% \item Geoinformatics and Surveying
+\item Computer Science and Engineering
+\item Chemical and Environmental Engineering
+\item Information and Communications Technology
+\end{itemize}
+\item Invited Partners (undergoing negotiations and discussions)
+\begin{enumerate}[itemsep=2mm,label=\arabic*.] \large
+\item \rput[lb](0,0){\psscalebox{1 0.8}{\flagDE[0.7]} \hspace{8mm} \textbf{DEU}} \rput[lB](2.6,0){\href{http://materich.com}{Materich, Vetschau} -- Coordinator }
+
+% \item \rput[lb](0,0){\psscalebox{1 0.75}{\flagAT[0.7]} \hspace{8mm} \textbf{ATV}}  \rput[lB](2.6,0){\href{https://acib.at}{Austrian Centre of Industrial Biotechnology (acib), Vienna} -- Centre of Excellence}
+
+\item \rput[lb](0,0){\psscalebox{1 0.75}{\flagAT[0.7]} \hspace{8mm} \textbf{ATV}}  \rput[lB](2.6,0){\href{https://www.synyo.com}{SYNYO GmbH, Vienna} -- Research Enterprise}
+
+\item \rput[lb](0,0){\flagCZ[0.7] \hspace{8mm} \textbf{CZU}} \rput[lB](2.6,0){\href{https://www.czu.cz/en}{Czech University of Life Sciences, Prague} -- Research University}
+
+\item \rput[lb](0,0){\flagCZ[0.7] \hspace{8mm} \textbf{CZH}} \rput[lB](2.6,0){\href{https://www.pla.cz}{Povodí Labe, Hradec Králové Laboratory, Hradec} -- Laboratory of the Czech Water Resources Department}
+
+% \item \rput[lb](0,0){\psscalebox{1 0.9}{\flagDE[0.7]} \hspace{8mm} \textbf{DEU}} \rput[lB](2.6,0){\href{https://tu-dresden.de/?set_language=en}{Technical University of Dresden} -- Research University}
+
+\item \rput[lb](0,0){\psscalebox{1 0.8}{\flagGR[0.7]} \hspace{8mm} \textbf{GRA}} \rput[lB](2.6,0){\href{https://www.uniwa.gr/en/}{University of West Attica, Athens} -- Research University}
+
+\item \rput[lb](0,0){\psscalebox{1 0.8}{\flagNL[0.7]} \hspace{8mm} \textbf{NLE}} \rput[lB](2.6,0){\href{https://www.waterinsight.nl}{Water Insight, Ede (Sub-contractor)} -- Small Medium Enterprise}
+
+% % \item \rput[lb](0,0){\psscalebox{1 0.8}{\flagIT[0.7]} \hspace{8mm} \textbf{Italy}} \rput[lB](2.6,0){American University of Rome, University of Pisa%, University of Bologna}
+
+\item \rput[lb](0,0){\flagPL[0.7] \hspace{8mm} \textbf{PLK}} \rput[lB](2.6,0){\href{www.icso.lukasiewicz.gov.pl}{Institute of Heavy Organic Synthesis Blachownia (ICSO), Kedzierzyn-Koźle} -- Autonomous Government Laboratory}
+%Kędzierzyn-Koźle
+\end{enumerate}
+\end{itemize}
+%===============================================================================
+\if{0}
+\slideTitle{Consortia Members: Multi-Institutional and Multidisciplinary Partners}
+\confidential{\textcolor{Maroon}{For internal discussions only}}
+
+Invited Partners undergoing negotiations and discussions:
+\begin{enumerate}[itemsep=2mm] \large
+
+\item \psscalebox{1 0.75}{\flagAT[0.7]} \hspace{8mm} \textbf{ATV:} Austrian Centre of Industrial Biotechnology, Vienna
+
+\item \flagCZ[0.7] \hspace{8mm} \textbf{CZU:} Czech University, Prague
+
+\item \flagCZ[0.7] \hspace{8mm} \textbf{CZH:} Hradec Králové Laboratory, Hradec
+
+\item \psscalebox{1 0.9}{\flagDE[0.7]} \hspace{8mm} \textbf{DEU:} Technical University of Dresden
+
+\item \psscalebox{1 0.8}{\flagNL[0.7]} \hspace{8mm} \textbf{NLE:} Water Insight, Ede (Sub-contractor)
+
+% \item \psscalebox{1 0.8}{\flagIT[0.7]} \hspace{8mm} \textbf{Italy:} American University of Rome, University of Pisa%, University of Bologna
+
+\item \flagPL[0.7] \hspace{8mm} \textbf{PLB:} Institute of Heavy Organic Synthesis, Blachownia
+\end{enumerate}
+\fi
+%===============================================================================
+\slideTitle{Project Aims, Objectives and Outcomes}
+\begin{itemize}[before=\LARGE\normalfont,itemsep=6mm]
+\item Aims
+\begin{itemize}[before=\large]
+\item Provide open data platform for data exchange and research innovation that is collaborative, interactive, secured, and open access
+\item Provide digital tools powered by intelligent algorithms and reliable services needed to enable and scale-up research and innovation in the field
+\item Provide holistic water quality monitoring system for traditional and emerging contaminants using direct methods and indirect correlational techniques
+\item Implement and demonstrate water monitoring and hierarchical decision support system that is driven by the needs of its users/stakeholders at TRL 1-6
+\end{itemize}
+\item Specific Objectives
+\begin{itemize}[before=\large]
+\item Monitor the water quality of the city/region of Prague as a part of the catchment area of the River Labe/Elbe and underlined urban water networks
+\item Provide a holistic monitoring of 50 types of Persistent Organic Pollutants (POPs), 25 types of Per- and polyfluoroalkyl substances (PFASs), 5 types of active pharmaceutical ingredients, and emerging microbial contaminants, pathogens or antimicrobial resistance genes as substances of very high concern
+\item Develop integrated framework for geospatial Earth observations, physical sensors, chemical/biological analyses, and socioeconomic market intelligence
+\item Provide a unified framework for long-term access and preservation of digital(ised) data, and a cloud platform ecosystem with built-in tools and services% that are collaborative, interactive, secured, and open access
+\item Establish a local, regional, transnational and pan-European water quality policy guidelines from multiple perspectives for multiple stakeholders
+\end{itemize}
+\item Expected Outcomes
+\begin{itemize}[before=\large]
+\item Enhanced ability of researchers/stakeholders to interact across disciplinary, institutional, sectorial and political boundaries and cooperate effectively in advancing water quality monitoring and in developing innovative digital solutions for the analyses, valorisation and informed decision/policy-making
+\item Enhanced ability to apply integrated monitoring techniques using conventional and emerging sensors, and bigdata market intelligence within the study area that can be easily extended to other water ecosystems in Europe (and beyond)
+\item Valorised intellectual property as novel monitoring techniques, digital twins, and decision support tools to unleash the full potential of a digitally enabled water monitoring  ecosystem connecting rivers, streams, and industrial and residential sewerage networks
+\end{itemize}
+\end{itemize}
+%===============================================================================
+
+%===============================================================================
+\slideTitle{Key Challenges and Problem Statements}
+\confidential{Confidential}
+\begin{itemize}[itemsep=3mm]\LARGE
+\item Development of Water Monitoring Platform for Data Exchange, Digital Twinning, and Systematic Analyses
+\begin{itemize}[itemsep=2mm]\large
+\item \textbf{Assessment of Digitalisation for water monitoring State-of-the-Art}
+\begin{itemize}
+\item Review of existing case studies, current best practices, and monitoring techniques for their digitalisation and integration with the proposed methods
+\end{itemize}
+
+\item \textbf{Development of Cloud Ecosystem, Tools and Services}
+\begin{itemize}
+\item Development of digital infrastructure, digitlisation of data and assets, online and mobile applications, and tools for digitalisation and data visualisation
+\end{itemize}
+
+\item \textbf{Cloud Orchestration, Demonstration and Valorisation Using Selective Case Studies}
+\begin{itemize}
+\item Rigorous testing and implementation of the proposed cloud ecosystem using a demonstrable case studies in Czechia, Austria, Germany, and Poland
+\end{itemize}
+
+% \item \textbf{Quality Control and Testing the Effectiveness of Digital Transformations}
+% \begin{itemize}
+%   \item Using targeted case studies analyse the key performance indicators to enhance cloud ecosystem, tools, services and monitor their impacts
+% \end{itemize}
+\end{itemize}
+\item Development New Monitoring Techniques and Integration of Direct and Indirect Methods
+\begin{itemize} \large
+\item Multi-source data gathering from strategic locations across the study area using traditional and newly proposed techniques
+\item Augmentation, integration and data fusion using bigdata sets from geospatial earth observations, physical sensors, and chemical/biological analyses
+\end{itemize}
+\item Development of Intelligent Algorithms and Model-based/Data-Driven Tools
+\begin{itemize} \large
+\item Development of intelligent algorithms for data assimilation, extrapolation, and time-series forecasting.
+\item Development of spatiotemporal hydro-dynamical, hydro-ecological, and hydro-econometric models, and their digital-twins for rapid what-if analyses and scenario testing, uncertainty and risk analyses, war-gaming to test adverse impacts, and cost-effective strategies for mitigation of impacts
+\item Derivation of empirical policy guidelines and identification of model/data-driven best practices for actionable insights and decision making
+\end{itemize}
+\item Capacity Building, Knowledge and Technology Transfer Activities
+\begin{itemize} \large
+\item Development of learning ecosystem and logical training programmes to enhance creativity, imagination and future-ready skillsets using train-the-trainer workshops, engagement with the pan-European network of key stakeholders, and engagement with the public at large
+\item Dissemination of obtained new knowledge using scholarly publications, conferences, and seminars/webinars
+\end{itemize}
+\end{itemize}
+%===============================================================================
+%===============================================================================
+\slideTitle{Case Studies}
+\confidential{}
+\centering{\rput(0,-7){\Huge{Area of Study$\ldots$}}}
+%===============================================================================
+%===============================================================================
+\slideTitle{Proposed Work Packages}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item WP1 - Monitoring Platform Ecosystem
+\item WP2 - Data Gathering and Processing
+\item WP3 - Intelligent Water Analytics
+\item WP4 - Capacity Building, Knowledge and Technology Transfer
+\item WP5 - Project Management
+\end{itemize}
+%===============================================================================
+\slideTitle{WP1 -  Monitoring Platform Ecosystem}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Objectives
+\begin{enumerate}[label=1.\arabic*,before=\large]
+\item Review of digitalisation best practices across industry sectors
+\item Development of cloud infrastructure
+\item Development of data gathering, fusion and sharing interfaces
+\item Development of system integration tools
+\item Development of learning management platform
+\item Vulnerability testing, performance benchmarking and quality monitoring
+\end{enumerate}
+
+\item Deliverables
+\begin{itemize}\large
+\item Software: Mobile Application and Web Portal
+\item Technical Manuals and User Guides
+\item Scholarly Publications
+\item Policy Briefs
+\end{itemize}
+
+\item Impacts
+\begin{itemize}\large
+\item Better understanding of data flow
+\item Development of new performance matrices
+\item Orchestration of proposed monitoring ecosystem
+\end{itemize}
+\end{itemize}
+%===============================================================================
+\slideTitle{WP2 -  Data Gathering and Processing}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Objectives
+\begin{enumerate}[label=2.\arabic*,before=\large]
+\item Novel sensors and sensing techniques for biological monitoring
+\item Sample collection and processing for chemical and biological analysis
+\item Data fusion with Earth observations
+\item Augmentation of econometric data
+% \item Integration of bioinformatics data
+\end{enumerate}
+
+\item Deliverables
+\begin{itemize}\large
+\item Open Data as a Service (DaaS) - geo-stamped raw data, metadata and analysed datasets
+\item Software as a Service (SaaS) tools for data visualisation
+\item Scholarly and Scientific Publications
+\item Policy guidelines
+\end{itemize}
+
+\item Impacts
+\begin{itemize}\large
+\item Rapid analyses using of direct and indirect methods
+\item Integration of emerging technologies
+\item Application programming interfaces for data exchange
+\end{itemize}
+\end{itemize}
+%===============================================================================
+\slideTitle{WP3 - Intelligent Water Analytics}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Objectives
+\begin{enumerate}[label=3.\arabic*,before=\large]
+\item Hydrodynamical and hydro-ecological modelling
+\item Econometric modelling
+\item Predictive modelling (digital twin)
+\item Uncertainty and Risk Analyses
+\end{enumerate}
+
+\item Deliverables
+\begin{itemize}\large
+\item Open Models as Digital Twins
+\item Software as a Service (SaaS) Tools for model-based/data-driven analyses
+\item Scholarly and Scientific Publications
+\item Empirical Policy Guidelines
+\end{itemize}
+
+\item Impacts
+\begin{itemize}\large
+\item Digital tools for skill enhancements
+\item Actionable insights for rapid and informed decision/policy-making
+\item Orchestration of proposed monitoring ecosystem
+\end{itemize}
+\end{itemize}
+%===============================================================================
+\slideTitle{WP4 - Capacity Building - Knowledge and Technology Transfer}
+\begin{itemize}[itemsep=4mm]\LARGE
+\item Objectives
+\begin{enumerate}[label=4.\arabic*,before=\large]
+\item New curriculum development
+\item Activities for school and university students
+\item Workshops for researchers, teachers and trainers
+\item Events and activities for public as taxpayer funded work
+\item Focus groups for industry and government agencies
+\item Knowledge sharing events for policymakers
+\end{enumerate}
+
+\item Deliverables
+\begin{itemize}\large
+\item New curriculum
+\item Conferences, workshops, seminars, webinars and public events
+\end{itemize}
+
+\item Target Groups
+\begin{itemize}\large
+\item Academic researchers
+\item Industry professionals
+\item Bureaucrats and professionals from government agencies
+\item Future generation of students, researchers, and women scientists
+\item Water awareness and citizen science for public at large
+\end{itemize}
+\end{itemize}
+%===============================================================================
+%===============================================================================
+\end{document}

@@ -1,0 +1,1187 @@
+%===============================================================================
+% File Name     : <pst-icon-sport.sty>
+% Description   : LaTeX package for postscript sports icon using PSTricks
+% Documentation : pst-icon-river.tex
+%-------------------------------------------------------------------------------
+% Author        : Amit Manohar Manthanwar
+% Locale        : Pune, Maharashtra, India
+% Mailer        : manthanwar@hotmail.com
+% WebURL        : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2024 Amit Manohar Manthanwar
+% License       : LaTeX Project Public License
+%-------------------------------------------------------------------------------
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN archives
+% in directory macros/latex/base/lppl.txt.
+%===============================================================================
+% Revision Log  | Author  | Description
+%---------------+---------+----------------------------------------------------
+% 30-Jul-2024   | AMM     | Initial Version
+%---------------+---------+----------------------------------------------------
+% Units in mm, origin bottom left
+%===============================================================================
+\NeedsTeXFormat{LaTeX2e}[2023-11-01]%
+\ProvidesPackage{pst-icon-sports}[2024-07-30 Postscript Sports Icons (c) Amit M. Manthanwar]
+%===============================================================================
+\RequirePackage{pstricks}%
+% \RequirePackage{pst-all}%
+% \RequirePackage{multido}%
+\RequirePackage{pst-icon-macros}%
+\RequirePackage{pst-icon-macros-csv}%
+% %===============================================================================
+\def\kvf{pst-icon-sports}% key value family
+%===============================================================================
+\input{pst-icon-sports-kvp.tex}%
+%===============================================================================
+
+
+%===============================================================================
+% C1: (7,13.5)    % Center Ring 1
+% C2: (22,13.5)  = ((2*RO + RT), (
+% C3: (37,13.5)
+% C4: (14.5,7)
+% C5: (29.5,7)
+%===============================================================================
+% Logo Olympic
+%-------------------------------------------------------------------------------
+\definecolor{blueOlympic}{HTML}{0081C8}%
+\definecolor{blackOlympic}{HTML}{000000}%
+\definecolor{redOlympic}{HTML}{EE334E}%
+\definecolor{yellowOlympic}{HTML}{FCB131}%
+\definecolor{greenOlympic}{HTML}{00A651}%
+%-------------------------------------------------------------------------------
+% Olympic Rings Construction
+% Ring 1 - Blue
+% Ring 2 - Black
+% Ring 3 - Red
+% Ring 4 - Gold
+% Ring 5 - Green
+%
+% Wd: 44          % Logo Width
+% Ht: 20.5        % Logo Height
+% Ro: 7           % Radius Outer
+% Ri: 6           % Radius Inner
+% C1: (7,13.5)    % Center Ring 1
+% C2: (22,13.5)   % ((2*RO + RT), (
+% C3: (37,13.5)
+% C4: (14.5,7)
+% C5: (29.5,7)
+%
+% P01: (8.54113,7.701)
+% P02: (7.51953,7.523)
+% P03: (7.51654,6.519)
+% P04: (8.50938,6.665)
+% %
+% P11: (12.95887,12.799)
+% P12: (20.49062,6.665)
+% P13: (21.48346,6.519)
+% P14: (12.99062,13.835)
+% %
+% P21: (13.98047,12.977)
+% P22: (13.98346,13.981)
+% P23: (21.48047,7.523)
+% P24: (20.45887,7.701)
+%
+%
+% \newcommand{\ring}[2]{\pscircle[fillcolor=##1,opacity=0.4](##2){\radiusOuter}%
+% \pscircle[fillcolor=white,opacity=0.2](##2){\radiusInner}}%
+% \ring{blueOlympic}{7,13.5}%
+% \ring{yellowOlympic}{14.5,7}%
+%
+% \psset{linestyle=solid,linewidth=1,fillstyle=none,dimen=middle}%
+% \pscircle[linecolor=blueOlympic](7,13.5){6.5}%
+%
+% \psdot(8.54113,7.701)\rput[l](8.8,9){\psscalebox{0.2}{P01}}%
+% \psdot(7.51953,7.523)\rput[r](7.2,7.9){\psscalebox{0.2}{P02}}%
+% \psdot(7.51654,6.519)\rput[r](7.2,6.3){\psscalebox{0.2}{P03}}%
+% \psdot(8.50938,6.665)\rput[l](8.8,6.4){\psscalebox{0.2}{P04}}%
+%
+% Ring 1 - Blue
+% 11--12
+% \psset{linestyle=solid,linecolor=green,linewidth=0.1,fillstyle=none}%
+% \FPeval{\angA}{\aTan{\fpeval{7.701-13.5}}{\fpeval{8.54113-7}}}%
+% \FPeval{\angB}{\aTan{\fpeval{7.523-13.5}}{\fpeval{7.51953-7}}}%
+% \psarc(7,13.5){6}{\angA}{\angB}%
+% % 12--13
+% \FPeval{\angA}{\fpeval{180+\aTan{\fpeval{7.523-7}}{\fpeval{7.51953-14.5}}}}%
+% \FPeval{\angB}{\fpeval{180+\aTan{\fpeval{6.519-7}}{\fpeval{7.51654-14.5}}}}%
+% \psarc(14.5,7){7}{\angA}{\angB}%
+% % 13--14
+% \FPeval{\angA}{\aTan{\fpeval{6.519-13.5}}{\fpeval{7.51654-7}}}%
+% \FPeval{\angB}{\aTan{\fpeval{6.665-13.5}}{\fpeval{8.50938-7}}}%
+% \psarcn(7,13.5){7}{\angA}{\angB}%
+% % 11--14
+% \FPeval{\angA}{\fpeval{180+\aTan{\fpeval{7.701-7}}{\fpeval{8.54113-14.5}}}}%
+% \FPeval{\angB}{\fpeval{180+\aTan{\fpeval{6.665-7}}{\fpeval{8.50938-14.5}}}}%
+% \psarc(14.5,7){6}{\angA}{\angB}%
+%
+%
+% Ring 4 - Yellow A
+%
+% Ring 4 - Yellow B
+% \psset{linestyle=solid,linecolor=Green,linewidth=0.1,fillstyle=none}%
+%
+%-------------------------------------------------------------------------------
+\newcommand{\psLogoOlympicConstruction}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/44:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=none,linewidth=0,fillstyle=solid,linearc=0,framearc=0}%
+\FPset{\radius}{6.5}%
+\psset{linestyle=solid,linewidth=1,fillstyle=none}%
+\pscircle[linecolor=blueOlympic](7,13.5){\radius}%
+\pscircle[linecolor=blackOlympic](22,13.5){\radius}%
+\pscircle[linecolor=redOlympic](37,13.5){\radius}%
+\pscircle[linecolor=yellowOlympic](14.5,7){\radius}%
+\pscircle[linecolor=greenOlympic](29.5,7){\radius}%
+%
+\psset{dotsize=0.3mm,fillstyle=solid,fillcolor=cyan,dotstyle=o}\tiny%
+\sffamily%
+\FPset{\sss}{0.3}%
+\psdot(7,13.5)\rput[l](7,13){\psscalebox{\sss}{C1}}%
+\psdot(22,13.5)\rput[l](22,13){\psscalebox{\sss}{C2}}%
+\psdot(37,13.5)\rput[l](37,13){\psscalebox{\sss}{C3}}%
+\psdot(14.5,7)\rput[l](14.5,6.5){\psscalebox{\sss}{C4}}%
+\psdot(29.5,7)\rput[l](29.5,6.5){\psscalebox{\sss}{C5}}%
+%
+\psset{dotsize=0.5mm,fillcolor=red}%
+\psdot(12.95887,12.799)\rput[r](12.8,12){\psscalebox{\sss}{P11}}%
+\psdot(20.49062,6.665)\rput[r](20.1,6.3){\psscalebox{\sss}{P12}}%
+\psdot(21.48346,6.519)\rput[l](21.6,6){\psscalebox{\sss}{P13}}%
+\psdot(12.99062,13.835)\rput[r](12.6,14.4){\psscalebox{\sss}{P14}}%
+%
+\psdot(13.98047,12.977)\rput[l](14,12.2){\psscalebox{\sss}{P21}}%
+\psdot(13.98346,13.981)\rput[l](14,14.6){\psscalebox{\sss}{P22}}%
+\psdot(21.48047,7.523)\rput[l](21.6,8.1){\psscalebox{\sss}{P23}}%
+\psdot(20.45887,7.701)\rput[r](20.2,8.4){\psscalebox{\sss}{P24}}%
+\psset{linestyle=solid,linecolor=Green,linewidth=0.1,fillstyle=none}%
+% C4--21--22
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{12.799-7}}{\fpeval{12.95887-14.5}}}}%
+\FPeval{\angB}{\aTan{\fpeval{6.665-7}}{\fpeval{20.49062-14.5}}}%
+\psarc(14.5,7){6}{\angA}{\angB}%
+% C2--22--23
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{6.665-13.5}}{\fpeval{20.49062-22}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{6.519-13.5}}{\fpeval{21.48346-22}}}}%
+\psarc(22,13.5){7}{\angA}{\angB}%
+% C4--23--24
+\FPeval{\angA}{\aTan{\fpeval{6.519-7}}{\fpeval{21.48346-14.5}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{13.835-7}}{\fpeval{12.99062-14.5}}}}%
+\psarcn(14.5,7){7}{\angA}{\angB}%
+% C1--24--21
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{13.835-13.5}}{\fpeval{12.99062-7}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{12.799-13.5}}{\fpeval{12.95887-7}}}}%
+\psarcn(7,13.5){6}{\angA}{\angB}%
+% C1--31--32
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{12.977-13.5}}{\fpeval{13.98047-7}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{13.981-13.5}}{\fpeval{13.98346-7}}}}%
+\psarc(7,13.5){7}{\angA}{\angB}%
+% C4--32--33
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{13.981-7}}{\fpeval{13.98346-14.5}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{7.523-7}}{\fpeval{21.48047-14.5}}}}%
+\psarcn(14.5,7){7}{\angA}{\angB}%
+% C2--33--34
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{7.523-13.5}}{\fpeval{21.48047-22}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{7.701-13.5}}{\fpeval{20.45887-22}}}}%
+\psarcn(22,13.5){6}{\angA}{\angB}%
+% C4--34--31
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{7.701-7}}{\fpeval{20.45887-14.5}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{12.977-7}}{\fpeval{13.98047-14.5}}}}%
+\psarc(14.5,7){6}{\angA}{\angB}%
+}}%
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\newcommand{\psLogoOlympicTex}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/44:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=none,linewidth=0,fillstyle=solid,linearc=0,framearc=0}%
+%
+% Ring Yellow A
+\newcommand{\ringYellowA}[1]{%
+\pscustom[fillcolor=##1]{%
+% C4--21--22
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{12.799-7}}{\fpeval{12.95887-14.5}}}}%
+\FPeval{\angB}{\aTan{\fpeval{6.665-7}}{\fpeval{20.49062-14.5}}}%
+\psarc(14.5,7){6}{\angA}{\angB}%
+% C2--22--23
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{6.665-13.5}}{\fpeval{20.49062-22}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{6.519-13.5}}{\fpeval{21.48346-22}}}}%
+\psarc(22,13.5){7}{\angA}{\angB}%
+% C4--23--24
+\FPeval{\angA}{\aTan{\fpeval{6.519-7}}{\fpeval{21.48346-14.5}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{13.835-7}}{\fpeval{12.99062-14.5}}}}%
+\psarcn(14.5,7){7}{\angA}{\angB}%
+% C1--24--21
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{13.835-13.5}}{\fpeval{12.99062-7}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{12.799-13.5}}{\fpeval{12.95887-7}}}}%
+\psarcn(7,13.5){6}{\angA}{\angB}%
+}}%
+%
+% Ring Yellow B
+\newcommand{\ringYellowB}[1]{%
+\pscustom[fillcolor=##1]{%
+% C1--31--32
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{12.977-13.5}}{\fpeval{13.98047-7}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{13.981-13.5}}{\fpeval{13.98346-7}}}}%
+\psarc(7,13.5){7}{\angA}{\angB}%
+% C4--32--33
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{13.981-7}}{\fpeval{13.98346-14.5}}}}%
+\FPeval{\angB}{\fpeval{0+\aTan{\fpeval{7.523-7}}{\fpeval{21.48047-14.5}}}}%
+\psarcn(14.5,7){7}{\angA}{\angB}%
+% C2--33--34
+\FPeval{\angA}{\fpeval{180+\aTan{\fpeval{7.523-13.5}}{\fpeval{21.48047-22}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{7.701-13.5}}{\fpeval{20.45887-22}}}}%
+\psarcn(22,13.5){6}{\angA}{\angB}%
+% C4--34--31
+\FPeval{\angA}{\fpeval{0+\aTan{\fpeval{7.701-7}}{\fpeval{20.45887-14.5}}}}%
+\FPeval{\angB}{\fpeval{180+\aTan{\fpeval{12.977-7}}{\fpeval{13.98047-14.5}}}}%
+\psarc(14.5,7){6}{\angA}{\angB}%
+}}%
+%
+{%
+\FPset{\radius}{6.5}%
+\psset{linestyle=solid,linewidth=1,fillstyle=none}%
+\pscircle[linecolor=blueOlympic](7,13.5){\radius}%
+% \pscircle[linecolor=blackOlympic](22,13.5){\radius}%
+\pscircle[linecolor=redOlympic](37,13.5){\radius}%
+% \pscircle[linecolor=yellowOlympic](14.5,7){\radius}%
+% \pscircle[linecolor=greenOlympic](29.5,7){\radius}%
+}%
+%
+\ringYellowA{yellowOlympic}%
+\ringYellowB{yellowOlympic}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowA{blackOlympic}}}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowB{blackOlympic}}}%
+\rput(15,0){\ringYellowA{greenOlympic}}%
+\rput(15,0){\ringYellowB{greenOlympic}}%
+%
+}}%
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% Olympic Logo
+% Ring A
+% C4--RI--11--12--180--0--
+% C2--RO--12--13--180--180--
+% C4--RO--13--14--0--180--n
+% C1--RI--14--11--0--0--n
+% Ring B
+% C1--RO--21--22--0--0--
+% C4--RO--22--23--180--0--n
+% C2--RI--23--24--180--180--n
+% C4--RI--24--21--0--180--
+% \pscircle[linecolor=blackOlympic](22,13.5){\radius}%
+% \pscircle[linecolor=yellowOlympic](14.5,7){\radius}%
+% \pscircle[linecolor=greenOlympic](29.5,7){\radius}%
+\newcommand{\psLogoOlympic}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/44:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=none,linewidth=0,fillstyle=solid,linearc=0,framearc=0}%
+\newcommand{\ringYellowA}[1]{%
+\pscustom[fillcolor=##1]{%
+\psarc(14.5,7){6}{104.8828}{-3.2007}%
+\psarc(22,13.5){7}{257.5472}{265.7683}%
+\psarcn(14.5,7){7}{-3.9401}{102.4528}%
+\psarcn(7,13.5){6}{3.2007}{-6.7094}%
+}}%
+\newcommand{\ringYellowB}[1]{%
+\pscustom[fillcolor=##1]{%
+\psarc(7,13.5){7}{-4.2848}{3.9401}%
+\psarcn(14.5,7){7}{94.2317}{4.2848}%
+\psarcn(22,13.5){6}{265.0322}{255.1172}%
+\psarc(14.5,7){6}{6.7094}{94.9678}%
+}}%
+{%
+\FPset{\radius}{6.5}%
+\psset{linestyle=solid,linewidth=1,fillstyle=none}%
+\pscircle[linecolor=blueOlympic](7,13.5){\radius}%
+\pscircle[linecolor=redOlympic](37,13.5){\radius}%
+}%
+%
+\ringYellowA{yellowOlympic}%
+\ringYellowB{yellowOlympic}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowA{blackOlympic}}}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowB{blackOlympic}}}%
+\rput(15,0){\ringYellowA{greenOlympic}}%
+\rput(15,0){\ringYellowB{greenOlympic}}%
+%
+}}%
+%-------------------------------------------------------------------------------
+% \rput(0,0){\psLogoOlympic[titlePosition=1]}
+% \rput(0,0){psLogoOlympic @ \number\inputlineno}
+%===============================================================================
+
+%===============================================================================
+% Baseball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportBaseBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linewidth=\lineWidthStitch,fillstyle=none,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+\psarc(0,14){10}{225}{-45}%
+\psarc(0,-13.5){10}{42}{137}%
+\newcommand{\stitches}{%
+\FPset{\rrr}{10}%
+\multido{\nA=42+3.5}{27}{%
+\FPeval{\xxx}{\fpeval{\rrr * cosd(\nA)}}%
+\FPeval{\yyy}{\fpeval{\rrr * sind(\nA)}}%
+\rput{\nA}(\xxx,\fpeval{\yyy-13.5}){\psarc[fillstyle=none](0,0){0.6}{45}{135}}%
+\rput{\nA}(\xxx,\fpeval{\yyy-13.5}){\psdot(-0.44,0.4)}%
+\rput{\nA}(\xxx,\fpeval{\yyy-13.5}){\psdot(0.44,0.4)}%
+}}%
+\psset{dotsize=0.3,dotstyle=o,fillstyle=solid,fillcolor=black,linewidth=0.1}%
+\rput(0,0){\stitches}%
+\rput(0,0.4){\psscalebox{-1 -1}{\stitches}}%
+\pscircle[linestyle=\lineStyleCircle,linewidth=\lineWidthCircle,fillstyle=none](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Basketball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportBasketBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=none,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyleCircle,fillcolor=\fillColorCircle](0,0){10}%
+\psbezier(-7,7)(-6,8)(-2,9)(-3,5)(-4,2)(-12,-9)(0,-10)(12,-9)(4,2)(3,5) (2,9)(6,8)(7,7)%
+\psbezier(-10,0)(-6,9)(6,9)(10,0)%
+\psline(0,-10)(0,10)%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Tennis Ball
+\newcommand{\psSportTennisBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyleCircle,fillcolor=\fillColorCircle](0,0){10}%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=none}%
+\psbezier(-7.12,7)(-6,8)(-2,9)(-3,5)(-4,2)(-12,-9)(0,-10)(12,-9)(4,2)(3,5) (2,9)(6,8)(7.12,7)%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Beach Volleyball
+%-------------------------------------------------------------------------------
+% Construction
+% \psset{linecolor=red}%
+% \psbezier(0,0)(3,5)(10;30)(10;30)%
+% \psbezier(0,0)(-6,0)(10;150)(10;150)%
+% \psset{linecolor=green}%
+% \psbezier(0,0)(-1.95,0)(-3.31,0.56)(-3.31,0.56)%
+% \psbezier(-3.31,0.56)(-1,7)(10;54)(10;54)%
+% %
+% \psset{linecolor=blue}%
+% \psbezier(-3.31,0.56)(-5.17,1.18)(-6.6,2.52)(-6.6,2.52)%
+% \psbezier(-6.6,2.52)(-5,8)(10;80)(10;80)%
+% \psset{linecolor=black}%
+% \psbezier(-6.6,2.52)(-8.04,3.8)(10;150)(10;150)%
+% %
+%-------------------------------------------------------------------------------
+\newcommand{\psSportBeachVolleyBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+\newcommand{\stripA}{\pscustom{\psbezier(0,0)(3,5)(10;30)(10;30)\psarc(0,0){10}{30}{54}\psbezier(10;54)(-1,7)(-3.31,0.56)(-3.31,0.56)(-1.95,0)(0,0)}}%
+\newcommand{\stripB}{\pscustom{\psbezier(-3.31,0.56)(-1,7)(10;54)(10;54)\psarc(0,0){10}{56}{80}\psbezier(10;80)(-5,8)(-6.6,2.52)(-6.6,2.52)(-5.17,1.18)(-3.31,0.56)}}%
+\newcommand{\stripC}{\pscustom{\psbezier(-6.6,2.52)(-5,8)(10;80)(10;80)\psarc(0,0){10}{80}{150}\psbezier(10;150)(-8.04,3.8)(-6.6,2.52)}}%
+%
+\psset{fillcolor=\fillColorStripAa}\rput(0,0){\stripA}%
+\psset{fillcolor=\fillColorStripBa}\rput(0,0){\stripB}%
+\psset{fillcolor=\fillColorStripCa}\rput(0,0){\stripC}%
+\rput{120}(0,0){%
+\psset{fillcolor=\fillColorStripAb}\rput(0,0){\stripA}%
+\psset{fillcolor=\fillColorStripBb}\rput(0,0){\stripB}%
+\psset{fillcolor=\fillColorStripCb}\rput(0,0){\stripC}}%
+\rput{240}(0,0){%
+\psset{fillcolor=\fillColorStripAc}\rput(0,0){\stripA}%
+\psset{fillcolor=\fillColorStripBc}\rput(0,0){\stripB}%
+\psset{fillcolor=\fillColorStripCc}\rput(0,0){\stripC}}%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Bowling Ball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportBowlingBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\psset{linestyle=\lineStyleEllipse,linecolor=\lineColorEllipse,linewidth=\lineWidthEllipse,fillstyle=\fillStyleEllipse,fillcolor=\fillColorEllipse}
+\rput{35}(7,1){\psellipse(0,0)(0.9,1.2)}%
+\rput{-20}(3,7){\psellipse(0,0)(1,0.5)}%
+\rput{-25}(0,4){\psellipse(0,0)(1,0.6)}%
+%
+\ifnum\shadowEllipse=1\relax%
+\rput{32}(6.86,0.93){\psellipse[linestyle=none,linewidth=0,fillstyle=\fillStyleEllipseInnerShadow,fillcolor=\fillColorEllipseInnerShadow](0,0)(0.7,1.1)}%
+\rput{-15}(3,6.72){\psellipse[linestyle=none,linewidth=0,fillstyle=\fillStyleEllipseInnerShadow,fillcolor=\fillColorEllipseInnerShadow](0,0)(0.6,0.2)}%
+\rput{-24}(-0.1,3.78){\psellipse[linestyle=none,linewidth=0,fillstyle=\fillStyleEllipseInnerShadow,fillcolor=\fillColorEllipseInnerShadow](0,0)(0.8,0.3)}%
+\fi%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Bowling Pin Thin = Flat Base
+% Bowling Ball
+
+% \pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+% \psset{fillstyle=none,linestyle=solid,linecolor=red}%
+% \psbezier(-5,0)(-17,30)(-3,30)(-4,42)%
+% \psbezier(-4,42)(-5,50)(-10,62)(0,62)%
+% \psbezier(0,62)(10,62)(5,50)(4,42)%
+% \psbezier(4,42)(3,30)(17,30)(5,0)%
+
+% Neck Bottom
+% \psset{linecolor=blue}%
+% \psbezier(-4.25,38)(-4.25,38)(-3.8,40)(-4,42)%
+
+% Neck Center
+% \psset{linecolor=red}%
+% \psbezier(-4,42)(-4,42.2)(-4.43,44.7)(-4.5,45)%
+
+% Neck Top
+% \psset{linecolor=red}%
+% \psbezier(-4.5,45)(-4.5,45.1)(-5.2,48.5)(-5.3,49)%
+
+%
+% \psset{linestyle=\lineStyleNeckBottom,linecolor=\lineColorNeckBottom,linewidth=\lineWidthNeckBottom,fillstyle=\fillStyleNeckBottom,fillcolor=\fillColorNeckBottom}%
+% \rput(0,0){\neckBottom}%
+%
+% \psset{linestyle=\lineStyleNeckCenter,linecolor=\lineColorNeckCenter,linewidth=\lineWidthNeckCenter,fillstyle=\fillStyleNeckCenter,fillcolor=\fillColorNeckCenter}%
+% \rput(0,0){\neckCenter}%
+%
+% \psset{linestyle=\lineStyleNeckTop,linecolor=\lineColorNeckTop,linewidth=\lineWidthNeckTop,fillstyle=\fillStyleNeckTop,fillcolor=\fillColorNeckTop}%
+% \rput(0,0){\neckTop}%
+%-------------------------------------------------------------------------------
+\newcommand{\psSportBowlingPinThin}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,fillcolor=\fillColor,linearc=0,framearc=0}%
+%
+\newcommand{\bowlingPin}{\pscustom{%
+\psbezier(-5,0)(-17,30)(-3,30)(-4,42)%\psbezier(-4,42)
+(-5,50)(-10,62)(0,62)%\psbezier(0,62)
+(10,62)(5,50)(4,42)%\psbezier(4,42)
+(3,30)(17,30)(5,0)%
+\closepath%
+}}%
+\newcommand{\neckBottom}{\pscustom{%
+\psbezier(-4.25,38)(-4.25,38)(-3.8,40)(-4,42)%
+\psline(-4,42)(4,42)%(4,42)
+\psbezier(3.8,40)(4.25,38)(4.25,38)%
+\closepath%
+}}
+\newcommand{\neckTop}{\pscustom{%
+\psbezier(-4.5,45)(-4.5,45.1)(-5.2,48.5)(-5.3,49)%
+\psline(-5.3,49)(5.3,49)%(-5.3,49)
+\psbezier(5.2,48.5)(4.5,45.1)(4.5,45)%
+\closepath%
+}}%
+%
+\rput(0,0){\bowlingPin}%
+%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyleNeckBottom,fillcolor=\fillColorNeckBottom}%
+\rput(0,0){\neckBottom}%
+%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyleNeckTop,fillcolor=\fillColorNeckTop}%
+\rput(0,0){\neckTop}%
+}}%
+%-------------------------------------------------------------------------------
+% Bowling Pin
+%
+% \psset{fillstyle=none,linestyle=solid,linecolor=red}%
+% \psbezier(-5,2)(-15.8,25)(-6,32)(-4,41)%
+% \psbezier(-4,41)(-3,47)(-5,51)(-5,56)%
+% \psbezier(-5,56)(-5,66.66)(5,66.66)(5,56)%
+% \psbezier(5,56)(5,51)(3,47)(4,41)%
+% \psbezier(4,41)(6,32)(15.8,25)(5,2)%
+% \psbezier(5,2)(3,-0.67)(-3,-0.67)(-5,2)%
+%
+% Bottom
+% \psset{linecolor=blue}%
+% \psbezier(-4,41)(-3.9,41.4)(-3.7,43.5)(-3.72,44)%
+% \psline(-3.72,44)(3.72,44)%
+% \psbezier(3.72,44)(3.7,43.5)(3.9,41.4)(4,41)%
+% \psline(4,41)(-4,41)%
+%
+% Top
+% \psset{linecolor=blue}%
+% \psbezier(-3.87,47)(-3.87,47.2)(-4.2,49.5)(-4.31,50)%
+% \psline(-4.31,50)(4.31,50)%
+% \psbezier(4.31,50)(4.2,49.5)(3.87,47.2)(3.87,47)%
+% \psline(3.87,47)(-3.87,47)%
+% \psset{linecolor=blue}%
+% \psline(-10,63)(10,63)%
+% \psset{linecolor=red}%
+% % Base
+% \psset{linecolor=red,linewidth=0.3}%
+% \psbezier(5,2)(3,-0.67)(-3,-0.67)(-5,2)%
+% \psbezier(5.92,4)(3,1.32)(-3,1.32)(-5.92,4)%
+% \psset{linecolor=blue,linewidth=0.02}%
+% %% Base
+% \newcommand{\base}{\pscustom{%
+% \psbezier(5,2)(3,-0.67)(-3,-0.67)(-5,2)%
+% \psline(-5,2)(-5.9,4)%(-5.92,4)
+% \psbezier(-3,1.32)(3,1.32)(5.9,4)%
+% \closepath%
+% }}%
+% Height = 62, Width = 2
+\newcommand{\psSportBowlingPin}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,fillcolor=\fillColor,linearc=0,framearc=0}%
+\newcommand{\bowlingPin}{\pscustom{%
+\psbezier(-5,2)(-15.8,25)(-6,32)(-4,41)%\psbezier(-4,41)
+(-3,47)(-5,51)(-5,56)%\psbezier(-5,56)
+% (-5,66.66)(5,66.66)(5,56)%\psbezier(5,56) height = 64
+% (-5,65.33)(5,65.33)(5,56)%\psbezier(5,56)% height = 63
+(-5,64)(5,64)(5,56)%\psbezier(5,56)%  height = 62
+% (-5,61.33)(5,61.33)(5,56)%\psbezier(5,56)%  height = 60
+(5,51)(3,47)(4,41)%\psbezier(4,41)
+(6,32)(15.8,25)(5,2)%\psbezier(5,2)
+(3,-0.67)(-3,-0.67)(-5,2)%
+\closepath%
+}}%
+\newcommand{\neckBottom}{\pscustom{%
+\psbezier(-4,41)(-3.9,41.4)(-3.7,43.5)(-3.72,44)%
+\psline(-3.72,44)(3.72,44)%(3.72,44)
+\psbezier(3.7,43.5)(3.9,41.4)(4,41)%
+\psline(4,41)(-4,41)%
+\closepath%
+}}
+\newcommand{\neckTop}{\pscustom{%
+\psbezier(-3.87,47)(-3.87,47.2)(-4.2,49.5)(-4.31,50)%
+\psline(-4.31,50)(4.31,50)%(4.31,50)
+\psbezier(4.2,49.5)(3.87,47.2)(3.87,47)%
+\psline(3.87,47)(-3.87,47)%
+\closepath%
+}}%
+
+\newcommand{\base}{\pscustom{%
+\psbezier(5,2)(3,-0.67)(-3,-0.67)(-5,2)%
+\psline(-5,2)(-5.9,4)%(-5.92,4)
+\psbezier(-3,0.67)(3,0.67)(5.9,4)%
+\closepath%
+}%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\pscustom{%
+\psline(6.16,4.6)(5,2)%(5,2)
+\psbezier(3,-0.67)(-3,-0.67)(-5,2)%
+\psline(-5,2)(-6.16,4.6)%
+}%
+}%
+%
+\rput(0,0){\bowlingPin}%
+%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyleNeckBottom,fillcolor=\fillColorNeckBottom}%
+\rput(0,0){\neckBottom}%
+%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyleNeckTop,fillcolor=\fillColorNeckTop}%
+\rput(0,0){\neckTop}%
+%
+\psset{linestyle=\lineStyleBase,linecolor=\lineColorBase,linewidth=\lineWidthBase,fillstyle=\fillStyleBase,fillcolor=\fillColorBase}%
+\rput(0,0){\base}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Cricket Ball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportCricketBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyleCircle,fillcolor=\fillColorCircle](0,0){10}%
+%
+\FPset{\del}{0.0}%
+\FPset{\xpos}{0.75}%
+\FPset{\xneg}{0.75}%
+\newcommand{\stitches}{%
+\multido{\nY=-10+1}{20}{%
+\ifnum\nY<0\relax%
+% \rput(10.7,\fpeval{-\nY*2}){\tiny{\nY,\fpeval{1.18 + 0.02(1 + \nY)}}}%
+\rput(0.5,\nY){\psline(0,0)(0.1,\fpeval{\xpos + \del(1 + \nY)})}%
+\rput(-0.5,\nY){\psline(0,0)(-0.1,\fpeval{\xpos + \del(1 + \nY)})}%
+\rput(1.2,\fpeval{\nY+0.2}){\psline(0,0)(0.3,\fpeval{\xpos + \del*(1 + \nY)})}%
+\rput(-1.2,\fpeval{\nY+0.2}){\psline(0,0)(-0.3,\fpeval{\xpos+\del*(1 + \nY)})}%
+\rput(2,\fpeval{\nY+0.2}){\psline(0,0)(0.3,\fpeval{\xpos + \del*(1 + \nY)})}%
+\rput(-2,\fpeval{\nY+0.2}){\psline(0,0)(-0.3,\fpeval{\xpos + \del*(1 + \nY)})}%
+\else
+% \rput(20.7,\fpeval{-\nY*2}){\tiny{\nY,\fpeval{1.2 - 0.02(1 + \nY)}}}%
+\rput(0.5,\nY){\psline(0,0)(0.1,\fpeval{\xneg - \del(1 + \nY)})}%
+\rput(-0.5,\nY){\psline(0,0)(-0.1,\fpeval{\xneg - \del(1 + \nY)})}%
+\rput(1.2,\nY){\psline(0,0)(0.3,\fpeval{\xneg - \del*(1 + \nY)})}%
+\rput(-1.2,\nY){\psline(0,0)(-0.3,\fpeval{\xneg - \del*(1 + \nY)})}%
+\rput(2,\fpeval{\nY-0.05}){\psline(0,0)(0.3,\fpeval{\xneg - \del*(1 + \nY)})}%
+\rput(-2,\fpeval{\nY-0.05}){\psline(0,0)(-0.3,\fpeval{\xneg- \del*(1 + \nY)})}%
+\fi%
+}}%
+\psset{linestyle=\lineStyleStitch,linecolor=\lineColorStitch,linewidth=\lineWidthStitch,fillstyle=none}%
+\psline(0,-10)(0,10)%
+\rput{0}(0,0){\stitches}%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Rugby Ball
+% \psset{fillstyle=none,linestyle=solid,linewidth=0.02,linecolor=blue}%
+% \psbezier(6,-4)(-5,-5)(-9.43,2)(-9.43,2)%
+% \psset{linecolor=red,linewidth=0.05}%
+% \psellipticarc(0,0)(10,6){168}{192}%
+% \psset{linecolor=green}%
+% \psbezier(-9.43,-2)(-9.43,-2)(-5,-7)(6,-4)%
+%-------------------------------------------------------------------------------
+\newcommand{\psSportRugbyBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+%
+\newcommand{\swoosh}{\pscustom{%
+\psbezier(6,-4)(-5,-5)(-9.43,2)(-9.43,2)%
+\psellipticarc(0,0)(10,6){168}{192}%
+\psbezier(-9.43,-2)(-9.43,-2)(-5,-7)(6,-4)%
+}}%
+%
+\psset{fillstyle=solid,fillcolor=\fillColor,linestyle=none,linewidth=0}%
+\rput(0,0){\swoosh}%
+\rput{180}(0,0){\swoosh}%
+%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psellipse(0,0)(10,6)%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Rugby Ball - Ellipses
+%-------------------------------------------------------------------------------
+\newcommand{\psSportRugbyBallEllipses}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=none,linewidth=0}%
+\psellipse(0,0)(10,6)%
+%
+\psset{fillstyle=solid,fillcolor=\fillColorA}%
+\psellipse(0,0)(10,4)%
+%
+\psset{fillcolor=\fillColorB}%
+\rput{-2}(1,0.2){\psellipse(0,0)(9,3.5)}%
+%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psellipse(0,0)(10,6)%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Football American - Ellipse
+%-------------------------------------------------------------------------------
+\newcommand{\psSportFootballAmericanEllipse}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,linearc=0,framearc=0}%
+%
+\FPset{\distXA}{7}%
+\FPeval{\angA}{round(\fpeval{acosd(\distXA/10)},4)}%
+\FPeval{\distYA}{\fpeval{round(5*sind(\angA),3)}}%
+\FPset{\distXB}{5}%
+\FPeval{\angB}{round(\fpeval{acosd(\distXB/10)},4)}
+\FPeval{\distYB}{\fpeval{round(5*sind(\angB),3)}}%
+\FPset{\xA}{8.6}%
+\FPset{\xB}{6.9}%
+\newcommand{\arcA}{\pscustom{%
+\psellipticarc(0,0)(10,5){-27}{27}%
+\psbezier(\distXA,\distYA)(\xA,\fpeval{\distYA/2})(\xA,-\fpeval{\distYA/2})(\distXA,-\distYA)%
+\closepath}%
+}%
+\newcommand{\arcB}{\pscustom{%
+\psellipticarc(0,0)(10,5){-41}{-27}%(\distXA,-\distYA)
+\psbezier(\xA,-\fpeval{\distYA/2})(\xA,\fpeval{\distYA/2})(\distXA,\distYA)%
+\psellipticarc(0,0)(10,5){27}{41}%(\distXB,\distYB)
+\psbezier(\xB,\fpeval{\distYB/2})(\xB,-\fpeval{\distYB/2})(\distXB,-\distYB)%
+\closepath}%
+}%
+\newcommand{\arcC}{\pscustom{%
+\psellipticarc(0,0)(10,5){220}{320}%(\distXB,-\distYB)
+\psbezier(\xB,-\fpeval{\distYB/2})(\xB,\fpeval{\distYB/2})(\distXB,\distYB)%
+\psellipticarc(0,0)(10,5){40}{140}%(-\distXB,\distYB)
+\psbezier(-\xB,\fpeval{\distYB/2})(-\xB,-\fpeval{\distYB/2})(-\distXB,-\distYB)%
+\closepath}%
+}%
+\psset{fillstyle=solid,linestyle=none,linewidth=0}%
+\psset{fillcolor=\fillColorStripAa}%
+\rput(0,0){\arcA}%
+\rput{180}(0,0){\arcA}%
+%
+\psset{fillcolor=\fillColorStripAa}%
+\rput(0,0){\arcC}%
+%
+\psset{linestyle=\lineStyleSeam,linewidth=\lineWidthSeam,linecolor=\lineColorSeam,fillstyle=none}%
+\psline(-9.99,0)(9.99,0)%
+%
+\psset{linestyle=\lineStyleStitchMain,linewidth=\lineWidthStitchMain,linecolor=\lineColorStitchMain}%
+\psline{c-c}(-6,0)(6,0)%
+%
+\psset{linestyle=\lineStyleStitch,linewidth=\lineWidthStitch,linecolor=\lineColorStitch}%
+\multirput(-5,0)(1,0){11}{\psline{c-c}(0,0.8)(0,-0.8)}%
+%
+\psset{fillstyle=solid,fillcolor=\fillColorStripAb,linestyle=none}%
+\rput(0,0){\arcB}%
+\rput{180}(0,0){\arcB}%
+%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psellipse(0,0)(10,5)%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Football American - Rugby Ball Construction
+% \psset{linecolor=pink}%
+% \psbezier(10,0)(5,8)(-5,8)(-10,0)%
+% \psbezier(10,0)(5,-8)(-5,-8)(-10,0)%
+%
+% \psset{linecolor=blue}%
+% \psbezier(8,-3)(10.5,-1)(10.5,1)(8,3)%
+% \psbezier(-8,-3)(-10.5,-1)(-10.5,1)(-8,3)%
+% %
+% \psset{linecolor=green}%
+% \psbezier(8,3)(3,7)(-3,7)(-8,3)%
+% %
+% \psset{linecolor=red}%
+% \psbezier(8,3)(7,3.76)(7,3.76)(6,4.36)%
+%
+% \psset{linecolor=black}%
+% \psbezier(8,-3)(\pushA,-1)(\pushA,1)(8,3)%
+% \psbezier(8,3)(7,3.76)(7,3.76)(6,4.36)%
+% \psbezier(6,4.36)(\pushB,2)(\pushB,-2)(6,-4.36)%
+% \psbezier(6,-4.36)(7,-3.76)(7,-3.76)(8,-3)%
+%
+% \psset{linecolor=black}%
+% \psbezier(6,-4.36)(\pushB,-2)(\pushB,2)(6,4.36)%
+% \psbezier(-6,4.36)(-\pushB,2)(-\pushB,-2)(-6,-4.36)%
+% \psset{linecolor=blue}%
+% \psbezier(6,4.36)(\pushCX,\pushCY)(-\pushCX,\pushCY)(-6,4.36)%
+%===============================================================================
+% Football American - Rugby Ball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportFootballAmerican}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\FPset{\pushAaX}{10.68}%
+\FPset{\pushAaY}{1}%
+\FPset{\pushAA}{10.8}%
+\FPset{\pushAX}{8.8}%
+\FPset{\pushAY}{1}%
+\FPset{\pushBX}{7.2}%
+\FPset{\pushBY}{2}%
+\FPset{\pushCX}{2}%
+\FPset{\pushCY}{6.55}%
+\newcommand{\arcA}{\pscustom{%
+\psbezier(8,-3)(\pushAaX,-\pushAaY)(\pushAaX,\pushAaY)(8,3)%\psbezier(8,-3)
+(\pushAX,\pushAY)(\pushAX,-\pushAY)(8,-3)}}%
+\newcommand{\arcB}{\pscustom{%
+\psbezier(8,-3)(\pushAX,-\pushAY)(\pushAX,\pushAY)(8,3)%\psbezier(8,3)
+(7,3.76)(7,3.76)(6,4.36)%\psbezier(6,4.36)
+(\pushBX,\pushBY)(\pushBX,-\pushBY)(6,-4.36)%\psbezier(6,-4.36)
+(7,-3.76)(7,-3.76)(8,-3)}}%
+\newcommand{\arcC}{\pscustom{%
+\psbezier(6,-4.36)(\pushBX,-\pushBY)(\pushBX,\pushBY)(6,4.36)%\psbezier(6,4.36)
+(\pushCX,\pushCY)(-\pushCX,\pushCY)(-6,4.36)%\psbezier(-6,4.36)
+(-\pushBX,\pushBY)(-\pushBX,-\pushBY)(-6,-4.36)%\psbezier(-6,-4.36)
+(-\pushCX,-\pushCY)(\pushCX,-\pushCY)(6,-4.36)}}%
+%
+\psset{linestyle=none,linewidth=0,fillstyle=\fillStyle}%
+%
+\psset{fillcolor=\fillColorStripAa}%
+\rput(0,0){\arcA}%
+\rput{180}(0,0){\arcA}%
+%
+\psset{fillcolor=\fillColorStripAc}%
+\rput(0,0){\arcC}%
+%
+\psset{linestyle=\lineStyleSeam,linewidth=\lineWidthSeam,linecolor=\lineColorSeam,fillstyle=none}%
+\psline(-9.99,0)(9.99,0)%
+%
+\psset{linestyle=\lineStyleStitchMain,linewidth=\lineWidthStitchMain,linecolor=\lineColorStitchMain}%
+\psline{c-c}(-6,0)(6,0)%
+%
+\psset{linestyle=\lineStyleStitch,linewidth=\lineWidthStitch,linecolor=\lineColorStitch}%
+\multirput(-5,0)(1,0){11}{\psline{c-c}(0,0.8)(0,-0.8)}%
+%
+\psset{linestyle=none,linewidth=0,fillstyle=\fillStyle}%
+\psset{fillcolor=\fillColorStripAb}%
+\rput(0,0){\arcB}%
+\rput{180}(0,0){\arcB}%
+%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psbezier(8,-3)(10.5,-1)(10.5,1)(8,3)%
+\psbezier(-8,-3)(-10.5,-1)(-10.5,1)(-8,3)%
+\psbezier(8,3)(3,7)(-3,7)(-8,3)%
+\psbezier(8,-3)(3,-7)(-3,-7)(-8,-3)%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Football - Soccer
+%-------------------------------------------------------------------------------
+% \FPset{\cp}{0,0}%
+% \FPset{\cg}{0.5,0.5}%
+% \FPset{\cy}{1.5,1}%
+% \FPset{\cb}{2.5,1.5}%
+% \pspolygon[linecolor=pink](p1)(p2)(p3)(p4)(p5)(p6)(p7)(p8)(p9)(p10)%
+% \pspolygon[linecolor=green](g1)(g2)(g3)(g4)(g5)(g6)%
+% \pspolygon[linecolor=Gold](y1)(y2)(y3)(y4)(y5)%
+% \pspolygon[linecolor=cyan](b1)(b2)(b3)(b4)(b5)%
+% \psset{fillstyle=none,linestyle=solid,linecolor=Green,linewidth=0.1}%
+% \pscircle(\cxg,\cyg){\rg}%
+% \psset{linecolor=Gold}%
+% \pscircle(\cxy,\cyy){\ry}%
+% \psset{linecolor=blue}%
+% \pscircle(\cxb,\cyb){\rb}%
+%-------------------------------------------------------------------------------
+\newcommand{\psSportFootball}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\FPset{\rp}{10}\FPset{\cxp}{0}\FPset{\cyp}{0}%
+\FPset{\rg}{9}\FPset{\cxg}{0.8}\FPset{\cyg}{0.6}%
+\FPset{\ry}{7.4}\FPset{\cxy}{1.5}\FPset{\cyy}{0.5}%
+\FPset{\rb}{4}\FPset{\cxb}{2.5}\FPset{\cyb}{1.5}%
+\csList{\angP}{0,40,60,104,134,174,224,250,290,336}%
+\csList{\angG}{110,132,180,210,260,285}%
+\csList{\angY}{18,87,155,234,308}%
+\csList{\angB}{90,162,234,306,18}%
+% Pink
+\multido{\nN=1+1}{10}{\pnode(\rp;\csListOne{\angP}{\nN}){p\nN}}%
+% Green
+\multido{\nN=1+1}{6}{%
+\FPeval{\xg}{\cosd{\cxg}{\rg}{\csListOne{\angG}{\nN}}}%
+\FPeval{\yg}{\sind{\cyg}{\rg}{\csListOne{\angG}{\nN}}}%
+\pnode(\xg,\yg){g\nN}}%
+% Yellow, Blue
+\multido{\nN=1+1}{5}{%
+\FPeval{\xy}{\cosd{\cxy}{\ry}{\csListOne{\angY}{\nN}}}%
+\FPeval{\yy}{\sind{\cyy}{\ry}{\csListOne{\angY}{\nN}}}%
+\pnode(\xy,\yy){y\nN}%
+\FPeval{\xb}{\cosd{\cxb}{\rb}{\csListOne{\angB}{\nN}}}%
+\FPeval{\yb}{\sind{\cyb}{\rb}{\csListOne{\angB}{\nN}}}%
+\pnode(\xb,\yb){b\nN}}%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=solid}%
+% p1
+\psset{fillcolor=\fillColorA}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{1}}{\csListOne{\angP}{2}}%
+\psline(p2)(y1)(p1)}%
+% p1 w
+\psset{fillcolor=\fillColorB}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{2}}{\csListOne{\angP}{3}}%
+\psline(p3)(y2)(b1)(b5)(y1)(p2)}%
+% p2
+\psset{fillcolor=\fillColorC}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{3}}{\csListOne{\angP}{4}}%
+\psline(p4)(g1)(y2)(p3)}%
+% p2 w
+\psset{fillcolor=\fillColorD}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{4}}{\csListOne{\angP}{5}}%
+\psline(p5)(g2)(g1)(p4)}%
+% p3
+\psset{fillcolor=\fillColorE}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{5}}{\csListOne{\angP}{6}}%
+\psline(p6)(g3)(y3)(g2)(p5)}%
+% p3 w
+\psset{fillcolor=\fillColorF}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{6}}{\csListOne{\angP}{7}}%
+\psline(p7)(g4)(g3)(p6)}%
+% p4
+\psset{fillcolor=\fillColorG}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{7}}{\csListOne{\angP}{8}}%
+\psline(p8)(g5)(y4)(g4)(p7)}%
+% p4 w
+\psset{fillcolor=\fillColorH}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{8}}{\csListOne{\angP}{9}}%
+\psline(p9)(g6)(g5)(p8)}%
+% p5
+\psset{fillcolor=\fillColorI}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{9}}{\csListOne{\angP}{10}}%
+\psline(p10)(y5)(g6)(p9)}%
+% p5 w
+\psset{fillcolor=\fillColorJ}%
+\pscustom{\psarc(0,0){\rp}{\csListOne{\angP}{10}}{\csListOne{\angP}{1}}%
+\psline(p1)(y1)(b5)(b4)(y5)(p10)}%
+% h1
+\psset{fillcolor=\fillColorK}%
+\pspolygon(b1)(y2)(g1)(g2)(y3)(b2)%
+% h2
+\psset{fillcolor=\fillColorL}%
+\pspolygon(b2)(y3)(g3)(g4)(y4)(b3)%
+% h3
+\psset{fillcolor=\fillColorM}%
+\pspolygon(b3)(y4)(g5)(g6)(y5)(b4)%
+% Pentagon
+\psset{fillcolor=\fillColor}%
+\pspolygon(b1)(b2)(b3)(b4)(b5)%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Football - Symmetric
+%-------------------------------------------------------------------------------
+\newcommand{\psSportFootballSymmetric}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\FPset{\rp}{10}%
+\FPset{\rg}{9}%
+\FPset{\ry}{7}%
+\FPset{\rb}{3.5}%
+\csList{\angP}{0,38,72,110,144,182,216,254,288,326}%
+\csList{\angG}{-4,42,68,114,140,186,212,258,284,330}%
+\csList{\angY}{90,162,234,306,18}%
+\csList{\angB}{90,162,234,306,18}%
+\multido{\nN=1+1}{10}{\pnode(\rp;\csListOne{\angP}{\nN}){p\nN}}%
+\multido{\nN=1+1}{10}{\pnode(\rg;\csListOne{\angG}{\nN}){g\nN}}%
+\multido{\nN=1+1}{5}{\pnode(\ry;\csListOne{\angY}{\nN}){y\nN}}%
+\multido{\nN=1+1}{5}{\pnode(\rb;\csListOne{\angB}{\nN}){b\nN}}%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=solid}%
+% p1
+\psset{fillcolor=\fillColorA}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{1}}{\csListOne{\angP}{2}}%
+\psline(p2)(g2)(y5)(g1)(p1)}%
+% p1 w
+\psset{fillcolor=\fillColorB}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{2}}{\csListOne{\angP}{3}}%
+\psline(p3)(g3)(g2)(p2)}%
+% p2
+\psset{fillcolor=\fillColorC}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{3}}{\csListOne{\angP}{4}}%
+\psline(p4)(g4)(y1)(g3)(p3)}%
+% p2 w
+\psset{fillcolor=\fillColorD}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{4}}{\csListOne{\angP}{5}}%
+\psline(p5)(g5)(g4)(p4)}%
+% p3
+\psset{fillcolor=\fillColorE}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{5}}{\csListOne{\angP}{6}}%
+\psline(p6)(g6)(y2)(g5)(p5)}%
+% p3 w
+\psset{fillcolor=\fillColorF}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{6}}{\csListOne{\angP}{7}}%
+\psline(p7)(g7)(g6)(p6)}%
+% p4
+\psset{fillcolor=\fillColorG}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{7}}{\csListOne{\angP}{8}}%
+\psline(p8)(g8)(y3)(g7)(p7)}%
+% p4 w
+\psset{fillcolor=\fillColorH}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{8}}{\csListOne{\angP}{9}}%
+\psline(p9)(g9)(g8)(p8)}%
+% p5
+\psset{fillcolor=\fillColorI}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{9}}{\csListOne{\angP}{10}}%
+\psline(p10)(g10)(y4)(g9)(p9)}%
+% p5 w
+\psset{fillcolor=\fillColorJ}%
+\pscustom{\psarc(0,0){\rp}
+{\csListOne{\angP}{10}}{\csListOne{\angP}{1}}%
+\psline(p1)(g1)(g10)(p10)}%
+%
+\psset{fillcolor=\fillColorK}%
+\pspolygon(b1)(b5)(y5)(g2)(g3)(y1)%
+\psset{fillcolor=\fillColorL}%
+\pspolygon(b1)(y1)(g4)(g5)(y2)(b2)%
+\psset{fillcolor=\fillColorM}%
+\pspolygon(b2)(y2)(g6)(g7)(y3)(b3)%
+\psset{fillcolor=\fillColorN}%
+\pspolygon(b3)(y3)(g8)(g9)(y4)(b4)%
+\psset{fillcolor=\fillColorO}%
+\pspolygon(b4)(y4)(g10)(g1)(y5)(b5)%
+% Pentagon
+\psset{fillcolor=\fillColor}%
+\pspolygon(b1)(b2)(b3)(b4)(b5)%
+%
+% Construction labels
+% {\psset{linestyle=none,linewidth=0}%
+% % \rput(0,0){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{}}}%
+% \rput(8,3){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{A}}}%
+% \rput(5,8){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{B}}}%
+% \rput(0,9){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{C}}}%
+% \rput(-5,8){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{D}}}%
+% \rput(-9,3){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{E}}}%
+% \rput(-9,-3){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{F}}}%
+% \rput(-5,-7){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{G}}}%
+% \rput(0,-9){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{H}}}%
+% \rput(5,-7){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{I}}}%
+% \rput(9,-3){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{J}}}%
+% \rput(4,4){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{K}}}%
+% \rput(-4,4){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{L}}}%
+% \rput(-5,-2){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{M}}}%
+% \rput(0,-6){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{N}}}%
+% \rput(5,-3){\psframebox[fillcolor=gray!10,framesep=0.1mm]{\tiny{O}}}%
+% }%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Water Polo Ball
+% \rput(0,0){\distY}%
+% \psarc(0,0){\radius}{-\ang}{\ang}%
+% \rput{180}(0,0){\psarc(0,0){\radius}{-\ang}{\ang}}%
+% \psline(\distX,\distY)(10;60)%
+%
+% \rput(0,0){\angB}%
+% \psarc(0,0){\radius}{\angB}{\ang}%
+% \psbezier(\radius;\fpeval{180-\angB})(-8,4)(8,4)(\radius;\angB)%
+% \psarc(0,0){\radius}{\fpeval{180-\angB}}{\fpeval{180-\ang}}%
+%
+% \psset{fillstyle=none,linecolor=black}%
+% \psarc(0,0){\radius}{-\angB}{\angB}%
+% \psbezier(\radius;\angB)(3,4)(-3,4)(\radius;\fpeval{180-\angB})%
+% \psarc(0,0){\radius}{\fpeval{180-\angB}}{\fpeval{180+\angB}}%
+% \psbezier(\radius;\fpeval{180+\angB})(-3,-4)(3,-4)(\radius;-\angB)%
+%
+%-------------------------------------------------------------------------------
+\newcommand{\psSportWaterPoloBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\FPset{\pushAaX}{10.68}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\FPset{\radius}{8.5}%
+\FPset{\distX}{6}%
+\FPeval{\ang}{\aSin{\distX}{\radius}}%
+\FPeval{\distY}{\cosd{0}{\radius}{\ang}}%
+\FPset{\distYB}{2}%
+\FPeval{\angB}{\aSin{\distYB}{\radius}}%
+%
+\newcommand{\arcA}{\pscustom{\psarc(0,0){10}{-60}{60}%
+\psline(10;60){\distX,\distY}\psarcn(0,0){\radius}{\ang}{-\ang}\closepath}}%
+%
+\newcommand{\headA}{\pscustom{\psarc(0,0){10}{60}{75}\psline(10;75)(1.5,6)(\distX,\distY)\closepath}}%
+%
+\newcommand{\headC}{\pscustom{%
+\psarc(0,0){10}{75}{105}\psline(10;105)(-1.5,6)(1.5,6)(10;75)\closepath}}%
+%
+\newcommand{\centerA}{\pscustom{\psarc(0,0){\radius}{\angB}{\ang}%
+\psarc(0,0){\radius}{\fpeval{180-\ang}}{\fpeval{180-\angB}}%(\radius;\fpeval{180-\angB})
+\psbezier(-3,4)(3,4)(\radius;\angB)\closepath}}%
+%
+\newcommand{\centerC}{\pscustom{%
+\psarc(0,0){\radius}{-\angB}{\angB}%(\radius;\angB)
+\psbezier(3,4)(-3,4)(\radius;\fpeval{180-\angB})%
+\psarc(0,0){\radius}{\fpeval{180-\angB}}{\fpeval{180+\angB}}%(\radius;\fpeval{180+\angB})
+\psbezier(-3,-4)(3,-4)(\radius;-\angB)\closepath}}%
+%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColorA,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\arcA}%
+\rput{180}(0,0){\arcA}%
+%
+\psset{fillcolor=\fillColorB}%
+\rput(0,0){\headA}%
+\rput(0,0){\psscalebox{-1 1}{\headA}}%
+\rput{180}(0,0){\headA}%
+\rput{180}(0,0){\psscalebox{-1 1}{\headA}}%
+%
+\psset{fillcolor=\fillColorC}%
+\rput(0,0){\headC}%
+\rput{180}(0,0){\headC}%
+%
+\psset{fillcolor=\fillColorD}%
+\rput(0,0){\centerA}%
+\rput{180}(0,0){\centerA}%
+%
+\psset{fillcolor=\fillColor}%
+\rput(0,0){\centerC}%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Pool Ball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportPoolBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0,linestyle=none,linewidth=0}%
+%
+\psBall[sloperadius=10,slopecenter={0.6 0.6},slopebegin=\fillColor!70](0,0){\fillColor}{10}%
+%
+\ifnum\ballNumber>8\relax%
+\psset{fillstyle=solid,fillcolor=\fillColorA,opacity=1}%
+\pscustom{%
+% \psarc(0,0){10}{-50}{10}%
+% \psarc(0,0){10}{130}{190}%
+% \psarc(0,0){10}{-50}{15}%
+% \psarc(0,0){10}{115}{180}%
+\psarc(0,0){10}{-60}{5}%
+\psarc(0,0){10}{105}{170}%
+\closepath%
+}%
+\psset{fillstyle=solid,fillcolor=white}%
+\pscircle(1,1){4}%
+\rput(1,1){\textsf{\textbf{\Large{\ballNumber}}}}%
+\else%
+\psset{fillstyle=solid,fillcolor=white}%
+\pscircle(2,2){4}%
+\rput(2,2){\textsf{\textbf{\Large{\ballNumber}}}}%
+\fi%
+%
+\psset{fillstyle=ccslope,slopebegin=white,slopeend=white,slopecenter={0.5 0.7},fading,startfading=0.02,endfading=0.001}%
+\rput(0,0){\pscustom{\psbezier(-6,4)(-6,10)(6,10)(6,4)(6,0)(-6,0)(-6,4)\closepath}}%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+% Table Tennis Ball = Ping Pong Ball
+%-------------------------------------------------------------------------------
+\newcommand{\psSportTableTennisBall}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0,linestyle=none,linewidth=0}%
+%
+\psBall[sloperadius=10,slopecenter={0.6 0.6},slopebegin=\fillColorA](0,0){\fillColor}{10}%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+%===============================================================================
+%
+%-------------------------------------------------------------------------------
+\newcommand{\psSport}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\FPset{\pushAaX}{10.68}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+%===============================================================================
+
+
+%===============================================================================
+
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+%===============================================================================
+%===============================================================================
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%===============================================================================
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%===============================================================================
+\endinput
+

@@ -1,0 +1,151 @@
+%===============================================================================
+% File Name     : <pst-icon-sports.tex>
+% Description   : User Guide or LaTeX package <pst-icon-sports.sty>
+%-------------------------------------------------------------------------------
+% Author        : Amit Manohar Manthanwar
+% Mailer        : manthanwar@hotmail.com
+% Mobile        : +91.853.081.3398
+% WebURL        : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2024 Amit Manohar Manthanwar
+% License       : LaTeX Project Public License
+%-------------------------------------------------------------------------------
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN archives
+% in directory macros/latex/base/lppl.txt.
+%===============================================================================
+% Revision Log  | Author  | Description
+%---------------+---------+----------------------------------------------------
+% 30-Jul-2024   | AMM     | Initial Version
+%---------------+---------+----------------------------------------------------
+%===============================================================================
+\documentclass{pst-icon}
+\usepackage{pst-icon-sports}
+% \usepackage{FiraSans}
+\title{\Huge\textsc{Olympic Logo Using \LaTeX}\\[-2mm]}
+\author{\small{Amit M. Manthanwar}\\[0mm]\footnotesize{\today}}
+\date{}
+%===============================================================================
+\begin{document}
+\maketitle
+
+
+%===============================================================================
+
+% \section{Olympic Logo}
+
+%===============================================================================
+\begin{figure}[!h]
+\centering%
+\resizebox{0.9\textwidth}{!}{
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(10,5)
+\psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm] % griddots=4, subgriddots=10,
+%
+% \rput(0,0){\psLogoOlympicConstruction}%
+\rput(0,0){\psLogoOlympic[iconWidth=100]}%
+%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+\section{Construction}
+%===============================================================================
+\begin{figure}[!h]
+\centering%
+\resizebox{0.9\textwidth}{!}{
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(10,5)
+\psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm] % griddots=4, subgriddots=10,
+%
+\rput(0,0){\psLogoOlympicConstruction[iconWidth=100]}%
+% \rput(0,0){\psLogoOlympic[iconWidth=100]}%
+%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+
+\clearpage
+%===============================================================================
+\section{Sport Balls}
+%===============================================================================
+\begin{figure}[!h]
+\centering%
+\resizebox{0.96\textwidth}{!}{%
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(18,11)%
+\psgrid[subgriddiv=5, gridcolor=gray!50, subgridcolor=gray!20, gridlabels=8pt, gridlabelcolor=red, gridwidth=0.1mm,subgridwidth=0.1mm]%
+%
+\psSet{iconWidth=16,lineWidthCircle=0}%
+\rput{0}(1,10){\psSportPoolBall[ballNumber=8,fillColor=black]}%
+\rput{0}(3,10){\psSportPoolBall[ballNumber=7,fillColor=Maroon]}%
+\rput{0}(5,10){\psSportPoolBall[ballNumber=6,fillColor=Green]}%
+\rput{0}(7,10){\psSportPoolBall[ballNumber=5,fillColor=orange]}%
+\rput{0}(9,10){\psSportPoolBall[ballNumber=4,fillColor=violet]}%
+\rput{0}(11,10){\psSportPoolBall[ballNumber=3,fillColor=red]}%
+\rput{0}(13,10){\psSportPoolBall[ballNumber=2,fillColor=blue]}%
+\rput{0}(15,10){\psSportPoolBall[ballNumber=1,fillColor=Gold]}%
+\rput{0}(17,10){\psSportPoolBall[iconWidth=16,fillColor=white!,fillColorA=Green,ballNumber=14,lineWidthCircle=0.1,lineColorCircle=gray]}%
+%
+\psSet{iconWidth=16,lineWidthCircle=0.2}%
+\rput(0,7){\psLogoOlympic[iconWidth=30]}%
+\rput(4,7){\psSportBowlingPinThin[iconWidth=6,fillStyle=solid,lineWidth=0.5]}%
+\rput(5,7){\psSportBowlingPin[iconWidth=6,fillStyle=solid,lineWidth=0.5]}%
+%
+\rput{0}(7,8){\psSportTableTennisBall[iconWidth=16,fillColor=DarkOrange,fillColorA=DarkOrange!40,lineColorCircle=DarkOrange]}%
+\rput{0}(9,8){\psSportTableTennisBall[iconWidth=16,fillColor=gray!20,fillColorA=white,lineColorCircle=gray!20]}%
+%
+\psSet{iconWidth=16,lineWidthCircle=0.2}%
+\rput{-45}(1,6){\psSportBasketBall[iconWidth=16,fillColorCircle=OrangeRed]}%
+\rput{-45}(3,6){\psSportBasketBall[iconWidth=16,lineColor=white,fillColorCircle=OrangeRed]}%
+\rput{-45}(5,6){\psSportTennisBall[iconWidth=16,lineWidth=0.4,lineColor=Green,lineColorCircle=Green]}%
+\rput{-45}(7,6){\psSportTennisBall[iconWidth=16,lineColor=white,lineWidth=0.6,fillColorCircle=YellowGreen,lineWidthCircle=0.6,lineColorCircle=white]}%
+\rput{-30}(9,6){\psSportCricketBall[iconWidth=16,fillStyle=none,lineWidth=0.2,fillColorCircle=Crimson,lineColorStitch=gray!30]}%
+\rput{0}(11,6){\psSportFootballAmerican[iconWidth=16,fillStyle=solid,fillColor=white,lineStyle=none,lineWidth=0.2,
+fillColorStripAa=Sepia,fillColorStripAb=white,fillColorStripAc=Sepia,
+lineColorSeam=Sepia!50!black,lineWidthSeam=0.3,
+lineColorStitchMain=gray!10,lineWidthStitchMain=0.5,
+lineStyleStitch = solid,lineColorStitch = gray!10,lineWidthStitch = 0.4]}%
+\rput{0}(13,6){\psSportFootballAmericanEllipse[iconWidth=16,fillColorStripAa=Sepia,fillColorStripAb=white,lineStyle=none,lineColorSeam=Sepia!60!black,lineColorStitchMain=white,lineColorStitch=white]}%
+\rput{0}(15,6){\psSportRugbyBall[iconWidth=16,fillColor=black,lineColor=black,lineWidth=0.4]}%
+\rput{0}(17,6){\psSportRugbyBallEllipses[iconWidth=16,fillStyle=none,lineWidth=0.4]}%
+%
+%
+\rput{45}(1,4){\psSportBaseBall[iconWidth=16,fillColor=white]}%
+\rput{-45}(3,4){\psSportBasketBall[iconWidth=16,fillStyle=none]}%
+\rput{-45}(5,4){\psSportTennisBall[iconWidth=16,fillStyle=none]}%
+\rput(7,4){\psSportBeachVolleyBall[iconWidth=16,fillStyle=none]}%
+\rput(9,4){\psSportBowlingBall[iconWidth=16,fillStyle=none]}%
+\rput{-30}(11,4){\psSportCricketBall[iconWidth=16,fillStyle=none,lineWidth=0.2]}\rput{0}(13,4){\psSportFootball[iconWidth=16,fillStyle=none,
+lineStyle=solid,lineColor=black,lineWidth=0.2,lineWidthCircle=0.2,fillColor=black]}%
+\rput{0}(15,4){\psSportFootballSymmetric[iconWidth=16,fillStyle=none,
+lineStyle=solid,lineColor=black,lineWidth=0.2,lineWidthCircle=0.2,fillColor=black]}%
+%
+\rput{0}(17,4){\psSportWaterPoloBall[iconWidth=16,fillStyle=none,fillColor=orange,fillColorA=cyan,fillColorB=lime,fillColorC=pink,fillColorD=yellow,lineWidth=0.2,lineWidthCircle=0.2]}%
+%
+%
+%
+\rput{0}(2,1){\psSportTableTennisBall[iconWidth=20,fillColor=DarkOrange,lineColorCircle=gray!20]}%
+%
+%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+
+
+
+
+
+%===============================================================================
+%===============================================================================
+%===============================================================================
+\end{document}
+%===============================================================================

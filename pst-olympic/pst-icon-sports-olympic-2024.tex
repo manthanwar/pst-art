@@ -1,0 +1,1004 @@
+%===============================================================================
+% File Name     : <pst-icon-sports-olympic-2024.tex>
+% Description   : User Guide or LaTeX package <pst-icon-sports-olympic-2024.sty>
+%-------------------------------------------------------------------------------
+% Author        : Amit Manohar Manthanwar
+% Mailer        : manthanwar@hotmail.com
+% Mobile        : +91.853.081.3398
+% WebURL        : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2024 Amit Manohar Manthanwar
+% License       : LaTeX Project Public License
+%-------------------------------------------------------------------------------
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN archives
+% in directory macros/latex/base/lppl.txt.
+%===============================================================================
+% Revision Log  | Author  | Description
+%---------------+---------+----------------------------------------------------
+% 05-Aug-2024   | AMM     | Initial Version
+%---------------+---------+----------------------------------------------------
+%===============================================================================
+\documentclass{pst-icon}
+\usepackage{pst-icon-sports-olympic-2024}
+\usepackage{listings-macros}
+% \usepackage{FiraSans}
+\title{\Huge\textsc{Olympic 2024 Pictograms}\\[2mm]
+\LARGE{Using \LaTeX\ Postscript Package
+\textsf{\text{pst-icon-sports-olympic-2024}}}\\[-2mm]
+}
+\author{\small{Amit M. Manthanwar}\\[0mm]\footnotesize{\today}}
+\date{}
+%===============================================================================
+\begin{document}
+\maketitle
+
+
+%===============================================================================
+
+% \section{Olympic Logo}
+
+% %===============================================================================
+% \begin{figure}[!h]
+% \centering%
+% \resizebox{0.9\textwidth}{!}{
+% %\sffamily
+% % \psset{unit=1mm}
+% \begin{pspicture}(0,0)(10,5)\psGrid%
+% %
+% % \rput(0,0){\psLogoOlympicConstruction}%
+% \rput(0,0){\psOlympicXxivLogo[iconWidth=100]}%
+% %
+% \end{pspicture}}%
+% % \caption{text box label}%
+% % \label{box Caption Label}%
+% \end{figure}
+% %===============================================================================
+% \clearpage
+
+\section{Picograms}
+\input{pst-icon-sports-olympic-2024-fig-pictograms-bw.tex}
+
+\clearpage
+\section{Picograms Elements}
+\input{pst-icon-sports-olympic-2024-fig-elements-bw.tex}
+
+\clearpage
+\section{Colored Picograms}
+\input{pst-icon-sports-olympic-2024-fig-pictograms.tex}
+
+\clearpage
+\section{Colored Picograms Elements}
+\input{pst-icon-sports-olympic-2024-fig-elements.tex}
+
+\clearpage
+\section{Code Example}
+
+
+\listingsTeX
+\begin{figure}[h]
+\centering%
+\begin{lstlisting}
+% document.tex
+\documentclass{article}
+\usepackage{pst-icon-sports-olympic-2024}
+\begin{document}
+
+\section{Olympic Pictograms}
+
+\begin{figure}[!h]
+\begin{pspicture}(0,0)(8,6)\psGrid%
+% default dimensions of tex are in pt
+% default dimensions of pspicture are in cm
+% dimensions used in this package are in mm
+\rput{0}(4,3){\psOlympicXxivCycleBmx[
+    iconWidth=60,
+    % Tire
+    fillStyle=solid,
+    fillColor=LightPink,
+    lineStyle=solid,
+    lineColor=black,
+    lineWidth=0.2,
+    % Frame
+    fillStyleA=solid,
+    fillColorA=LightSkyBlue,
+    lineStyleA=solid,
+    lineColorA=black,
+    lineWidthA=0.2,
+    % Handle
+    fillStyleB=solid,
+    fillColorB=LightGreen,
+    lineStyleB=solid,
+    lineColorB=black,
+    lineWidthB=0.2,
+    % Seat
+    fillStyleC=solid,
+    fillColorC=Plum,
+    lineStyleC=solid,
+    lineColorC=black,
+    lineWidthC=0.2,
+]}%
+\end{pspicture}%
+\caption{BMX Bike}
+\label{fig:bmx-bike}
+\end{figure}
+
+\end{document}
+\end{lstlisting}
+\end{figure}
+
+\vspace{10mm}%
+
+\begin{figure}[!h]
+\centering%
+\begin{pspicture}(0,0)(8,6)% dimensions in cm
+\psGrid%
+% default dimensions of tex are in pt
+% default dimensions of pspicture are in cm
+% dimensions used in this package are in mm
+\rput{0}(4,3){\psOlympicXxivCycleBmx[
+iconWidth=60,
+% Tire
+fillStyle=solid, fillColor=LightPink, lineStyle=solid, lineColor=black, lineWidth=0.2,
+% Frame
+fillStyleA=solid, fillColorA=LightSkyBlue, lineStyleA=solid, lineColorA=black,lineWidthA=0.2,
+% Handle
+fillStyleB=solid, fillColorB=LightGreen, lineStyleB=solid, lineColorB=black,lineWidthB=0.2,
+% Seat
+fillStyleC=solid, fillColorC=Plum, lineStyleC=solid, lineColorC=black,lineWidthC=0.2,
+]}%
+\end{pspicture}%
+\caption{BMX Bike}
+\label{fig:bmx-bike}
+\end{figure}
+
+
+\end{document}
+% \clearpage
+%===============================================================================
+\begin{figure}[!h]
+\centering%
+\resizebox{0.96\textwidth}{!}{%
+%\sffamily
+% \psset{unit=1mm}
+% \begin{pspicture}(0,0)(16,12)%
+\begin{pspicture}(0,0)(16,6)\psGrid%
+%
+\psSet{iconWidth=16,lineWidthCircle=0}%
+%
+
+
+% \rput(8,3){\psOlympicXxivGymnasticsRibbon[iconWidth=80,
+% % Ribbon Handle
+% lineColor=black,lineWidth=1,
+% % Ribbon Handle Top
+% lineColorA=black,lineWidthA=2,
+% % Ribbon
+% lineColorB=red,lineWidthB=2]}%
+
+\rput(8,2){\psOlympicXxivCyclingBmxRacing[iconWidth=20,
+multiColorTrue = 1,
+% Cycle Tire
+fillStyle=solid,fillColor=red!70,lineStyle=solid,lineColor=black,lineWidth=0.01,
+% Cycle Frame = A
+fillStyleA=solid,fillColorA=Green!50,lineStyleA=solid,lineColorA=black,lineWidthA=0.01,
+% Cycle Handle = B
+fillStyleB=solid,fillColorB=cyan!50,lineStyleB=solid,lineColorB=black,lineWidthB=0.01,
+% Cycle Seat = C
+fillStyleC=solid,fillColorC=violet!50,lineStyleC=solid,lineColorC=black,lineWidthC=0.01,
+% Helmet Head = D
+fillStyleD=solid,fillColorD=Maroon,lineStyleD=solid,lineColorD=black,lineWidthD=0.01,
+% Helmet Chin = E
+fillStyleE=solid,fillColorE=teal,lineStyleE=solid,lineColorE=black,lineWidthE=0.01,
+% Helmet Goggle = F
+fillStyleF=solid,fillColorF=Gold,lineStyleF=solid,lineColorF=black,lineWidthF=0.01,
+% Cross Line = G
+lineStyleG=solid,lineColorG=black,lineWidthG=0.3,
+]}%
+
+% % Ball
+% fillStyleBall=solid,fillColorBall=Gold,lineStyleBall=solid,lineColorBall=magenta,lineWidthBall=0.4,
+% % Ball Lines
+% fillStyleBallLines=solid,fillColorBallLines=Gold,lineStyleBallLines=solid,lineColorBallLines=magenta,lineWidthBallLines=0.2,
+% % Mask Ball
+% fillStyleMask=solid,fillColorMask=white,lineStyleMask=solid,lineColorMask=white,lineWidthMask=0.8
+%
+% Field Lines inside Diamond
+% lineStyleE=solid,lineColorE=gray,lineWidthE=0.2,lineDashE={1 1},
+% Cross Lines
+% lineStyleF=solid,lineColorF=black,lineWidthF=0.4,
+% fillStyleBall=solid,%
+% fillColorBall=black,%
+% lineStyleBall=solid,%
+% lineColorBall=red,%
+% lineWidthBall=0.6,
+% fillColor=black,
+% fillColorA=black,
+% fillColorB=white,
+% fillColorC=black,
+% fillColorD=white,
+% fillColorE=black,
+% fillColorF=white,
+% fillColorG=black,
+% fillColorH=white,
+% fillColorI=black,
+% fillColorJ=white,
+% fillColorK=white,
+% fillColorL=white,
+% fillColorM=white
+% ]}%
+
+% % \hewpsstyle{amit}{fillcolor=red}%
+% \newpsstyle{amit}{linestyle=dotted,%
+% dotsep=1pt,%
+% linecolor=Green,fillcolor=red}
+% \rput(6,3){\pscircle[fillstyle=solid,style=amit](0,0){2}}%
+
+% % Shoe Sole
+% fillStyleShoeSole=solid,fillColorShoeSole=pink,lineStyleShoeSole=solid,lineColorShoeSole=black,lineWidthShoeSole=0.2,
+% % Shoe Sole Mid
+% fillStyleShoeMidSole=solid,fillColorShoeMidSole=lime,lineStyleShoeMidSole=solid,lineColorShoeMidSole=black,lineWidthShoeMidSole=0.2,
+% % Shoe Top
+% fillStyleShoeTop=solid,fillColorShoeTop=cyan,lineStyleShoeTop=solid,lineColorShoeTop=black,lineWidthShoeTop=0.2,
+
+% % Club Inner
+% fillStyleA=solid,fillColorA=cyan!20,lineStyleA=solid,lineColorA=black,lineWidthA=0.1,
+
+% fillStyleD=solid,fillColorD=yellow!50,lineStyleD=solid,lineColorD=black,lineWidthD=0.1,
+% % Wall Angled
+% fillStyleE=solid,fillColorE=Brown!50,lineStyleE=solid,lineColorE=black,lineWidthE=0.1,
+% % Wall Curved
+% fillStyleF=none,fillColorF=Maroon!50,lineStyleF=solid,lineColorF=black,lineWidthF=0.2,
+
+% % Road
+% fillStyleB=solid,fillColorB=gray!20,lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% % Road Line
+% lineStyleC=dashed,lineDashC={0.6 0.3},lineColorC=black,lineWidthC=0.2,
+% % Waves
+% lineStyleD=solid,lineColorD=cyan,lineWidthD=0.2,
+% % Shoe Sole
+% fillStyleShoeSole=solid,fillColorShoeSole=pink,lineStyleShoeSole=solid,lineColorShoeSole=black,lineWidthShoeSole=0.2,
+% % Shoe Sole Mid
+% fillStyleShoeMidSole=solid,fillColorShoeMidSole=lime,lineStyleShoeMidSole=solid,lineColorShoeMidSole=black,lineWidthShoeMidSole=0.2,
+% % Shoe Top
+% fillStyleShoeTop=solid,fillColorShoeTop=cyan,lineStyleShoeTop=solid,lineColorShoeTop=black,lineWidthShoeTop=0.2,
+% % Cap
+% fillStyleCap=solid,fillColorCap=red!50,lineStyleCap=solid,lineColorCap=black,lineWidthCap=0.2,
+% % Cap Band
+% fillStyleCapBand=solid,fillColorCapBand=white,lineStyleCapBand=solid,lineColorCapBand=white,lineWidthCapBand=0.2,
+% % Cap Goggle
+% fillStyleGoggle=solid,fillColorGoggle=red!50,lineStyleGoggle=solid,lineColorGoggle=black,lineWidthGoggle=0.2,
+% % Cross Lines
+% % Net
+% fillStyleNet=solid,fillColorNet=green!50,lineStyleNet=solid,lineColorNet=black,lineWidthNet=0.2,
+% % Net Band
+% fillStyleNetBand=solid,fillColorNetBand=cyan!50,lineStyleNetBand=solid,lineColorNetBand=black,lineWidthNetBand=0.2,
+% % Ball
+% fillStyleBall=solid,fillColorBall=Gold,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+% % Ball
+% fillStyleStrip=solid,fillColorStrip=Navy,lineStyleStrip=solid,lineColorStrip=black,lineWidthStrip=0.2,
+% % Cross Line
+% lineStyleE=solid,lineColorE=black,lineWidthE=0.4]}%
+
+
+
+
+
+% % Cap String
+% fillStyleB=solid,fillColorB=cyan!50,lineStyleB=solid,lineColorB=white,lineWidthB=0.1,
+% % Ball Strip
+% fillStyleStrip=solid,
+% fillColorStripAa=red!20,
+% fillColorStripBa=green!20,
+% fillColorStripCa=cyan!20,
+% fillColorStripAb=red!20,
+% fillColorStripBb=green!20,
+% fillColorStripCb=cyan!20,
+% fillColorStripAc=red!20,
+% fillColorStripBc=green!20,
+% fillColorStripCc=cyan!20,
+% % Ball Seam Lines
+% lineStyleBallLines=solid,
+% lineColorBallLines=black,
+% lineWidthBallLines=0.2,
+% % Ball
+% fillStyleBall=solid,fillColorBall=lime,lineStyleBall=solid,lineColorBall=black,lineWidthBall=0.4,
+% % Waves
+% lineStyleC=solid,lineColorC=cyan,lineWidthC=0.2,
+% % Diamond
+% fillStyleD=solid,fillColorD=white,lineStyleD=solid,lineColorD=black,lineWidthD=0.2,
+% % Net A
+% fillStyleE=solid,fillColorE=lime,lineStyleE=solid,lineColorE=Green,lineWidthE=0.2,
+% % Net A Line
+% lineStyleF=dashed,lineColorF=black,lineWidthF=0.2,lineDashF={0.5 0.5},
+% % Net B
+% fillStyleG=solid,fillColorG=green!50,lineStyleG=solid,lineColorG=black,lineWidthG=0.2,
+% % Cross Lines
+% lineStyleH=solid,lineColorH=cyan,lineWidthH=0.4
+% %
+% ]}
+
+
+
+% \rput(4,2){\psOlympicXxivGolfClub[iconWidth=20,
+% fillStyle=solid,fillColor=red!20,lineStyle=solid,lineColor=black,lineWidth=0.1,
+% fillStyleA=solid,fillColorA=cyan!20,lineStyleA=solid,lineColorA=black,lineWidthA=0.2,
+% fillStyleB=solid,fillColorB=cyan,lineStyleB=solid,lineColorB=black,lineWidthB=0.1,
+% fillStyleC=solid,fillColorC=yellow,lineStyleC=solid,lineColorC=black,lineWidthC=1,
+% fillStyleD=solid,fillColorD=pink,lineStyleD=dashed,lineColorD=black,lineWidthD=0.4,lineDashD={2 2},
+% fillStyleE=solid,fillColorE=red,lineStyleE=solid,lineColorE=black,lineWidthE=0.1,
+% fillStyleF=none,fillColorF=red,lineStyleF=solid,lineColorF=black,lineWidthF=1,
+% fillStyleG=solid,fillColorG=YellowGreen,lineStyleG=solid,lineColorG=Green,lineWidthG=0.1,
+% fillColor=black,
+% fillColorA=black,
+% fillColorB=white,
+% fillColorC=black,
+% fillColorD=white,
+% fillColorE=black,
+% fillColorF=white,
+% fillColorG=black,
+% fillColorH=white,
+% fillColorI=black,
+% fillColorJ=white,
+% fillColorK=white,
+% fillColorL=white,
+% fillColorM=white
+% ]}%
+
+
+
+%
+%
+% \rput{0}(4,2){\psOlympicXxivHelmetMountain[iconWidth=40,
+% fillStyle=solid,fillColor=red!50,lineStyle=solid,lineColor=black,lineWidth=0.01,fillStyleA=solid,fillColorA=Cyan!20,lineStyleA=solid,lineColorA=black,lineWidthA=0.3,
+% fillStyleB=solid,fillColorB=white,lineStyleB=solid,lineColorB=black,lineWidthB=0.2,
+% fillStyleC=solid,fillColorC=pink,lineStyleC=solid,lineColorC=black,lineWidthC=0.3,
+% fillStyleShoeSole=solid,fillColorShoeSole=pink,lineStyleShoeSole=solid,lineColorShoeSole=black,lineWidthShoeSole=0.2,
+% fillStyleShoeMidSole=solid,fillColorShoeMidSole=lime,lineStyleShoeMidSole=solid,lineColorShoeMidSole=black,lineWidthShoeMidSole=0.2,
+% fillStyleShoeTop=solid,fillColorShoeTop=cyan,lineStyleShoeTop=solid,lineColorShoeTop=black,lineWidthShoeTop=0.2,
+% fillStyleCanoeBoat=solid,fillColorCanoeBoat=black,lineStyleCanoeBoat=none,lineColorCanoeBoat=black,lineWidthCanoeBoat=0,
+% fillStyleCanoeSeat=solid,fillColorCanoeSeat=white,lineStyleCanoeSeat=none,lineColorCanoeSeat=black,lineWidthCanoeSeat=0,
+% fillStyleCanoePaddle=solid,fillColorCanoePaddle=black,lineStyleCanoePaddle=none,lineColorCanoePaddle=white,lineWidthCanoePaddle=0]}%
+% \rput(3,-1.7){\tiny{HorseBust}}%
+%
+%
+%
+%
+%
+%
+%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+
+\end{document}
+%===============================================================================
+%===============================================================================
+\section{Pictograms}
+%===============================================================================
+\begin{figure}[!h]
+\centering%
+\resizebox{0.9\textwidth}{!}{
+%\sffamily
+% \psset{unit=1mm}
+\begin{pspicture}(0,0)(10,5)\psGrid%
+%
+% \rput(0,0){\psLogoOlympicConstruction[iconWidth=100]}%
+% \rput(0,0){\psLogoOlympic[iconWidth=100]}%
+%
+\end{pspicture}}%
+% \caption{text box label}%
+% \label{box Caption Label}%
+\end{figure}
+%===============================================================================
+
+
+%===============================================================================
+%===============================================================================
+Cycle BMX
+Cycle Mountain Bike
+Cycle Road
+Cycle Track
+Fencing Sword
+Golf Club
+Golf Flag
+Handball Ball
+Hockey Stick
+Judogi
+Pistol
+Fencing Sword Pentathlon
+Rhythmic Gymnastics
+Rope
+Hoop
+Ball
+Clubs
+Ribbon
+Rowing Boat
+Rowing Paddle
+Rugby Sevens Ball
+Sailing Boat
+Table Tennis Bat
+Taekwondo Player
+Tennis Bat
+Tennis Ball
+Trampoline Net
+Triathlon Cap
+Triathlon Shoe
+Triathlon Cycle
+Volleyball Ball
+Water Polo Ball
+Water Polo Cap
+Weightlifting bar
+Wrestling Costume
+%===============================================================================
+
+Olympic Sports List at 2024 Paris Olympics
+https://olympics.com/en/paris-2024/sports
+
+% 17
+Archery
+Artistic Gymnastics
+Artistic Swimming
+Athletics
+Badminton
+Basketball
+Basketball 3x3
+
+% 14
+Beach Volleyball
+Boxing
+Breaking
+Canoe Slalom
+Canoe Sprint
+Cycling BMX Freestyle
+Cycling BMX Racing
+Cycling Mountain Bike
+
+% 11
+Cycling Road
+Cycling Track
+Diving
+Equestrian Dressage
+Equestrian Eventing
+Equestrian Jumping
+Fencing
+Football
+
+% 8
+Golf
+Handball
+Hockey
+Judo
+Marathon Swimming
+Modern Pentathlon
+Rhythmic Gymnastics
+Rowing
+
+% 5
+Rugby Sevens
+Sailing
+Shooting
+Skateboarding
+Sport Climbing
+Surfing
+Swimming
+Table Tennis
+
+% 2
+Taekwondo
+Tennis
+Trampoline
+Triathlon
+Volleyball
+Water Polo
+Weightlifting
+Wrestling
+%%%%%%%%%%%%
+
+
+Archery Events
+Men's Individual
+Women's Individual
+Men's Team
+Women's Team
+
+%%%%%%%%%%%%
+
+Artistic Gymnastics 	Events
+Men's Team
+Men's All-Around
+Men's Floor Exercise
+Men's Pommel Horse
+Men's Rings
+Men's Vault
+Men's Parallel Bars
+Men's Horizontal Bar
+Women's Team
+Women's All-Around
+Women's Vault
+Women's Uneven Bars
+Women's Balance Beam
+Women's Floor Exercise
+
+%%%%%%%%%%%%
+
+Artistic Swimming Events
+Duet
+Team
+
+%%%%%%%%%%%%
+
+Athletics Events
+Men's 100m
+Men's 200m
+Men's 400m
+Men's 800m
+Men's 1500m
+Men's 5000m
+Men's 10,000m
+Men's Marathon
+Men's 3000m Steeplechase
+Men's 110m Hurdles
+Men's 400m Hurdles
+Men's High Jump
+Men's Pole Vault
+Men's Long Jump
+Men's Triple Jump
+Men's Shot Put
+Men's Discus Throw
+Men's Hammer Throw
+Men's Javelin Throw
+Men's Decathlon
+Men's 20km Race Walk
+Men's 4 x 100m Relay
+Men's 4 x 400m Relay
+Women's 100m
+Women's 200m
+Women's 400m
+Women's 800m
+Women's 1500m
+Women's 5000m
+Women's 10,000m
+Women's Marathon
+Women's 3000m Steeplechase
+Women's 100m Hurdles
+Women's 400m Hurdles
+Women's High Jump
+Women's Pole Vault
+Women's Long Jump
+Women's Triple Jump
+Women's Shot Put
+Women's Discus Throw
+Women's Hammer Throw
+Women's Javelin Throw
+Women's Heptathlon
+Women's 20km Race Walk
+Women's 4 x 100m Relay
+Women's 4 x 400m Relay
+4 x 400m Relay Mixed
+Marathon Race Walk Relay Mixed
+
+%%%%%%%%%%%%
+Badminton Events
+Men's Singles
+Women's Singles
+Men's Doubles
+Women's Doubles
+Mixed Doubles
+
+%%%%%%%%%%%%
+
+Basketball Events
+Men
+Women
+%%%%%%%%%%%%
+
+Basketball 3x3 Events
+Men
+Women
+%%%%%%%%%%%%
+
+Beach Volleyball Events
+Men
+Women
+%%%%%%%%%%%%
+
+Boxing Events
+Men's 51kg
+Men's 57kg
+Men's 63.5kg
+Men's 71kg
+Men's 80kg
+Men's 92kg
+Men's +92kg
+Women's 50kg
+Women's 54kg
+Women's 57kg
+Women's 60kg
+Women's 66kg
+Women's 75kg
+
+%%%%%%%%%%%%
+
+Breaking Events
+B-Boys
+B-Girls
+%%%%%%%%%%%%
+
+Canoe Slalom Events
+Men's Kayak Single
+Women's Kayak Single
+Men's Canoe Single
+Women's Canoe Single
+Men's Kayak Cross
+Women's Kayak Cross
+
+%%%%%%%%%%%%
+Canoe Sprint Events
+Men's Kayak Single 1000m
+Men's Kayak Double 500m
+Men's Kayak Four 500m
+Men's Canoe Single 1000m
+Men's Canoe Double 500m
+Women's Kayak Single 500m
+Women's Kayak Double 500m
+Women's Kayak Four 500m
+Women's Canoe Single 200m
+Women's Canoe Double 500m
+
+%%%%%%%%%%%%
+
+Cycling BMX Freestyle Events
+Women's Park
+Men's Park
+%%%%%%%%%%%%
+
+Cycling BMX Racing Events
+Women
+Men
+
+%%%%%%%%%%%%
+
+Cycling Mountain Bike Events
+Men's Cross-country
+Women's Cross-country
+%%%%%%%%%%%%
+
+Cycling Road Events
+Men's Road Race
+Women's Road Race
+Men's Individual Time Trial
+Women's Individual Time Trial
+%%%%%%%%%%%%
+
+Cycling Track Events
+Men's Team Sprint
+Men's Sprint
+Men's Keirin
+Men's Team Pursuit
+Men's Omnium
+Men's Madison
+Women's Team Sprint
+Women's Sprint
+Women's Keirin
+Women's Team Pursuit
+Women's Omnium
+Women's Madison
+
+%%%%%%%%%%%%
+
+Diving Events
+Women's 3m Springboard
+Women's 10m Platform
+Women's Synchronised 3m Springboard
+Women's Synchronised 10m Platform
+Men's 3m Springboard
+Men's 10m Platform
+Men's Synchronised 3m Springboard
+Men's Synchronised 10m Platform
+%%%%%%%%%%%%
+
+Equestrian Events
+Eventing Team
+Eventing Individual
+Dressage Team
+Dressage Individual
+Jumping Team
+Jumping Individual
+%%%%%%%%%%%%
+
+Fencing Schedule & Results
+Events
+Women's Épée Individual
+Women's Foil Individual
+Women's Sabre Individual
+Men's Épée Individual
+Men's Foil Individual
+Men's Sabre Individual
+Women's Épée Team
+Women's Foil Team
+Women's Sabre Team
+Men's Épée Team
+Men's Foil Team
+Men's Sabre Team
+%%%%%%%%%%%%
+
+Football Events
+Men
+Women
+%%%%%%%%%%%%
+
+Golf Events
+Men's Individual Stroke Play
+Women's Individual Stroke Play
+%%%%%%%%%%%%
+
+Handball Events
+Men
+Women
+%%%%%%%%%%%%
+
+Hockey Events
+Men
+Women
+%%%%%%%%%%%%
+
+Judo Events
+Women -48 kg
+Women -52 kg
+Women -57 kg
+Women -63 kg
+Women -70 kg
+Women -78 kg
+Women +78 kg
+Men -60 kg
+Men -66 kg
+Men -73 kg
+Men -81 kg
+Men -90 kg
+Men -100 kg
+Men +100 kg
+Mixed Team
+%%%%%%%%%%%%
+
+Marathon Swimming Events
+Women's 10km
+Men's 10km
+%%%%%%%%%%%%
+
+Modern Pentathlon Events
+Women's Individual
+Men's Individual
+%%%%%%%%%%%%
+
+Rhythmic Gymnastics Events
+Individual All-Around
+Group All-Around
+%%%%%%%%%%%%
+
+Rowing Events
+Women's Pair
+Men's Pair
+Women's Double Sculls
+Men's Double Sculls
+Women's Four
+Men's Four
+Women's Single Sculls
+Men's Single Sculls
+Lightweight Women's Double Sculls
+Lightweight Men's Double Sculls
+Women's Quadruple Sculls
+Men's Quadruple Sculls
+Women's Eight
+Men's Eight
+%%%%%%%%%%%%
+
+Rugby Sevens Events
+Men
+Women
+
+%%%%%%%%%%%%
+
+Sailing Events
+Men's Windsurfing
+Men's Kite
+Men's Dinghy
+Men's Skiff
+Women's Windsurfing
+Women's Kite
+Women's Dinghy
+Women's Skiff
+Mixed Dinghy
+Mixed Multihull
+%%%%%%%%%%%%
+
+Shooting Events
+10m Air Rifle Men
+50m Rifle 3 Positions Men
+10m Air Pistol Men
+25m Rapid Fire Pistol Men
+Trap Men
+Skeet Men
+10m Air Rifle Women
+50m Rifle 3 Positions Women
+10m Air Pistol Women
+25m Pistol Women
+Trap Women
+Skeet Women
+10m Air Rifle Mixed Team
+10m Air Pistol Mixed Team
+Skeet Mixed Team
+%%%%%%%%%%%%
+
+Skateboarding Events
+Women's Street
+Men's Street
+Women's Park
+Men's Park
+%%%%%%%%%%%%
+
+Sport Climbing Events
+Women's Boulder & Lead
+Women's Speed
+Men's Boulder & Lead
+Men's Speed
+%%%%%%%%%%%%
+
+Surfing Events
+Men
+Women
+%%%%%%%%%%%%
+
+Swimming Events
+Women's 50m Freestyle
+Women's 100m Freestyle
+Women's 200m Freestyle
+Women's 400m Freestyle
+Women's 800m Freestyle
+Women's 1500m Freestyle
+Women's 100m Backstroke
+Women's 200m Backstroke
+Women's 100m Breaststroke
+Women's 200m Breaststroke
+Women's 100m Butterfly
+Women's 200m Butterfly
+Women's 200m Individual Medley
+Women's 400m Individual Medley
+Women's 4 x 100m Freestyle Relay
+Women's 4 x 200m Freestyle Relay
+Women's 4 x 100m Medley Relay
+Men's 50m Freestyle
+Men's 100m Freestyle
+Men's 200m Freestyle
+Men's 400m Freestyle
+Men's 800m Freestyle
+Men's 1500m Freestyle
+Men's 100m Backstroke
+Men's 200m Backstroke
+Men's 100m Breaststroke
+Men's 200m Breaststroke
+Men's 100m Butterfly
+Men's 200m Butterfly
+Men's 200m Individual Medley
+Men's 400m Individual Medley
+Men's 4 x 100m Freestyle Relay
+Men's 4 x 200m Freestyle Relay
+Men's 4 x 100m Medley Relay
+Mixed 4 x 100m Medley Relay
+%%%%%%%%%%%%
+
+Table Tennis Events
+Men's Singles
+Women's Singles
+Mixed Doubles
+Men's Team
+Women's Team
+%%%%%%%%%%%%
+
+Taekwondo Events
+Men -58kg
+Men -68kg
+Men -80kg
+Men +80kg
+Women -49kg
+Women -57kg
+Women -67kg
+Women +67kg
+%%%%%%%%%%%%
+
+Tennis Events
+Men's Singles
+Women's Singles
+Men's Doubles
+Women's Doubles
+Mixed Doubles
+%%%%%%%%%%%%
+
+Trampoline Events
+Men
+Women
+%%%%%%%%%%%%
+
+Triathlon Events
+Women's Individual
+Men's Individual
+Mixed Relay
+
+%%%%%%%%%%%%
+
+
+Volleyball Events
+Men
+Women
+
+%%%%%%%%%%%%
+
+Water Polo Events
+Men
+Women
+%%%%%%%%%%%%
+
+Weightlifting Events
+Women's 49kg
+Women's 59kg
+Women's 71kg
+Women's 81kg
+Women's +81kg
+Men's 61kg
+Men's 73kg
+Men's 89kg
+Men's 102kg
+Men's +102kg
+%%%%%%%%%%%%
+
+Wrestling Events
+Men's Greco-Roman 60kg
+Men's Greco-Roman 67kg
+Men's Greco-Roman 77kg
+Men's Greco-Roman 87kg
+Men's Greco-Roman 97kg
+Men's Greco-Roman 130kg
+Women's Freestyle 50kg
+Women's Freestyle 53kg
+Women's Freestyle 57kg
+Women's Freestyle 62kg
+Women's Freestyle 68kg
+Women's Freestyle 76kg
+Men's Freestyle 57kg
+Men's Freestyle 65kg
+Men's Freestyle 74kg
+Men's Freestyle 86kg
+Men's Freestyle 97kg
+Men's Freestyle 125kg
+
+%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+
+Paris 2024 - Paralympic Sports Pictograms
+Blind Football
+Boccia
+Goalball
+Para Archery
+Para Athletics
+Para Badminton
+Para Canoe
+Para Cycling Road
+Para Cycling Track
+Para Equestrian
+Para Judo
+Para Powerlifting
+Para Rowing
+Para Swimming
+Para Table Tennis
+Para Taekwondo
+Para Triathlon
+Shooting Para Sport
+Sitting Volleyballs
+Wheelchair Basketball
+Wheelchair Fencing
+Wheelchair Rugby
+Wheelchair Tennis
+

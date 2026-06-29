@@ -1,0 +1,2163 @@
+% region Header
+%===============================================================================
+% File Name     : <pst-icon-sport-olympic-2024.sty>
+% Description   : LaTeX package for postscript Olympic 2024 icons using PSTricks
+% Documentation : pst-icon-sports-olympic-2024.tex
+%-------------------------------------------------------------------------------
+% Author        : Amit Manohar Manthanwar
+% Locale        : Pune, Maharashtra, India
+% Mailer        : manthanwar@hotmail.com
+% WebURL        : https://manthanwar.github.io
+%-------------------------------------------------------------------------------
+% Copyright     : ©2024 Amit Manohar Manthanwar
+% License       : LaTeX Project Public License
+%-------------------------------------------------------------------------------
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN archives
+% in directory macros/latex/base/lppl.txt.
+%===============================================================================
+% Revision Log  | Author  | Description
+%---------------+---------+----------------------------------------------------
+% 05-Aug-2024   | AMM     | Initial Version
+%---------------+---------+----------------------------------------------------
+% Units in mm, origin at center
+%===============================================================================
+\NeedsTeXFormat{LaTeX2e}[2023-11-01]%
+\ProvidesPackage{pst-icon-sports-olympic-2024}[2024-08-05 Olympic 2024 Pictograms (c) Amit M. Manthanwar]
+% endregion Header
+
+% region Packages
+\RequirePackage{pstricks}%
+% \RequirePackage{pst-all}%
+% \RequirePackage{multido}%
+\RequirePackage{pst-icon-macros}%
+% \RequirePackage{pst-icon-macros-csv}%
+\RequirePackage{pst-icon-sports-olympic-2024-tools}%
+% endregion Packages
+
+% region Key Value
+\def\kvf{pst-icon-sports-olympic-2024}% key value family
+\input{pst-icon-sports-olympic-2024-kvp.tex}%
+% endregion Key Value
+
+% region Colors
+\definecolor{blueOlympic}{HTML}{0081C8}%
+\definecolor{blackOlympic}{HTML}{000000}%
+\definecolor{redOlympic}{HTML}{EE334E}%
+\definecolor{yellowOlympic}{HTML}{FCB131}%
+\definecolor{greenOlympic}{HTML}{00A651}%
+% endregion Colors
+
+% region 00 Olympic Logo
+\newcommand{\psOlympicXxivLogo}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/44:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linestyle=none,linewidth=0,fillstyle=solid,linearc=0,framearc=0}%
+\newcommand{\ringYellowA}[1]{%
+\pscustom[fillcolor=##1]{%
+\psarc(14.5,7){6}{104.8828}{-3.2007}%
+\psarc(22,13.5){7}{257.5472}{265.7683}%
+\psarcn(14.5,7){7}{-3.9401}{102.4528}%
+\psarcn(7,13.5){6}{3.2007}{-6.7094}%
+}}%
+\newcommand{\ringYellowB}[1]{%
+\pscustom[fillcolor=##1]{%
+\psarc(7,13.5){7}{-4.2848}{3.9401}%
+\psarcn(14.5,7){7}{94.2317}{4.2848}%
+\psarcn(22,13.5){6}{265.0322}{255.1172}%
+\psarc(14.5,7){6}{6.7094}{94.9678}%
+}}%
+{%
+\FPset{\radius}{6.5}%
+\psset{linestyle=solid,linewidth=1,fillstyle=none}%
+\pscircle[linecolor=blueOlympic](7,13.5){\radius}%
+\pscircle[linecolor=redOlympic](37,13.5){\radius}%
+}%
+%
+\ringYellowA{yellowOlympic}%
+\ringYellowB{yellowOlympic}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowA{blackOlympic}}}%
+\rput(36.5,20.5){\psscalebox{-1 -1}{\ringYellowB{blackOlympic}}}%
+\rput(15,0){\ringYellowA{greenOlympic}}%
+\rput(15,0){\ringYellowB{greenOlympic}}%
+%
+}}%
+% endregion Olympic Logo
+
+% region 01 Archery
+\newcommand{\psOlympicXxivArchery}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/40:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+%
+% Target
+\psset{linestyle=none,linewidth=0,fillstyle=solid}%
+% 5
+\pscircle[fillstyle=\fillStyleA,fillcolor=\fillColorA](0,0){10}%
+\pscircle[fillstyle=\fillStyleF,fillcolor=\fillColorF](0,0){9}%
+% 4
+\pscircle[fillstyle=\fillStyleB,fillcolor=\fillColorB](0,0){8}%
+\pscircle[fillstyle=\fillStyleF,fillcolor=\fillColorF](0,0){7}%
+% 3
+\pscircle[fillstyle=\fillStyleC,fillcolor=\fillColorC](0,0){6}%
+\pscircle[fillstyle=\fillStyleF,fillcolor=\fillColorF](0,0){5}%
+% 2
+\pscircle[fillstyle=\fillStyleD,fillcolor=\fillColorD](0,0){4}%
+\pscircle[fillstyle=\fillStyleF,fillcolor=\fillColorF](0,0){3}%
+% 1
+\pscircle[fillstyle=\fillStyleE,fillcolor=\fillColorE](0,0){2}%
+\pscircle[fillstyle=\fillStyleF,fillcolor=\fillColorF](0,0){1}%
+%%
+\newcommand{\arrowBow}{%
+\psset{fillstyle=solid,fillcolor=\fillColor,linestyle=none,linewidth=0}%
+\pspolygon(0,0)(2,0.3)(22,0.3)(23,1)(27,1)(26,0)(27,-1)(23,-1)(22,-0.3)(2,-0.3)%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psarc(28,0){11}{\fpeval{180-\aSin{8}{11}}}{\fpeval{180+\aSin{8}{11}}}%
+}%
+\multido{\nA=45+90}{4}{\rput{\nA}(0,0){\arrowBow}}%
+}}%
+% endregion Archery
+
+% region 02 Artistic Gymnastics
+\newcommand{\psOlympicXxivArtisticGymnastics}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\psset{fillstyle=none,linestyle=solid,linecolor=\lineColor,linewidth=0.2}%
+\rput(-10,-10){%
+% Center frame thick
+\psframe[dimen=outer,linewidth=1.5](3,3)(17,17)%
+\psset{linewidth=0.45,linecolor=\lineColorA}%
+\psline(5,5)(7.8,7.8)%
+\psline(15,15)(12.2,12.2)%
+% inner circle
+\pscircle[linewidth=1,linecolor=white](9,9){2}%
+\pscircle(9,9){2}%
+\pscircle[linewidth=1,linecolor=white](11,11){2}%
+\pscircle(11,11){2}%
+% side frames
+\psset{linewidth=0.4,linecolor=\lineColor}%
+\rput(0,0){\psframe(0,4)(3,16)}%
+\rput(17,0){\psframe(0,4)(3,16)}%
+% angle lines
+\psset{linewidth=1.2,linecolor=white}%
+\psline(1,5)(5,2)%
+\psline(19,5)(15,2)%
+\psline(1,15)(5,18)%
+\psline(19,15)(15,18)%
+\psset{linewidth=0.45,linecolor=\lineColorB}%
+\psline(1,5)(5,2)%
+\psline(19,5)(15,2)%
+\psline(1,15)(5,18)%
+\psline(19,15)(15,18)%
+% top bottom
+\psset{linewidth=0.25,linecolor=\lineColorC}%
+\rput(0,0){\psframe[framearc=0.5](0.5,0)(19.5,2)}%
+\rput(0,18){\psframe[framearc=0.5](0.5,0)(19.5,2)}%
+% angle lines
+\psset{linewidth=0.45,linecolor=\lineColorC}%
+\psline(1.5,2)(3,3.5)%
+\psline(18.5,2)(17,3.5)%
+\psline(1.5,18)(3,16.5)%
+\psline(18.5,18)(17,16.5)%
+}% end rput
+}}%
+% endregion Artistic Gymnastics
+
+% region 03 Artistic Swimming
+% Swim Costume Top
+% \psset{linecolor=red}%
+% \psbezier(4.6,-2.2)(5.5,-4.55)(7,-4.15)(7.5,-5.5)%
+% \psbezier(7.5,-5.5)(7.1,-5.8)(6.2,-5.5)(6,-6)%
+% \psbezier(6,-6)(5.6,-6.5)(5.7,-7)(5.2,-7.4)%
+% \psbezier(5.18,-7.45)(3.8,-6.6)(5.4,-4.)(4.6,-2.2)%
+% Big costume
+% Swim Costume Top
+% \psbezier(9,14)(5,26)(10,28)(10,34)%
+% \psbezier(10,34)(9,41)(5,42)(5,42)%
+% \psline(5,42)(4,41)%
+% \psbezier(4,41)(4,41)(7,40)(8,35)%
+% \psbezier(8,35)(4,35)(4,32)(0,32)%
+% \psbezier(0,32)(-4,32)(-4,35)(-8,35)%
+% \psbezier(-8,35)(-7,40)(-4,41)(-4,41)%
+% \psline(-4,41)(-5,42)%
+% \psbezier(-5,42)(-5,42)(-9,41)(-10,34)%
+% \psbezier(-10,34)(-10,24)(6,21)(9,14)%
+% Swim Costume Bottom
+% \psbezier(1,0)(1,0)(5,9)(9,9)%
+% \psbezier(9,9)(8,16)(-8,25)(-8,25)%
+% \psbezier(-8,25)(-7,24)(-7,19)(-10,10)%
+% \psbezier(-10,10)(-6,8)(-1,3)(-1,0)%
+% Costume Bottom; Width = 20, actual = 3.415
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivArtisticSwimming}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,linearc=0,framearc=0}%
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\newcommand{\flowerArc}{%
+\psbezier(20,0)(20,2.2)(17.5,1.8)(17.5,4.8)%
+\psbezier(20,0)(20,-2.2)(17.5,-1.8)(17.5,-4.8)%
+%
+\psbezier(17.8,0)(17.8,1.5)(15.9,1.5)(15.9,3.8)%
+\psbezier(17.8,0)(17.8,-1.5)(15.9,-1.5)(15.9,-3.8)%
+%
+\psbezier(15.5,0)(15.5,1)(14.6,0.9)(14.2,2)%
+\psbezier(15.5,0)(15.5,-1)(14.6,-0.9)(14.2,-2)%
+%
+\psbezier(13.2,0)(13.3,1)(12.5,0.3)(12.5,1.8)%
+\psbezier(13.3,0)(13.2,-1)(12.5,-0.3)(12.5,-1.8)%
+}%
+\rput(-10,0){\flowerArc}%
+\rput{180}(10,0){\flowerArc}%
+\rput{90}(0,-10){\flowerArc}%
+\rput{270}(0,10){\flowerArc}%
+%
+%
+\psset{linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth,fillstyle=\fillStyle,fillcolor=\fillColor}%
+\rput{45}(-2,2){\psOlympicXxivSwimmingCostumeA[3.5]}%
+\rput{-45}(2,2){\psOlympicXxivSwimmingCostumeA[3.5]}%
+\rput{225}(2,-2){\psOlympicXxivSwimmingCostumeA[3.5]}%
+\rput{-225}(-2,-2){\psOlympicXxivSwimmingCostumeA[3.5]}%
+}}%
+% endregion Artistic Swimming
+
+% region 04 Athletics
+\newcommand{\psOlympicXxivAthletics}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/23:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe[linearc=6](-10,-6)(10,6)%
+%
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psframe[linearc=4](-7,-4)(7,4)%
+%
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psframe[linearc=2](-4,-2)(4,2)%
+%
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psline(-9,6)(4,6)%
+\psline(-4,-6)(9,-6)%
+%
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-10,4)(2,4)%
+\psline(10,-4)(-2,-4)%
+% Top Short
+\psline(0.8,9)(5,9)%
+\psline(-0.8,-9)(-5,-9)%
+% Top long
+\psline(-2.4,7.5)(6.5,7.5)%
+\psline(2.4,-7.5)(-6.5,-7.5)%
+%
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-11.5,2)(2,2)%
+\psline(11.5,-2)(-2,-2)%
+%
+\FPset{\www}{5.8}%
+% Shoe Sole
+\psset{fillstyle=\fillStyleShoeSole,fillcolor=\fillColorShoeSole,linestyle=\lineStyleShoeSole,linecolor=\lineColorShoeSole,linewidth=\lineWidthShoeSole}%
+\rput(-5,7.5){\psOlympicXxivAthleticsShoeSole{\www}}%
+\rput{180}(5,-7.5){\psOlympicXxivAthleticsShoeSole{\www}}%
+% Shoe Mid Sole
+% \psset{fillstyle=\fillStyleShoeMidSole,fillcolor=\fillColorShoeMidSole,linestyle=\lineStyleShoeMidSole,linecolor=\lineColorShoeMidSole,linewidth=\lineWidthShoeMidSole}%
+% \rput(-5,7.5){\psOlympicXxivAthleticsShoeMidSole{\www}}%
+% \rput{180}(5,-7.5){\psOlympicXxivAthleticsShoeMidSole{\www}}%
+% Shoe Top
+\psset{fillstyle=\fillStyleShoeTop,fillcolor=\fillColorShoeTop,linestyle=\lineStyleShoeTop,linecolor=\lineColorShoeTop,linewidth=\lineWidthShoeTop}%
+\rput(-5,7.5){\psOlympicXxivAthleticsShoeTop{\www}}%
+\rput{180}(5,-7.5){\psOlympicXxivAthleticsShoeTop{\www}}%
+}}%
+% endregion Athletics
+
+% region 05 Badminton
+\newcommand{\psOlympicXxivBadmintonShuttleA}[1][20]{%
+\FPeval{\wide}{round(#1/30:3)}\psscalebox{\wide}{%
+% Cork Head
+\pscustom{\psbezier(5,4)(-2,4)(-2,-4)(5,-4)\psline(5,-4)(5,4)\closepath}%
+% Cork Soft
+\psframe(6,-4)(8,4)%
+% Feather Short A
+\newcommand{\featherShortA}{\pspolygon(9,3)(13,4.1)(13,6)(9,4.4)}%
+% Feather Short B
+\newcommand{\featherShortB}{\pspolygon(9,0.5)(13,0.5)(13,3)(9,2)}%
+% Feather Long A
+\newcommand{\featherLongA}{\pscustom{%
+\psbezier(27,8)(28,8)(30,12)(28,12)\psline(28,12)(14,6.5)(14,4.4)(27,8)}}%
+% Feather Long B
+\newcommand{\featherLongB}{\pscustom{%
+\psline(14,0.5)(28,0.5)%(28,0.5)
+\psbezier(28,0.5)(30,3)(30,4)%\psbezier(30,4)
+(30,5)(29,7)(28,7)%
+\psline(28,7)(14,3.3)(14,0.5)}}%
+%
+\rput(0,0){\featherShortA}%
+\rput(0,0){\featherShortB}%
+\rput(0,0){\featherLongA}%
+\rput(0,0){\featherLongB}%
+\rput(0,0){\psscalebox{1 -1}{\featherShortA}}%
+\rput(0,0){\psscalebox{1 -1}{\featherShortB}}%
+\rput(0,0){\psscalebox{1 -1}{\featherLongA}}%
+\rput(0,0){\psscalebox{1 -1}{\featherLongB}}%
+}}%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivBadminton}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Net
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psframe(-1,-9)(1,9)%
+\psline(0,-9)(0,9)%
+\multirput(0,0)(0,1){19}{\psline(-1,-9)(1,-9)}%
+% Shuttle
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(-8.5,4){\psOlympicXxivBadmintonShuttleA[6]}%
+\rput{180}(8.5,-4){\psOlympicXxivBadmintonShuttleA[6]}%
+% Line Main
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-10,0)(10,0)%
+% Lines
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\newcommand{\linesA}{%
+\psline(-7.5,-2.5)(2.5,-2.5)%
+\psline(-6,-4)(2.5,-4)
+\psline(-4.5,-5.5)(2.5,-5.5)}%
+%
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=white,linewidth=0.8}%
+\rput(0,0){\linesA}%
+\rput{180}(0,0){\linesA}%
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\linesA}%
+\rput{180}(0,0){\linesA}%
+}}%
+% endregion Badminton
+
+% region 06 Basketball
+\newcommand{\psOlympicXxivBasketball}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+%
+\newcommand{\courtSmall}{%
+\pscustom{\psarc(-4,4){1.5}{90}{270}\closepath}\psframe(-4,2)(0,6)}%
+%
+\newcommand{\courtBox}{\psframe(-4,2)(0,6)}%
+%
+\newcommand{\courtBig}{%
+\pscustom{\psline(-4,0)(0,0)(0,8)(-4,8)\psarc(-4,4){4}{90}{270}\closepath}}%
+% Court Big  = B
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\courtBig}\rput{180}(0,0){\courtBig}%
+% Court Small = C
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\courtSmall}\rput{180}(0,0){\courtSmall}%
+% Court Box = D
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\courtBox}\rput{180}(0,0){\courtBox}%
+% Cross Lines = A
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-10,0)(10,0)\psline(0,-10)(0,10)%
+% Ball
+\rput(5,5){\psOlympicXxivBasketballBallA[5]}%
+\rput(-5,-5){\psOlympicXxivBasketballBallA[5]}%
+}}%
+% endregion Basketball
+
+% region 07 Basketball 3x3 = BasketballThree
+% Letter X
+% \newcommand{\letterX}{\pscustom{%
+% \psbezier(-36,20)(-36,19)(-33,19)(-33,19)%
+% \psline(-33,19)(21,-35)(34,-35)(37,-19)%(37,-19)
+% \psbezier(33,-20)(30,-16)(30,-16)%
+% \psline(30,-16)(-20,35)(-33,34)(-36,20)%
+% \closepath}}%
+% % Letter X Half
+% \newcommand{\letterXHalf}{\pscustom{%
+% \psbezier(-44,-34)(-44,-35)(-22,-35)(-22,-35)%
+% \psline(-22,-35)(-5,-17)(-17,-4)(-34,-19)(-41,-19)(-44,-34)%
+% \closepath}}%
+% % Letter E: Origin = 67,0
+% \newcommand{\letterE}{\pscustom{%
+% \psline(-3,4)(0,0)(-9,-8)(-13,-26)(-6,-34)(17,-35)(20,-20)%(20,-20)
+% \psbezier(20,-19)(12,-19)(12,-19)%
+% \psline(12,-19)(15,-9)(25,-9)(28,7)(19,8)%(19,8)
+% \psbezier(19,8)(18,17)(24,20)%
+% \psline(24,20)(28,34)(10,34)(3,29)%(3,29)
+% \psbezier(0,27)(-3,21)(-3,21)%
+% \psline(-3,21)(-5,13)%(-5,13)
+% \psbezier(-5,13)(-7,8)(-3,4)%
+% \closepath}}%
+% %
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivBasketballThree}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+%
+\newcommand{\courtSmall}{%
+\pscustom{\psarc(-4,4){1.5}{90}{270}\closepath}\psframe(-4,2)(0,6)}%
+%
+\newcommand{\courtBox}{\psframe(-4,2)(0,6)}%
+%
+\newcommand{\courtBig}{%
+\pscustom{\psline(-4,0)(0,0)(0,8)(-4,8)\psarc(-4,4){4}{90}{270}\closepath}}%
+% Court Big  = B
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\courtBig}\rput{180}(0,0){\courtBig}%
+% Court Small = C
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\courtSmall}\rput{180}(0,0){\courtSmall}%
+% Court Box = D
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\courtBox}\rput{180}(0,0){\courtBox}%
+% Cross Lines = A
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-10,0)(10,0)\psline(0,-10)(0,10)%
+% Ball
+\rput(5,5){\psOlympicXxivBasketballBallA[5]}%
+\rput(-5,-5){\psOlympicXxivBasketballBallA[5]}%
+%
+% Letter X
+\newcommand{\letterX}{\pspolygon(-33,18)(-27,18)(7,-35)(27,-35)(31,-19)(25,-19)(-9,34)(-29,34)}%
+% Letter X Half
+\newcommand{\letterXHalf}{\pspolygon(-44,-35)(-25,-35)(-8,-20)(-18,-4)(-34,-19)(-41,-19)}%
+% Letter E: Origin = 66,0
+\newcommand{\letterE}{\pspolygon(0,0)(-10,-8)(-14,-25)(-6,-35)(16,-35)(20,-19)(12,-19)(14,-8)(25,-8)(29,8)(18,8)(20,18)(28,18)(31,34)(10,34)(-3,24)(-7,8)}%
+%
+\newcommand{\letterThree}[1]{\psscalebox{\fpeval{round(##1/160,3)}}{%
+\rput(0,0){\letterX}%
+\rput(0,0){\letterXHalf}%
+\rput(0,0){\psscalebox{-1 -1}{\letterXHalf}}%
+\rput(-67,0){\letterE}%
+\rput{180}(67,0){\letterE}%
+}}%
+%
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput{-45}(0,0){\letterThree{10}}%
+}}%
+% endregion Basketball 3x3 = BasketballThree
+
+% region 08 Beach Volleyball
+\newcommand{\psOlympicXxivBeachVolleyball}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Vertical Line
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(0,-10)(0,10)%
+% Court
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-6,1.5)(0,6)\psframe(0,-1)(6,-6)%
+% Net
+\psset{fillstyle=\fillStyleNetBand,fillcolor=\fillColorNetBand,linestyle=\lineStyleNetBand,linecolor=\lineColorNetBand,linewidth=\lineWidthNetBand}%
+\psframe(-10,1)(10,1.5)%
+\psset{fillstyle=\fillStyleNet,fillcolor=\fillColorNet,linestyle=\lineStyleNet,linecolor=\lineColorNet,linewidth=\lineWidthNet}%
+\rput{90}(0,0){\psframe(-1,-10)(1,10)\psline(0,-10)(0,10)%
+\multirput(0,0)(0,1){20}{\psline(-1,-10)(1,-10)}}%
+% Sand
+\newcommand{\sandPit}[2][20]{\FPset{\rrr}{##2}%
+\FPeval{\wide}{round(##1/30:3)}\psscalebox{\wide}{%
+\pscircle(04,17){\rrr}\pscircle(2,10){\rrr}%
+\pscircle(03,02){\rrr}\pscircle(5,6){\rrr}%
+\pscircle(06,12){\rrr}\pscircle(9,19){\rrr}%
+\pscircle(10,08){\rrr}\pscircle(8,3){\rrr}%
+\pscircle(15,04){\rrr}\pscircle(15,9){\rrr}%
+\pscircle(11,14){\rrr}\pscircle(15,17){\rrr}%
+\pscircle(20,18){\rrr}\pscircle(17,13){\rrr}%
+\pscircle(20,09){\rrr}\pscircle(21,4){\rrr}%
+\pscircle(26,03){\rrr}\pscircle(25,8){\rrr}%
+\pscircle(25,13){\rrr}\pscircle(27,17){\rrr}%
+}}%
+% Sand
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(-6,1.5){\sandPit[6]{0.4}}%
+\rput{180}(6,-1.5){\sandPit[6]{0.4}}%
+% Ball
+\psset{linestyle=\lineStyleBallLines,linecolor=\lineColorBallLines,linewidth=\lineWidthBallLines,fillstyle=\fillStyleStrip}%
+\rput(4.5,5.5){\psOlympicXxivBeachVolleyballBallA{5}}%
+\rput(-4.5,-5.5){\psOlympicXxivBeachVolleyballBallA{5}}%
+}}%
+% endregion Beach Volleyball
+
+% region 09 Boxing
+\newcommand{\psOlympicXxivBoxing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-6,-6)(6,6)%
+\psline(4,4)(6,6)%
+\psline(-4,4)(-6,6)%
+\psline(-4,-4)(-6,-6)%
+\psline(4,-4)(6,-6)%
+%
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(4,3)(4,4)\psline(3,4)(4,4)%
+\psline(-4,3)(-4,4)\psline(-3,4)(-4,4)%
+\psline(4,-3)(4,-4)\psline(3,-4)(4,-4)%
+\psline(-4,-3)(-4,-4)\psline(-3,-4)(-4,-4)%
+%
+\psline(5,2)(5,5)\psline(2,5)(5,5)%
+\psline(5,-2)(5,-5)\psline(2,-5)(5,-5)%
+\psline(-5,2)(-5,5)\psline(-2,5)(-5,5)%
+\psline(-5,-2)(-5,-5)\psline(-2,-5)(-5,-5)%
+%
+\psset{fillstyle=\fillStyleGlove,fillcolor=\fillColorGlove,linestyle=\lineStyleGlove,linecolor=\lineColorGlove,linewidth=\lineWidthGlove}%
+% Glove
+\rput{0}(0,-9){\psOlympicXxivBoxingGloveA[4.5]}%
+\rput{180}(0,9){\psOlympicXxivBoxingGloveA[4.5]}%
+% Line
+\psset{fillstyle=none,linestyle=solid,linecolor=white,linewidth=1}%
+\psline(-10,0)(10,0)%
+\psset{linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-10,0)(10,0)%
+}}%
+% endregion Boxing
+
+% region 10 Breaking
+\newcommand{\psOlympicXxivBreaking}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\newcommand{\quarterA}{%
+% Wedge
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=none,linewidth=0}%
+\pscustom{\psarcn(0,0){1.3}{90}{0}\psline(1.3,0)(8,0)\psarc(0,0){8}{0}{90}\closepath}%
+% Arch
+\psset{fillstyle=none}%
+\psset{linestyle=\lineStyleB,linecolor=\lineColorA,linewidth=\lineWidthB}%
+\psarc(0,0){8.7}{0}{60}%
+\pscircle(0,0){5.4}%
+\psset{linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psarc(0,0){7.3}{0}{65}\psarc(0,0){6.6}{0}{50}%
+\psarc(0,0){5.9}{0}{60}\psarc(0,0){5.2}{0}{75}%
+\psarc(0,0){4.5}{0}{60}\psarc(0,0){3.8}{0}{45}%
+\psarc(0,0){3.1}{0}{60}\psarc(0,0){2.4}{0}{75}%
+}% end newcommand
+\rput(0,0){\quarterA}\rput{180}(0,0){\quarterA}%
+% Cross Bar
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psline[linestyle=solid,linecolor=white,linewidth=1](-10,0)(10,0)%
+\pscircle(0,0){0.4}%
+\multido{\nA=0+90}{4}{\rput{\nA}(0,0){\psline(0.4,0)(10,0)}}%
+\pscircle(0,0){8}%
+%
+% Shoe
+\psset{fillstyle=solid,fillcolor=white,linestyle=none,linewidth=0}%
+\rput(1,-0.5){\pspolygon(-2.8,1)(-4.2,1)(-7,6)(-6.5,8.5)(-3,9)(-2.5,6)}%
+\rput{180}(-1,0.5){\pspolygon(-2.8,1)(-4.2,1)(-7,6)(-6.5,8.5)(-3,9)(-2.5,6)}%
+\rput{90}(-3.7,4.5){\psOlympicXxivBreakingShoeA[7]}%
+\rput{-90}(3.7,-4.5){\psOlympicXxivBreakingShoeA[7]}%
+% Mid Sole
+}}%
+%  endregion Breaking
+
+% region 11 Canoe Slalom
+% \psbezier(0,0)(1.3,0.3)(1.9,-1.5)(3.3,-0.7)%
+% (5.8,0.8)(6,-1.2)(7.4,-0.9)%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivCanoeSlalom}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Lines
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psline(0,2)(0,10)%
+% Water Lines
+\newcommand{\waterLines}{%
+\multirput(0.5,3)(0,1){3}{\psbezier(0,0)(1.2,0)(1.5,-1)(2.6,-0.5)%
+\psbezier(3.2,-0.3)(4,0)(4.2,0)(4.2,0)%
+\psbezier(4.8,0)(5.4,0)(5.8,-0.4)(5.8,-0.4)%
+\psbezier(6.2,-0.6)(6.2,-0.6)(6.8,-0.9)(7.2,-0.6)}%
+%
+\rput(0.5,6){\psbezier(0,0)(1.2,0)(1.5,-1)(2.6,-0.5)%
+\psbezier(3.2,-0.3)(4,0)(4.2,0)(4.2,0)%
+\psbezier(4.8,0)(5.4,0)(5.8,-0.4)(5.8,-0.4)}%
+%
+\rput(0.5,7){\psbezier(0,0)(1.2,0)(1.5,-1)(2.6,-0.5)%
+\psbezier(3.2,-0.3)(4,0)(4.2,0)(4.2,0)}%
+}%
+%
+\rput(0,0){\waterLines}%
+\rput{180}(0,0){\waterLines}%
+%
+% Thick Line
+\psset{linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\multirput(0.5,-5)(1.5,0){4}{\psline(0,0)(1,0)}%
+\multirput(-0.5,5)(-1.5,0){4}{\psline(0,0)(-1,0)}%
+%
+\psset{fillstyle=\fillStyleCanoeBoat,fillcolor=\fillColorCanoeBoat,linestyle=\lineStyleCanoeBoat,linecolor=\lineColorCanoeBoat,linewidth=\lineWidthCanoeBoat}%
+\rput(0,0){\psOlympicXxivCanoeSlalomBoatA[20]}%
+%
+\psset{fillstyle=\fillStyleCanoeSeat,fillcolor=\fillColorCanoeSeat,linestyle=\lineStyleCanoeSeat,linecolor=\lineColorCanoeSeat,linewidth=\lineWidthCanoeSeat}%
+\rput(0.3,0){\psOlympicXxivCanoeSlalomBoatASeat[20]}%
+%
+\psset{fillstyle=\fillStyleCanoePaddle,fillcolor=\fillColorCanoePaddle,linestyle=\lineStyleCanoePaddle,linecolor=\lineColorCanoePaddle,linewidth=\lineWidthCanoePaddle}%
+\rput{-90}(0,0){\psOlympicXxivCanoeSlalomPaddleA[10]}%
+%
+\psset{linestyle=none,linewidth=0,fillstyle=solid,fillcolor=white}%
+\rput{-90}(0,0){\psOlympicXxivCanoeSlalomPaddleAEllipse[10]}%
+%%
+}}%
+% endregion Canoe Slalom
+
+% region 12 Canoe Sprint
+\newcommand{\psOlympicXxivCanoeSprint}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Line Vertical and Top Thick
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psline(0,-10)(0,10)%
+\psline(-6,6)(6,6)%
+\psline(-6,-6)(6,-6)%
+\psset{linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-2,2)(2,2)%
+\psline(-2,-2)(2,-2)%
+\psline(-3.33,3.33)(3.33,3.33)%
+\psline(-3.33,-3.33)(3.33,-3.33)%
+\psline(-4.66,4.66)(4.66,4.66)%
+\psline(-4.66,-4.66)(4.66,-4.66)%
+%
+\psset{fillstyle=\fillStyleCanoePaddle,fillcolor=\fillColorCanoePaddle,linestyle=\lineStyleCanoePaddle,linecolor=\lineColorCanoePaddle,linewidth=\lineWidthCanoePaddle}%
+\rput{45}(0,0){\psOlympicXxivCanoeSprintPaddleA[18]}%
+%
+\psset{fillstyle=\fillStyleCanoeBoat,fillcolor=\fillColorCanoeBoat,linestyle=\lineStyleCanoeBoat,linecolor=\lineColorCanoeBoat,linewidth=\lineWidthCanoeBoat}%
+\rput(0,0){\psOlympicXxivCanoeSprintBoatA[20]}%
+%
+\psset{fillstyle=\fillStyleCanoeSeat,fillcolor=\fillColorCanoeSeat,linestyle=\lineStyleCanoeSeat,linecolor=\lineColorCanoeSeat,linewidth=\lineWidthCanoeSeat}%
+\rput(0,0){\psOlympicXxivCanoeSprintBoatASeat[20]}%
+}}%
+% endregion Canoe Sprint
+
+% region 13 Cycling MBX Freestyle
+\newcommand{\psOlympicXxivCyclingBmxFreestyle}[1][]{%
+\setIcon{#1}{\iconWidth/20}{%
+% Cycle = color, A, B, C
+\rput{17}(0,0){\psOlympicXxivCycleBmxA{16}}%
+% Helmet = D E
+\rput{45}(0,7){\psOlympicXxivHelmetFreestyleA{5.}}%
+\rput{225}(0,-7){\psOlympicXxivHelmetFreestyleA{5.}}%
+% Lines = F
+\psset{fillstyle=none,linestyle=\lineStyleH,linecolor=\lineColorH,linewidth=\lineWidthH}%
+% \psset{linecolor=blue,linewidth=0.1}%
+% \pscircle(-4.4,-3.35){2}%
+\psarc(-4.4,-3.35){3.3}{120}{170}%
+% \pscircle(5.4,-0.3){2}%
+\psarc(5.4,-0.3){3.3}{210}{250}%
+% Cross Lines = G
+\psset{fillstyle=none,linestyle=\lineStyleI,linecolor=\lineColorI,linewidth=\lineWidthI}%
+\psline(-9,-9)(-6,-6)\psline(9,9)(5,5)%
+\psline(9,-9)(5,-5)\psline(-9,9)(-5,5)%
+}}%
+% endregion Cycling MBX Freestyle
+
+% region 14 Cycling BMX Racing
+\newcommand{\psOlympicXxivCyclingBmxRacing}[1][]{\setIcon{#1}{\iconWidth/20}{%
+% Cycle = color, A, B, C
+\rput{0}(0,0.5){\psOlympicXxivCycleBmxA{16}}%
+% Helmet = D E F
+\rput{-45}(0,7){\psOlympicXxivHHelmetRacingA{6}}%
+\rput{135}(0,-7){\psOlympicXxivHHelmetRacingA{6}}%
+% Cross Lines = G
+\psset{fillstyle=none,linestyle=\lineStyleG,linecolor=\lineColorG,linewidth=\lineWidthG}%
+\psline(-9,-9)(-6,-6)\psline(9,9)(6,6)%
+\psline(9,-9)(6,-6)\psline(-9,9)(-6,6)%
+}}%
+% endregion Cycling BMX Racing
+
+% region 15 Cycling Mountain Bike
+\newcommand{\psOlympicXxivCyclingMountainBike}[1][]{%
+\setIcon{#1}{\iconWidth/20}{%
+% Helmet = D E F G
+\rput(0,7){\psOlympicXxivHelmetMountainA{6}}%
+\rput{180}(0,-7){\psOlympicXxivHelmetMountainA{6}}%
+% Cycle = color, A, B, C
+\rput{-23}(0.6,1){\psOlympicXxivCycleMountainA{14}}%
+% Lines = H
+\psset{fillstyle=none,linestyle=\lineStyleH,linecolor=\lineColorH,linewidth=\lineWidthH}%
+\psline(-7,1)(-10,2)%
+\psline(-7,2)(-10,3)%
+\psline(-6.5,3)(-10,4)%
+% Cross Lines = I
+\psset{fillstyle=none,linestyle=\lineStyleI,linecolor=\lineColorI,linewidth=\lineWidthI}%
+\psline(-9,-9)(-5,-5)\psline(9,9)(5,5)%
+\psline(9,-9)(5,-5)\psline(-9,9)(-5,5)%
+}}%
+% endregion Cycling Mountain Bike
+
+% region 16 Cycling Road
+\newcommand{\psOlympicXxivCyclingRoad}[1][]{\setIcon{#1}{\iconWidth/20}{%
+\psset{fillstyle=none,linecolor=red}%
+% Track Outer Fill
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=none,linewidth=0}%
+\psframe(-7.5,-5)(7.5,5)%
+% Track Outer Line
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(-7.5,5)(7.5,5)\psline(-7.5,-5)(7.5,-5)%
+% Track Middle Fill
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=none,linewidth=0}%
+\psframe(-7.5,-2.5)(7.5,2.5)%
+% Track Middle Lin
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD,dash=\lineDashD}%
+\psline(-7.5,2.5)(7.5,2.5)\psline(-7.5,-2.5)(7.5,-2.5)%
+% Track Outer Lines
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psline(-7,6)(-3.5,6)\psline(-7,-6)(-3.5,-6)%
+\psline(-6.5,7)(-4,7)\psline(-6.5,-7)(-4,-7)%
+% Cycle Track = color, A
+\rput(0,7.7){\psOlympicXxivCycleTrackA{7}}%
+\rput{180}(0,-7.7){\psOlympicXxivCycleTrackA{7}}%
+% Cross Line
+\psset{fillstyle=none,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\psline(-10,0)(10,0)%
+}}%
+% endregion Cycling Road
+
+% region 17 Cycling Track
+\newcommand{\psOlympicXxivCyclingTrack}[1][]{\setIcon{#1}{\iconWidth/20}{%
+\psset{fillstyle=none,linecolor=red}%
+% Track Outer
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psframe[cornersize=relative,framearc=1](-8,-5)(8,5)%
+% Track Middle Mask
+% \psset{fillstyle=\fillStyleMask,fillcolor=\fillColorMask,linestyle=\lineStyleMask,linecolor=\lineColorMask,linewidth=\lineWidthMask}%
+% \psframe[cornersize=relative,framearc=1](-6,-3)(6,3)%
+% Track Middle
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psframe[cornersize=relative,framearc=1](-6,-3)(6,3)%
+% Track Inner
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psframe[cornersize=relative,framearc=1](-4,-1)(4,1)%
+% Track Outer Lines
+% \psset{fillstyle=none,linecolor=blue,linewidth=0.1}%
+% \psframe[cornersize=relative,framearc=1](-9,-6)(9,6)%
+\psset{fillstyle=none,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\psarc(3,0){6}{0}{85}%
+\psarc(3,0){7}{30}{83}%
+\psarc(-3,0){6}{180}{265}%
+\psarc(-3,0){7}{210}{263}%
+% Cycle Track = color, A, B
+\rput(0,7.7){\psOlympicXxivCycleTrackA{7}}%
+\rput{180}(0,-7.7){\psOlympicXxivCycleTrackA{7}}%
+% Cross Line
+\psset{fillstyle=none,linestyle=\lineStyleG,linecolor=\lineColorG,linewidth=\lineWidthG}%
+\psline(-10,0)(10,0)%
+}}%
+% endregion Cycling Track
+
+% region 18 Diving
+% Dive Column
+% \psbezier(1,6)(1,6)(1,16)(7,16)%
+% \psline(7,16)(-7,16)%
+% \psbezier(-7,16)(-1,16)(-1,6)(-1,6)%
+% \psline(-1,6)(-1,0)(1,0)(1,6)%
+% Top Railing
+% \psarc(5,18){2}{0}{90}%
+% \psline(5,20)(-8,20)%
+% \psbezier(-8,20)(-9,20)(-8,19)(-8,19)%
+% \psline(-8,19)(-5,16)(7,16)(7,18)%
+% Top Railing Lines
+% \psline(-7,18)(7,18)%
+% \multirput(-5,16)(3,0){4}{\psline(0,0)(0,4)}%
+% Bottom Column Support
+% \psbezier(-7,4)(-7,4)(-2,4)(-2,0)%
+% \psline(-2,0)(-1,0)(-1,4)(-7,4)%
+% Bottom Railing
+% \pspolygon(-1,4)(-1,6)(-12,6)(-11,4)%
+% Bottom Railing Lines
+% \multirput(-3,6)(-3,0){3}{\psline(0,0)(-1,-2)}%
+% Dive Board Bottom
+% \psline(-1,6)(-20,6)%
+% Dive Board Top
+% \psline(7,16)(-20,16)%
+\newcommand{\psOlympicXxivDiving}[1][]{\setIcon{#1}{\iconWidth/40}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Dive Column
+\newcommand{\diveColumn}{\pscustom{%
+\psbezier(1,6)(1,6)(1,16)(7,16)%
+\psline(7,16)(-10,16)%(-7,16)
+\psbezier(-1,16)(-1,6)(-1,6)%
+\psline(-1,6)(-1,0)(1,0)(1,6)\closepath}}%
+% Top Railing
+\newcommand{\topRailing}{\pscustom{%
+\psarc(5,18){2}{0}{90}%
+\psline(5,20)(-8,20)%(-8,20)
+\psbezier(-9,20)(-8,19)(-8,19)%
+\psline(-8,19)(-5,16)(7,16)(7,18)\closepath}}%
+% Bottom Column Support
+\newcommand{\bottomColumnSupport}{\pscustom{%
+\psbezier(-7,4)(-7,4)(-2,4)(-2,0)%
+\psline(-2,0)(-1,0)(-1,4)(-7,4)\closepath}}%
+% Water Waves
+\newcommand{\waterWaves}{%
+\rput(5,5){\psplot[algebraic]{0}{15}{0.4*sin(x * -4.5/\FPpi)}}%
+\rput(7,7){\psplot[algebraic]{0}{13}{0.4*sin(x * 4.5/\FPpi)}}%
+\rput(9,9){\psplot[algebraic]{0}{11}{0.4*sin(x * -4.5/\FPpi)}}%
+\rput(11,11){\psplot[algebraic]{0}{9}{0.4*sin(x * 4.5/\FPpi)}}}%
+% region Diving Pool
+\newcommand{\divingPool}{%
+% Dive Column
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\diveColumn}%
+% Bottom Column Support
+\rput(0,0){\bottomColumnSupport}%
+% Top Railing Fill
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=none,linewidth=0}%
+\rput(0,0){\topRailing}%
+% Bottom Railing Fill
+\pspolygon(-1,4)(-1,6)(-12,6)(-11,4)%
+% Top Railing Lines
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-7,18)(7,18)%
+\multirput(-5,16)(3,0){4}{\psline(0,0)(0,4)}%
+% Top Railing Line Border
+\rput(0,0){\topRailing}%
+% Bottom Railing Lines
+\multirput(-3,6)(-3,0){3}{\psline(0,0)(-1,-2)}%
+% Bottom Railing Line Border
+\pspolygon(-1,4)(-1,6)(-12,6)(-11,4)%
+% Bottom Railing Line Right
+\psline(1,4)(4,4)%
+% Dive Board Bottom
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-1,6)(-20,6)%
+% Dive Board Top
+\psline(7,\fpeval{16+\lineWidthB/2-\lineWidth/2})(-20,\fpeval{16+\lineWidthB/2-\lineWidth/2})%
+% Water Waves
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\waterWaves}%
+}% Diving Pool
+% endregion Diving Pool
+% Diving Pool
+\rput(0,0){\divingPool}\rput{180}(0,0){\divingPool}%
+% Cross Line Mask
+\psset{fillstyle=none,linestyle=\lineStyleMask,linecolor=\lineColorMask,linewidth=\lineWidthMask}%
+\psline(-16,-16)(16,16)%
+% Cross Line Mask
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(-16,-16)(16,16)%
+}}%
+% endregion Diving
+
+% region 19 Equestrian Dressage
+\newcommand{\psOlympicXxivEquestrianDressage}[1][]{\setIcon{#1}{\iconWidth/40}{%
+% Bust
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{0}(-14,13){\psOlympicXxivHorseBustA{12}}%
+\rput{0}(14,13){\psscalebox{-1 1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(14,-13){\psscalebox{-1 -1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(-14,-13){\psscalebox{1 -1}{\psOlympicXxivHorseBustA{12}}}%
+% Helmet -> color A, B
+\rput{45}(-4.7,5){\psOlympicXxivHelmetEquestrianA{11}}%
+\rput{225}(4.7,-5){\psOlympicXxivHelmetEquestrianA{11}}%
+% Cross Line
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(-11,-11)(11,11)%
+}}%
+% endregion Equestrian Dressage
+
+% region 20 Equestrian Eventing
+\newcommand{\psOlympicXxivEquestrianEventing}[1][]{\setIcon{#1}{\iconWidth/40}{%
+% Flag
+\newcommand{\flagJump}{\pspolygon(0,0)(2,0)(1,1)(2,2)(0,2)}%
+% Water Waves
+\newcommand{\waterWaves}{%
+\rput(0,-6){\psplot[algebraic]{-9}{9}{0.4*sin(x * -4.5/\FPpi)}}%
+\rput(0,-8){\psplot[algebraic]{-9}{9}{0.4*sin(x * -4.5/\FPpi)}}%
+\rput(0,-10){\psplot[algebraic]{-9}{9}{0.4*sin(x * -4.5/\FPpi)}}%
+\rput(0,-12){\psplot[algebraic]{-9}{9}{0.4*sin(x * -4.5/\FPpi)}}%
+}%
+% Bust
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{0}(-14,13){\psOlympicXxivHorseBustA{12}}%
+\rput{0}(14,13){\psscalebox{-1 1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(14,-13){\psscalebox{-1 -1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(-14,-13){\psscalebox{1 -1}{\psOlympicXxivHorseBustA{12}}}%
+% Helmet -> color A, B
+\rput(0,10){\psOlympicXxivHelmetEquestrianA{10}}%
+% Flag Pole
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(7,-4)(7,3)\psline(-7,-4)(-7,3)%
+% Flag
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=none,linewidth=0}%
+\rput(\fpeval{7-\lineWidthC/2},3){\flagJump}%
+\rput(-\fpeval{7-\lineWidthC/2},3){\psscalebox{-1 1}{\flagJump}}%
+% Bar Lines
+\psset{linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(-7,0)(7,0)\psline(-7,1.5)(7,1.5)\psline(-7,3)(7,3)%
+% water Waves
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput(0,0){\waterWaves}%
+}}%
+% endregion Equestrian Eventing
+
+% region 21 Equestrian Jumping: Width 40, Height 40
+\newcommand{\psOlympicXxivEquestrianJumping}[1][]{\setIcon{#1}{\iconWidth/40}{%
+% Bust
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{0}(-14,13){\psOlympicXxivHorseBustA{12}}%
+\rput{0}(14,13){\psscalebox{-1 1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(14,-13){\psscalebox{-1 -1}{\psOlympicXxivHorseBustA{12}}}%
+\rput{0}(-14,-13){\psscalebox{1 -1}{\psOlympicXxivHorseBustA{12}}}%
+% Flag
+\newcommand{\flagJump}{\pspolygon(0,0)(2,0)(1,1)(2,2)(0,2)}%
+%
+\rput{45}(0,0){%
+% Flag Pole
+\psset{linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(7,1)(7,7)\psline(-7,1)(-7,7)%
+\psline(7,-1)(7,-7)\psline(-7,-1)(-7,-7)%
+% Flag
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=none,linewidth=0}%
+\rput(7,7){\flagJump}%
+\rput(-7,7){\psscalebox{-1 1}{\flagJump}}%
+\rput(7,-7){\psscalebox{1 -1}{\flagJump}}%
+\rput(-7,-7){\psscalebox{-1 -1}{\flagJump}}%
+% Bar Lines
+\psset{linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-7,4)(7,4)\psline(-7,-4)(7,-4)%
+\psline(-7,5.5)(7,5.5)\psline(-7,-5.5)(7,-5.5)%
+\psline(-7,7)(7,7)\psline(-7,-7)(7,-7)%
+% Cross Line
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(15.5,0)(-15.5,0)%
+}%
+}}%
+% endregion Equestrian Jumping
+
+% region 22 Fencing
+\newcommand{\psOlympicXxivFencing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Sword Epee
+\newcommand{\swordEpee}[1]{\psscalebox{\fpeval{round(##1/240,3)}}{%
+\rput(120,0){\pspolygon(0,2)(-21,2)(-21,-2)(0,-2)\pscustom{%
+\psbezier(-40,-3)(-37,-3)(-40,-15)(-24,-15)%
+\psline(-24,-15)(-24,15)%(-24,15)
+\psbezier(-40,15)(-37,3)(-40,3)%
+\psline(-40,3)(-230,1)(-240,0)(-230,-1)(-40,-3)%
+\closepath}}}}%
+% Sword Saber
+\newcommand{\swordSaber}[1]{\psscalebox{\fpeval{round(##1/240,3)}}{%
+\rput(120,0){\pscustom{%
+\psbezier(-40,-3)(-36,-21)(-10,-22)(-5,-2)%
+\psline(-5,-2)(0,-2)(0,2)%(0,2)
+\psbezier(0,2)(-27,2)(-27,1)%
+\psline(-27,1)(-27,-1)%(-27,-1)
+\psbezier(-27,-2)(-8,-2)(-8,-2)%\psbezier(-8,-2)
+(-15,-20)(-30,-12)(-30,-12)%
+\psline(-30,-12)(-30,15)%(-30,15)
+\psbezier(-36,15)(-40,3)(-40,3)%
+\psline(-40,3)(-230,1)(-240,0)(-230,-1)(-40,-3)%
+\closepath}}}}%
+% Sword Foil
+\newcommand{\swordFoil}[1]{\psscalebox{\fpeval{round(##1/240,3)}}{%
+\rput(120,0){%
+% Sword Mask
+% \psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+% \psline(-105,0)(-135,0)%
+% Foil
+% \psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\pscustom{%
+\psbezier(-34,-3)(-33,-12)(-24,-17)(-24,-17)%
+\psline(-24,-17)(-24,-2)%(-24,-2)
+\psbezier(-19,-2)(-22,-6)(-18,-6)%\psbezier(-18,-6)
+(-16,-13)(-13,-13)(-13,-10)%
+\psline(-13,-10)(-14,-6)%(-14,-6)
+\psbezier(-14,-6)(-11,-2)(0,-2)%
+\psline(0,-2)(0,6)(-6,6)(-6,19)(-12,19)(-12,6)%(-12,6)
+\psbezier(-18,6)(-18,2)(-21,2)%
+\psline(-21,2)(-24,2)(-24,17)%(-24,17)
+\psbezier(-24,17)(-33,12)(-34,3)%
+\psline(-34,3)(-230,1)(-240,0)(-230,-1)(-34,-3)%
+\closepath}}}}%
+% Helmet
+\newcommand{\helmetA}{\pscustom{%
+\psline(-19,6)(-19,-11)(-17,-11)%(-17,-11)
+\psbezier(-16,-13)(-11,-15)(-11,-15)%
+\psline(-11,-15)(-10.5,-13.5)%(-10.5,-13.5)
+\psbezier(-19,-10)(-16,-11)(10,-11)%\psbezier(10,-11)
+(20,-11)(20,0)(20,0)%
+\psline(20,0)(18,0)%(18,0)
+\psbezier(18,-10)(6,-9)(4,-9)%
+\psline(4,-9)(4,-7)%(4,-7)
+\psbezier(7,-7)(16,-7)(16,0)%
+\psline(16,0)(14,0)%(14,0)
+\psbezier(14,-5)(6,-5)(4,-5)%
+\psline(4,-5)(4,-3)%(4,-3)
+\psbezier(6,-3)(12,-3)(12,0)%\psbezier(12,0)
+(12,1)(10,0)(10,3)%\psbezier(10,3)
+(10,20)(-19,17)(-19,6)\closepath}}%
+% Helmet Hole - Rectangle Bottom
+\newcommand{\rectangleA}{\psframe(-17,-9)(-3,-2)}%
+% Helmet Hole - Rectangle Top
+\newcommand{\rectangleB}{\psframe(-17,0)(-3,2)}%
+% Helmet Hole - Semicircle
+\newcommand{\semicircleC}{\pscustom{\psbezier(8,4)(8,16)(-17,16)(-17,4)\psline(-17,4)(8,4)\closepath}}%
+% Epee
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{225}(0,0){\swordEpee{26}}%
+% Sword Saber
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput{-45}(0,0){\psscalebox{1 -1}{\swordSaber{26}}}%
+% Sword Foil
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput{90}(0,0){\swordFoil{20}}%
+% Helmet
+\newcommand{\fencingHelmet}[1]{\psscalebox{\fpeval{round(##1/39,3)}}{%
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\helmetA}%
+% A = Top Rectangle
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\rectangleA}%
+% B = Bottom Rectangle
+% \psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\rectangleB}%
+% C = Semicircle
+% \psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\semicircleC}%
+}}% end newcommand
+\rput{-90}(-7,0){\fencingHelmet{7}}%
+\rput{-90}(7,0){\psscalebox{1 -1}{\fencingHelmet{7}}}%
+}}%
+% endregion Fencing
+
+% region 23 Football
+% Style = footballBaW
+% \newpsstyle{footballBaW}{%
+% fillStyleBall=solid,%
+% fillColorBall=red,%
+% lineStyleBall=solid,%
+% lineColorBall=black,%
+% lineWidthBall=0.2,
+% fillColorA=black,
+% fillColorB=white,
+% fillColorC=black,
+% fillColorD=white,
+% fillColorE=black,
+% fillColorF=white,
+% fillColorG=black,
+% fillColorH=white,
+% fillColorI=black,
+% fillColorJ=white,
+% fillColorK=white,
+% fillColorL=white,
+% fillColorM=white%
+% }%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivFootball}[1][]{\setIcon{#1}{\iconWidth/20}{%
+% Field Area
+\newcommand{\fieldArea}{\pspolygon(-5.5,5)(-10,5)(-10,-5)(-5.5,-5)%
+\pspolygon(5.5,5)(10,5)(10,-5)(5.5,-5)}%
+% Field Line
+\newcommand{\fieldLines}{\psline(-5.5,5)(-10,5)(-10,-5)(-5.5,-5)%
+\psline(5.5,5)(10,5)(10,-5)(5.5,-5)}%
+% Field Area
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=none,linewidth=0}%
+\rput(0,0){\fieldArea}%
+% Goal Post
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psframe(-10,-2.5)(-8,2.5)\psframe(10,-2.5)(8,2.5)%%
+% Corner
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psarc(-10,5){1}{-90}{0}\psarc(10,5){1}{180}{270}%
+\psarc(-10,-5){1}{0}{90}\psarc(10,-5){1}{90}{180}%
+% Half Line
+\psline(0,7)(0,-7)%
+% Field Lines
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\fieldLines}%
+% Lines
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(-7,7)(7,7)\psline(-7,-7)(7,-7)%
+\psline(-7,0)(7,0)%
+\psline(-6,1)(6,1)\psline(-6,-1)(6,-1)%
+\psline(-5,2)(5,2)\psline(-5,-2)(5,-2)%
+\psline(-4,3)(4,3)\psline(-4,-3)(4,-3)%
+% % Mask Circle
+\psset{fillstyle=\fillStyleMask,fillcolor=\fillColorMask,linestyle=\lineStyleMask,linecolor=\lineColorMask,linewidth=\lineWidthMask}%
+\pscircle(0,0){3.7}%
+% Mask Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleMask,linecolor=\lineColorMask,linewidth=\lineWidthMask}%
+\psline(4,4)(8,8)\psline(-4,-4)(-8,-8)%
+\psline(-4,4)(-8,8)\psline(4,-4)(8,-8)%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(4,4)(8,8)\psline(-4,-4)(-8,-8)%
+\psline(-4,4)(-8,8)\psline(4,-4)(8,-8)%
+% % Football
+\rput(0,0){\psOlympicXxivFootballBallB{7.4}{black}{white}}%
+}}%
+% endregion Football
+
+% region 24 Golf
+\newcommand{\psOlympicXxivGolf}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\newcommand{\golfClub}[1]{\psscalebox{\fpeval{round(##1/120,4)}}{\pscustom{%
+\psbezier(-110,-1)(-125,0)(-120,-20)(-112,-17)%\psbezier(-112,-17)
+(-107,-13)(-112,-3)(-109,-3)%
+\psline(-109,-3)(-60,-3)%(-60,-3)
+\psbezier(-60,-3)(-35,-3)(-34,-4)%
+\psline(-34,-4)(-3,-4)%(-3,-4)
+\psbezier(-1,-4)(0,-4)(0,-2)%\psbezier(0,-2)
+(0,0)(-1,0)(-3,0)%
+\psline(-3,0)(-34,0)%(-34,0)
+\psbezier(-35,-1)(-60,-1)(-60,-1)%
+\psline(-60,-1)(-110,-1)%
+\closepath}}}%
+% Pole
+\FPeval{\angA}{\aSin{1}{6}}%
+\newcommand{\flagPole}[1]{\psscalebox{\fpeval{round(##1/80,4)}}{%
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\pscustom{%
+\psarc(0,0){6}{\angA}{-\angA}%
+\psline(6;-\angA)(62,-1)%(62,-1)
+\psbezier(67,-13)(59,3)(62,-18)%
+\psline(62,-18)(74,-18)%(74,-18)
+\psbezier(71,-3)(76,-18)(74,1)%
+\psline(74,1)(6;\angA)%
+\closepath}%
+% Pole Hole
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\pscircle(0,0){4}%
+}}%
+% Line
+\newcommand{\golfLine}{\psbezier(0,0)(18,0)(19,-13)(19,-13)%
+\psbezier(19,-13)(20,-20)(27,-19)(30,-25)\psline(0,10)(0,-25)%
+}%
+% Club
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(38,-2){\golfClub{76}}%
+\rput{180}(-38,2){\golfClub{76}}%
+% Line
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,30){\golfLine}%
+\rput{180}(0,-30){\golfLine}%
+% Pole
+\rput(-10,-15){\flagPole{37}}%
+\rput{180}(10,15){\flagPole{37}}%
+% Golf Ball
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(10,-36){\pscircle(0,0){2.2}}%
+\rput(-10,36){\pscircle(0,0){2.2}}%
+}}%
+% endregion Golf
+
+% region 25 Handball
+\newcommand{\psOlympicXxivHandball}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Water Diamond
+\newcommand{\waterDiamond}{\pspolygon(-7,0)(0,-7)(7,0)(0,7)}%
+% Goal  Post
+\newcommand{\goalPost}{\psframe(-10,-2)(-9,2)}%
+% Field Area D
+\newcommand{\fieldAreaD}{\pscustom{\psarcn(-6,-3.5){2.5}{0}{-90}%
+\psline(-6,-6)(-9,-6)(-9,6)(-6,6)\psarcn(-6,3.5){2.5}{90}{0}}}%
+% Hidden Lines
+\newcommand{\hiddenLines}{\psline(-5,-0.7)(-5,0.7)%
+\psline[linestyle=dashed,dash=\lineDashE](-3.5,-3.5)(-3.5,3.5)}%
+%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\rput(0,0){\psOlympicXxivCrossLinesA{20}}%
+% Goal Post
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\goalPost}\rput{180}(0,0){\goalPost}%
+% Field Area D
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\fieldAreaD}\rput{180}(0,0){\fieldAreaD}%
+% Diamond
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\waterDiamond}%
+% Hidden Lines
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psline(0,-7)(0,7)%
+\rput(0,0){\hiddenLines}\rput{180}(0,0){\hiddenLines}%
+% Handball = style, styleA
+\rput(0,0){\psOlympicXxivHandballBallA{4.6}}%
+}}%
+% endregion Handball
+
+% region 26 Hockey
+% line D dashed
+% \psline(2,-3)(6,-3)%
+% \psbezier(6,-3)(26,-3)(26,-33)(6,-33)%
+% \psline(6,-33)(2,-33)%
+% line D solid
+% \psline(2,-6)(6,-6)%
+% \psbezier(6,-6)(22,-6)(22,-30)(6,-30)%
+% \psline(6,-30)(2,-30)%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivHockey}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\newcommand{\hockeyStick}{%
+% Stick Bend
+\newcommand{\bendA}{\psscalebox{0.25}{\pscustom{%
+\psbezier(-226,-8)(-229,-9)(-229,-12)(-225,-14)%\psbezier(-225,-14)
+(-215,-16)(-217,-27)(-226,-26)%%\psbezier(-226,-26)
+(-244,-26)(-244,1)(-226,1)%
+\psline(-226,1)(-152,0.7)(-152,-7.3)(-226,-8)%
+\closepath}}}%
+% Stick Handle
+\newcommand{\handleA}{\psscalebox{0.25}{\pspolygon(0,0)(-148,0.7)(-148,-7.3)(0,-6)}}%
+% Handle Band
+\newcommand{\bandA}{\psscalebox{0.25}{\pspolygon(-152,0.7)(-152,-7.3)(-148,-7.3)(-148,0.7)}}%
+%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(30,0){\bendA}%
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(30,0){\handleA}%
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(30,0){\bandA}%
+}% end newcommand
+%
+\newcommand{\hockeyField}{%
+% line Dashed D
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD,dash=\lineDashD}%
+\pscustom{\psline(2,-3)(6,-3)%(6,-3)
+\psbezier(26,-3)(26,-33)(6,-33)%
+\psline(6,-33)(2,-33)}%
+% line Solid D
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\pscustom{\psline(2,-6)(6,-6)%(6,-6)
+\psbezier(22,-6)(22,-30)(6,-30)%
+\psline(6,-30)(2,-30)}%
+% circle D center
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\pscircle(8,-18){0.6}%
+% goal post
+\psset{fillstyle=\fillStyleF,fillcolor=\fillColorF,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\psline(-2,-12)(-5,-12)(-5,-24)(-2,-24)%
+% ball
+\psset{fillstyle=\fillStyleG,fillcolor=\fillColorG,linestyle=\lineStyleG,linecolor=\lineColorG,linewidth=\lineWidthG}%
+\pscircle(-17,-18){2}%
+}% end newcommand
+%
+% \rput(0,-1){\hockeyStick\hockeyStick}%
+% \rput{180}(0,1){\hockeyStick}%
+\rput(0,-1){\hockeyStick\hockeyField}%
+\rput{180}(0,1){\hockeyStick\hockeyField}%
+}}%
+% endregion Hockey
+
+% region 27 Judo: Width = 88, Height = 90
+\newcommand{\psOlympicXxivJudo}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/88:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Back command
+\newcommand{\kimonoMain}{\pspolygon(0,0)(-20,20)(-15,38)(-6,45)(6,45)(15,38)(20,20)}%
+% Left command
+\newcommand{\kimonoLeft}{\pspolygon(0,0)(-18.5858,18.5858)(-13.5858,36.5858)(-6,43)(-2,32)(-1,35)(-4,43)(4,43)(-5,17)(-8,17)(-9,14)(-4,14)(-7,11)(-4.8788,8.8788)(0,14)(6.8788,6.8788)}%
+% Right command
+\newcommand{\kimonoRight}{\pspolygon(18.5858,18.5858)(13.5858,36.5858)(6,43)(-3,17)(9,17)(9,14)(4,14)(9,9)}%
+%
+% Top Main
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\kimonoMain}%
+% Top Left Right
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\kimonoLeft}\rput(0,0){\kimonoRight}%
+% Bottom Main
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput{180}(0,0){\kimonoMain}%
+% Bottom Left Right
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput{180}(0,0){\kimonoLeft}%
+\rput{180}(0,0){\kimonoRight}%
+%
+% Cross Lines
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(-36,-36)(36,36)\psline(36,-36)(-36,36)%
+% Court Lines
+\pspolygon(22,22)(44,0)(22,-22)(0,0)\pspolygon(-22,22)(-44,0)(-22,-22)(0,0)%
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\pspolygon(11,11)(22,0)(11,-11)(0,0)\pspolygon(-11,11)(-22,0)(-11,-11)(0,0)%
+% Cross Lines
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(-36,-36)(36,36)\psline(36,-36)(-36,36)%
+}}%
+% endregion Judo
+
+% region 28 Marathon Swimming
+\newcommand{\psOlympicXxivMarathonSwimming}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Water Lines
+\newcommand{\waterLines}{%
+\rput(0,5){\psbezier(0,0)(-1.1,0.1)(-2,-2)(-4.8,0)}%
+\rput(0,-5){\psbezier(0,0)(-1.1,0.1)(-2,-2)(-4.8,0)}%
+%
+\rput(0,3.66){\psbezier(0,0)(-0.6,0)(-1,-0.3)(-2,-0.85)%
+(-4,-1.2)(-4,0.8)(-6.2,-0.2)}%
+\rput(0,-3.66){\psbezier(0,0)(-0.6,0)(-1,-0.3)(-2,-0.85)%
+(-4,-1.2)(-4,0.8)(-6.2,-0.2)}%
+%
+\rput(0,2.33){\psbezier(0,0)(-0.9,0)(-2,-1.8)(-4,-0.5)%
+(-6,0.9)(-6.5,-1.2)(-8.2,-0.5)}%
+\rput(0,-2.2){\psbezier(0,0)(-0.9,0)(-2,-1.8)(-4,-0.5)%
+(-6,0.9)(-6.5,-1.2)(-7.6,-0.1)}%
+%
+\rput(0,1){\psbezier(0,0)(-0.9,0.1)(-2,-1.8)(-4,-0.5)%
+(-6.4,1)(-6.2,-2)(-9.1,-0.2)}%
+\rput(0,-0.7){\psbezier(0,0)(-0.9,0.1)(-2,-1.8)(-4,-0.5)%
+(-6.4,1)(-6.2,-2)(-9.4,0.2)}%
+}%
+% Water Lines
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(10,0){\waterLines}\rput{180}(-10,0){\waterLines}%
+% Cross Lines
+\psset{linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-8,-8)(8,8)%
+\psline(8,-8)(-8,8)%
+% Swimming Cap
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{45}(0,7.2){\psOlympicXxivSwimmingCapA[5.6]}%
+\rput{225}(0,-7.2){\psOlympicXxivSwimmingCapA[5.6]}%
+% \rput(0,0){\goggleA[5.5]}%
+}}%
+% endregion Marathon Swimming
+
+% region 29 Modern Pentathlon
+\newcommand{\psOlympicXxivModernPentathlon}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Waves
+\newcommand{\waterWaves}{%
+\rput(-3,9){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+\rput(-3,8){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+\rput(-3,7){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+\rput(-3,-9){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+\rput(-3,-8){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+\rput(-3,-7){\psplot[algebraic]{0}{6}{0.2*sin(x * 6.5 / \FPpi)}}%
+}%
+% Shoe
+\rput{45}(-4,2){\psOlympicXxivRunningShoeA{6.6}}%
+% Pistol
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{45}(4,-2){\psOlympicXxivPistolA{8.2}}%
+% Sword Epee
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput{45}(1.6,0.4){\psOlympicXxivFencingEpeeA{18}}%
+\rput{225}(-1.6,-0.4){\psOlympicXxivFencingEpeeA{18}}%
+% Bust
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(-7.5,7){\psOlympicXxivHorseBustA{6}}%
+\rput{180}(7.5,-7){\psOlympicXxivHorseBustA{6}}%
+% Waves
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\waterWaves}%
+}}%
+% endregion Modern Pentathlon
+
+% region 30 Rhythmic Gymnastics
+\newcommand{\psOlympicXxivRhythmicGymnastics}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Club
+\rput{90}(0,10){\psOlympicXxivGymnasticsClubA{40}}%
+\rput{-90}(0,-10){\psOlympicXxivGymnasticsClubA{40}}%
+% Ball
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(30;58){\pscircle(0,0){8}}%
+\rput(30;238){\pscircle(0,0){8}}%
+% Ribbon
+\rput(-10,2){\psOlympicXxivGymnasticsRibbonA{50}}%
+\rput{180}(10,-2){\psOlympicXxivGymnasticsRibbonA{50}}%
+%
+\psset{fillstyle=none,linestyle=solid,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\psarc(0,0){30}{75}{85}%
+\psarc(0,0){30}{95}{160}%
+\psarc(0,0){30}{255}{265}%
+\psarc(0,0){30}{275}{340}%
+}}%
+% endregion Rhythmic Gymnastics
+
+% region 31 Rowing
+\newcommand{\psOlympicXxivRowing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Rowing Boat Command
+\newcommand{\rowingBoat}{\pscustom{%
+\psbezier(15,-3)(30,-3)(40,-1)(40,0)%\psbezier(40,0)
+(40,1)(30,3)(15,3)%
+\psline(15,3)(-10,3)%(-10,3)
+\psbezier(-25,3)(-40,1)(-40,0)%\psbezier(-40,0)
+(-40,-1)(-25,-3)(-10,-3)\closepath}}%
+% Rowing Boat Seat Command
+\newcommand{\rowingBoatSeat}{\pscustom{%
+\psbezier(10,-2)(15,-2)(19,-1)(19,0)%\psbezier(19,0)
+(19,1)(15,2)(10,2)%
+\psline(10,2)(1,2)(1,-2)(10,-2)\closepath}}%
+% Paddle Command
+\newcommand{\rowingPaddle}{\pscustom{%
+\psbezier(0,0)(-32,0)(-25,2)(-34,0)%\psbezier(-34,0)
+(-34,0)(-36.2,-4)(-34,-5)%\psbezier(-34,-5)
+(-34,-5)(-29,-6)(-26,-4)%
+\psline(-26,-4)(-23,-2)(-0.73,-2)(0,0)\closepath}}%
+% Paddle Mask
+% \newcommand{\rowingPaddleMask}{\psline(-2,-1)(-22,-1)}%
+% \newcommand{\rowingPaddleMask}{\psframe(-2,1)(-22,-3)}%
+\newcommand{\rowingPaddleMask}{\pspolygon[linejoin=0](-2,0)(-22,0.4)(-22,-2)(-2,-2)}%
+%
+% Waves
+\newcommand{\rowingWaves}{%
+\psline(-29,21)(29,21)%
+\psline(-22,15)(22,15)%
+\psline(-16,9)(16,9)}%
+%
+% Boat
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\rowingBoat}%
+% Seat
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\rowingBoatSeat}%
+\rput{180}(0,0){\rowingBoatSeat}%
+% Waves
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\rowingWaves}%
+\rput{180}(0,0){\rowingWaves}%
+% Paddle Mask
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput{-70}(10,3){\rowingPaddleMask}%
+\rput{-70}(-3,3){\rowingPaddleMask}%
+\rput{70}(10,-3){\psscalebox{1 -1}{\rowingPaddleMask}}%
+\rput{70}(-3,-3){\psscalebox{1 -1}{\rowingPaddleMask}}%
+% Paddle
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput{-70}(10,3){\rowingPaddle}%
+\rput{-70}(-3,3){\rowingPaddle}%
+\rput{70}(10,-3){\psscalebox{1 -1}{\rowingPaddle}}%
+\rput{70}(-3,-3){\psscalebox{1 -1}{\rowingPaddle}}%
+}}%
+% endregion Rowing
+
+% region 32 Rugby Sevens
+\newcommand{\psOlympicXxivRugbySevens}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/40:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1,fillstyle=none,linestyle=solid}%
+% Rugby Lines
+\newcommand{\rugbyLines}{%
+\psset{linecolor=\lineColor,linewidth=\lineWidth}%
+\psline(2,4)(7,4)% Line Thick horizontal
+\psset{linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(7,4)(16,4)% Line Thin horizontal
+\psline(8,0)(8,4)% Line Thin vertical
+\psset{linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(0,12)(2,12)% Line Thin Top
+\psset{linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB,dash=\lineDashB}%
+\psline(8,5)(8,12)% Line Thin vertical dotted
+}%
+% Rugby Lines
+\rput(0,0){\rugbyLines}%
+\rput(0,0){\psscalebox{-1 1}{\rugbyLines}}%
+\rput(0,0){\psscalebox{1 -1}{\rugbyLines}}%
+\rput(0,0){\psscalebox{-1 -1}{\rugbyLines}}%
+% Rugby Ball
+\rput(16.5,0){\psOlympicXxivRugbyBallA{7}}%
+\rput{180}(-16.5,0){\psOlympicXxivRugbyBallA{7}}%
+% Cross Line - Vertical
+\psset{linestyle=solid,linecolor=\lineColorD,linewidth=\lineWidthD,dash=\lineDashD}%
+\psline(0,-20)(0,20)%
+}}%
+% endregion Rugby Sevens
+
+% region 33 Sailing: Width = 80, Height = 90
+% Waves
+% \psbezier(-2,5)(12,5)(30,11)(39,11)%
+% \psbezier(-2,13)(13,13)(20,17)(32,17)%
+% \psbezier(-2,20)(8,20)(24,24)(26,24)%
+% \psbezier(-2,27)(10,27)(16,30)(20,30)%
+% \psbezier(-2,34)(6,34)(14,36)(14,36)%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivSailing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\psset{fillstyle=none,linecolor=red}%
+% Waves
+\newcommand{\sailWaves}{%
+\rput(0,-1){\psbezier(-2,5)(12,5)(30,11)(39,11)}%
+\psbezier(-2,13)(13,13)(20,17)(32,17)%
+\psbezier(-2,20)(8,20)(24,24)(26,24)%
+\psbezier(-2,27)(10,27)(16,30)(20,30)%
+\psbezier(-2,34)(6,34)(14,36)(14,36)%
+}%
+% Keel
+\newcommand{\sailBoatKeel}{\pscustom{%
+\psbezier(-8,-27)(-8,-28)(-7,-28.5)(-7,-28.5)%\psbezier(-7,-28.5)
+(5,-27)(7,-27)(6,-24)%
+\psline(6,-24)(2,-25)(2,-21)%(2,-21)
+\psbezier(10,-21)(18,-18)(18,-18)%\psbezier(18,-18)
+(10,-17)(-3,-19)(-16,-20)%\psbezier(-16,-20)
+(-8,-21)(0,-21)(0,-21)%
+\psline(0,-21)(0,-25.5)(-5,-27)%(-5,-27)
+\psbezier(-6,-27)(-6,-26)(-6,-26)%
+\psline(-6,-26)(-8,-27)%
+\closepath%
+}}%
+% Hull
+\newcommand{\sailBoatHull}{\pscustom{%
+\psbezier(-20,-17)(-20,-21)(0,-15)(20,-16)%\psbezier(20,-16)
+(20,-11)(-10,-17)(-20,-17)%
+\closepath%
+}}%
+% Sail Main
+\newcommand{\sailMain}{\pscustom{%
+\psbezier(-10,-9)(-10,-9)(0,-13)(13,-12.5)%
+\psline(13,-12.5)(13,-14)(15,-14.04)(15,28)%(15,28)
+\psbezier(-4,14)(-10,-6)(-10,-9)%
+\closepath%
+}}%
+% Sail Top
+\newcommand{\sailTop}{\pscustom{%
+\psbezier(13,24)(7,19)(-4,6)(-8,-7)%
+\psline(-8,-7)(13,-3)(13,24)%
+\closepath%
+}}%
+% Sail Bottom
+\newcommand{\sailBottom}{\pscustom{%
+\psbezier(-8,-8)(-8,-8)(0,-11)(13,-11)%
+\psline(13,-11)(13,-4)(-8,-8)%
+\closepath%
+}}%
+%
+% Waves
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput(0,0){\sailWaves}%
+\rput(0,0){\psscalebox{-1 -1}{\sailWaves}}%
+%
+\newcommand{\sailBoat}{%
+% Keel
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\sailBoatKeel}%
+% Hull
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\sailBoatHull}%
+% Sail Main
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\sailMain}%
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\sailTop}%
+%
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\sailBottom}%
+}% end newcommand
+\rput(-20,17){\sailBoat}%
+\rput(20,-17){\psscalebox{-1 -1}{\sailBoat}}%
+}}%
+% endregion Sailing
+
+% region 34 Shooting
+\newcommand{\psOlympicXxivShooting}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Big Circle
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\pscircle(0,0){9}%
+% Small Circle
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\pscircle(0,0){6}%
+% Square
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-3,-3)(3,3)%
+% Bull's Eye
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\pscircle(0,0){1}%
+% Cross Lines Long
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\multido{\nA=0+90}{4}{\rput{\nA}(0,0){\psline(3.5,3.5)(8,8)}}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\multido{\nA=0+90}{4}{\rput{\nA}(0,0){\psline(6.5,0)(10,0)}}%
+}}%
+% endregion Shooting
+
+% region 35 Skateboarding
+% Skateboarding
+% Board
+% \psline(0,6)(-6,6)%
+% \psarc(-6,4){2}{90}{270}%
+% \psline(-6,2)(0,2)%
+% Wall Curved
+% \psarc(-3,-10){2}{0}{90}%
+% \psline(-3,-8)(-4,-8)%
+% \psarcn(-4,-4){4}{270}{180}%
+% \psline(-8,-4)(-8,-3)%
+% \psarc(-10,-3){2}{0}{90}%
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxivSkateboarding}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Board
+\newcommand{\boardA}{\pscustom{\psline(0,6)(-6,6)%
+\psarc(-6,4){2}{90}{270}\psline(-6,2)(0,2)\closepath}}%
+% Board Holes
+\newcommand{\boardHoles}{%
+\rput(-3,3.5){\pscircle(0,0){0.2}}%
+\rput(-3,4.5){\pscircle(0,0){0.2}}%
+\rput(-4,3.5){\pscircle(0,0){0.2}}%
+\rput(-4,4.5){\pscircle(0,0){0.2}}}%
+% Wall Angled
+\newcommand{\wallAngled}{%
+\pspolygon(8,1)(6,6)(1,8) (1,9)(6.7071,6.7071)(9,1)%
+\rput{45}(6,6){\psline(0,0)(1,0)}%
+\rput{21.8}(7.16,3){\psline(0,0)(1,0)}%
+\rput{68.2}(3,7.16){\psline(0,0)(1,0)}%
+}%
+% Wall Curved
+\newcommand{\wallCurved}{\pscustom{\psarc(-3,-10){2}{0}{90}%
+\psline(-3,-8)(-4,-8)%
+\psarcn(-4,-4){4}{270}{180}%
+\psline(-8,-4)(-8,-3)%
+\psarc(-10,-3){2}{0}{90}}}%
+% Board
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\boardA}\rput{180}(0,0){\boardA}%
+% Board Holes
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\boardHoles}\rput{180}(0,0){\boardHoles}%
+% Wheel Rim
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\pscircle(3.5,3.5){1.75}%
+\pscircle(-3.5,-3.5){1.75}%
+% Wheel Hub
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\pscircle(3.5,3.5){0.7}%
+\pscircle(-3.5,-3.5){0.7}%
+% Wheel Bore
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\pscircle(3.5,3.5){0.45}%
+\pscircle(-3.5,-3.5){0.45}%
+% Wall Angled
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput(0,0){\wallAngled}%
+% Wall Curved
+\psset{fillstyle=\fillStyleF,fillcolor=\fillColorF,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\rput(0,0){\wallCurved}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleG,linecolor=\lineColorG,linewidth=\lineWidthG}%
+\psline(-10,0)(10,0)\psline(0,-10)(0,10)%
+}}%
+% endregion Skateboarding
+
+% region 36 Sport Climbing
+% Rock A
+% \psbezier(-12,7)(-11,10)(-16,10)(-16,9)%
+% \psline(-16,9)(-16,6)%
+% \psbezier(-16,6)(-16,3)(-14,5)(-14,5)%
+% \psline(-14,5)(-12,7)%
+% Rock B
+% \psbezier(-5,12)(-3,11)(-2,14)(-3,15)%
+% \psbezier(-3,15)(-4,16)(-8,16)(-8,15)%
+% \psbezier(-8,15)(-9,14)(-5,14)(-5,12)%
+% Rock C
+% \psbezier(-3,4)(-5,5)(-3,7)(-3,7)%
+% \psbezier(-3,7)(-2,9)(-4,8)(-4,8)%
+% \psbezier(-4,8)(-5,7)(-8,9)(-8,9)%
+% \psbezier(-8,9)(-7.5,6.5)(-9,6)(-9,6)%
+% \psbezier(-9,6)(-9,6)(-5,6)(-4,3)%
+% \psbezier(-4,3)(-3,2.5)(-2,3.5)(-3,4)%
+\newcommand{\psOlympicXxivSportClimbing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/40:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Rock A
+\newcommand{\rockA}{\pscustom{%
+\psbezier(-12,7)(-11,10)(-16,10)(-16,9)%
+\psline(-16,9)(-16,6)%(-16,6)
+\psbezier(-16,3)(-14,5)(-14,5)%
+\psline(-14,5)(-12,7)\closepath}}%
+% Rock B
+\newcommand{\rockB}{\pscustom{%
+\psbezier(-5,12)(-3,11)(-2,14)(-3,15)%\psbezier(-3,15)
+(-4,16)(-8,16)(-8,15)%\psbezier(-8,15)
+(-9,14)(-5,14)(-5,12)\closepath}}%
+% Rock C
+\newcommand{\rockC}{\pscustom{%
+\psbezier(-3,4)(-5,5)(-3,7)(-3,7)%\psbezier(-3,7)
+(-2,9)(-4,8)(-4,8)%\psbezier(-4,8)
+(-5,7)(-8,9)(-8,9)%\psbezier(-8,9)
+(-7.5,6.5)(-9,6)(-9,6)%\psbezier(-9,6)
+(-9,6)(-5,6)(-4,3)%\psbezier(-4,3)
+(-3,2.5)(-2,3.5)(-3,4)\closepath}}%
+%
+\newcommand{\rockClimb}{%
+% Polygon A
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\pspolygon(0,0)(8,0)(8,4)(0,8)%
+% Polygon C
+\pspolygon(8,4)(15,5)(12,12)%
+%
+% Rock C
+\rput(0,0){\rockC}%
+%
+% Polygon B
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\pspolygon(8,0)(20,0)(15,5)(8,4)%
+% Polygon D
+\pspolygon(8,4)(12,12)(5,10)(2,7)%
+% Polygon E
+\pspolygon(2,7)(5,10)(0,18)(0,8)%
+% Polygon F
+\pspolygon(0,20)(0,18)(5,10)(12,12)%
+%
+% Rock A
+\rput(0,0){\rockA}%
+% Rock B
+\rput(0,0){\rockB}%
+%
+% Circles
+\rput(3,3){\pscircle(0,0){0.7}}% A
+\rput(12,8){\pscircle(0,0){0.5}}% C
+%
+% Circle C
+\rput(-5.5,6.5){\pscircle(0,0){0.5}}%
+%
+% Circles
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(12,2){\pscircle(0,0){0.5}}% B
+\rput(7,8){\pscircle(0,0){0.5}}% D
+\rput(2,11){\pscircle(0,0){0.5}}% E
+\rput(5.5,13.5){\pscircle(0,0){0.5}}% F
+%
+% Circles
+\rput(-4.5,14){\pscircle(0,0){0.5}}% A
+\rput(-14,8){\pscircle(0,0){0.5}}% B
+}% end newcommand rock Climb
+\rput(0,0){\rockClimb}%
+\rput{180}(0,0){\rockClimb}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psline(-20,0)(20,0)%
+\psline(0,-20)(0,20)%
+}}%
+% endregion Sport Climbing
+
+% region 37 Surfing
+\newcommand{\psOlympicXxivSurfing}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\newcommand{\surfBoard}{\rput(3.4,0){\pscustom{%
+\psbezier(0,0)(0,0)(3.3,2)(6.6,0)%\psbezier(6.6,0)
+(3.3,-2)(0,0)(0,0)\closepath}}}%
+% Surf Board}
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\multido{\nA=0+72}{5}{\rput{\nA}(0,0){\surfBoard}}%
+% Lines
+\psset{fillstyle=none,linestyle=solid}%
+\multido{\nA=0+72}{5}{\rput{\nA}(0,0){%
+\psset{linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psarc(3.5,0){3.5}{20}{180}%
+\psset{linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psarc(3,0){3}{20}{180}%
+\psset{linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psarc(2.5,0){2.5}{20}{180}%
+\psset{linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psarc(2,0){2}{20}{180}%
+\psset{linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psarc(4,0){4}{20}{180}}}%
+}}%
+% endregion Surfing
+
+% region 38 Swimming
+\newcommand{\psOlympicXxivSwimming}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Pool newcommand
+\newcommand{\poolA}{\pscustom{\psline(0,0)(6,0)%(6,0)
+\psbezier(7,-1.5)(5,-1.5)(6,-3) (7,-4.5)(5,-4.5)(6,-6)%
+\psline(6,-6)(0,-6)(0,0)\closepath}}%
+% Pool
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\poolA}\rput{180}(0,0){\poolA}%
+% Cross Lines
+\psline(-10,0)(10,0)\psline(0,-10)(0,10)%
+% Swim Lanes
+\psset{fillstyle=none,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\multirput(0,-1.5)(0,-1.5){3}{\psline(0,0)(5,0)\psline(5,0.5)(5,-0.5)}%
+\multirput(0,1.5)(0,1.5){3}{\psline(0,0)(-5,0)\psline(-5,0.5)(-5,-0.5)}%
+% Swimming Cap
+\rput(5,5){\psOlympicXxivSwimmingCapA[5]}%
+\rput{180}(-5,-5){\psOlympicXxivSwimmingCapA[5]}%
+}}%
+% endregion Swimming
+
+% region 39 Table Tennis
+\newcommand{\psOlympicXxivTableTennis}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Table
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psframe(-5,-7)(5,7)\psline(0,-4)(0,4)%
+% Net Lines
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\psframe(-6,-0.5)(6,0.5)\multirput(-5,0)(1,0){11}{\psline(0,-0.5)(0,0.5)}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\psline(-10,0)(-6.5,0)\psline(10,0)(6.5,0)%
+% Bat Ball
+\rput(0,6.5){\psOlympicXxivTableTennisBatA{4}}%
+\rput{180}(0,-6.5){\psOlympicXxivTableTennisBatA{4}}%
+}}%
+% endregion Table Tennis
+
+% region 40 Taekwondo
+\newcommand{\psOlympicXxivTaekwondo}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/84:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Player
+\newcommand{\playerA}{%
+% Player Head command
+\newcommand{\playerHead}{\pscustom{%
+\psbezier(-8,-5)(-8,-13)(8,-13)(8,-5)%\psbezier(8,-5)
+(10,-5)(10,-2)(10,-2)%
+\psline(10,-2)(10,0)%(10,0)
+\psbezier(10,0)(10,3)(8,3)%\psbezier(8,3)
+(8,13)(-8,13)(-8,3)%\psbezier(-8,3)
+(-10,3)(-10,0)(-10,0)%
+\psline(-10,0)(-10,-2)%(-10,-2)
+\psbezier(-10,-2)(-10,-5)(-8,-5)\closepath}}%
+% Player Face command
+\newcommand{\playerFace}{\pscustom{%
+\psbezier(2,-9)(6,-9)(7,-2)(7,2)%\psbezier(7,2)
+(7,2)(7,3)(6,3)%\psbezier(6,3)
+(5,4)(4,4)(3,3)%
+\psline(3,3)(-3,3)%(-3,3)
+\psbezier(-4,4)(-5,4)(-6,3)%\psbezier(-6,3)
+(-7,3)(-7,2)(-7,2)%\psbezier(-7,2)
+(-7,-2)(-6,-9)(-2,-9)%
+\psline(-2,-9)(2,-9)\closepath}}%
+% Costume Inner command
+\newcommand{\costumeInner}{\pspolygon(0,0)(-14,14)(14,14)}%
+% Costume Neck command
+\newcommand{\costumeNeck}{\pscustom{%
+\psbezier(-4,18)(-3,16)(3,16)(4,18)%
+\psline(5,18)(8,18)(14,14)(-14,14)(-8,18)(-5,18)%
+\closepath}}%
+% Costume Vest command
+\newcommand{\costumeVest}{\pspolygon(0,0)(20,0)(20,9)(14,14)%
+\psline(13,0)(13,5)}%
+% Head
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,29.5){\playerHead}%
+% Face
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,29.5){\playerFace}%
+% Costume Inner
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\costumeInner}%
+% Costume Neck
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\costumeNeck}%
+% Costume Vest
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\costumeVest}%
+\rput(0,0){\psscalebox{-1 1}{\costumeVest}}%
+}% end newcommand
+\rput(0,0){\playerA}%
+\psscalebox{1 -1}{\playerA}%
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psline(21,21)(42,0)\psline(-21,21)(-42,0)%
+\psscalebox{1 -1}{\psline(21,21)(42,0)\psline(-21,21)(-42,0)}%
+\psline(-33,-33)(33,33)\psline(-33,33)(33,-33)%
+}}%
+% endregion Taekwondo
+
+% region 41 Tennis
+\newcommand{\psOlympicXxivTennis}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Ball
+\newcommand{\tennisBall}[1]{\psscalebox{\fpeval{round(##1/20,3)}}{%
+\pscircle[linestyle=none,fillstyle=\fillStyleE,fillcolor=\fillColorE](0,0){10}%
+\psset{fillstyle=none,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF}%
+\psbezier(-7.12,7)(-6,8)(-2,9)(-3,5)(-4,2)(-12,-9)(0,-10)(12,-9)(4,2)(3,5) (2,9)(6,8)(7.12,7)%
+\pscircle[fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE](0,0){10}%
+}}%
+%
+\rput{135}(5,5){\tennisBall{2}}%
+\rput{-135}(-5,5){\tennisBall{2}}%
+\rput{-45}(-5,-5){\tennisBall{2}}%
+\rput{45}(5,-5){\tennisBall{2}}%
+%
+% bat
+\rput(0,1){\psOlympicXxivTennisBatA{3.6}}
+\rput{180}(0,-1){\psOlympicXxivTennisBatA{3.6}}
+\rput{90}(-1,0){\psOlympicXxivTennisBatA{3.6}}
+\rput{-90}(1,0){\psOlympicXxivTennisBatA{3.6}}
+}}%
+%endregion
+
+% region 42 Trampoline
+\newcommand{\psOlympicXxivTrampoline}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\psset{fillstyle=none,linecolor=red}%
+% Net Light Outer
+\psset{fillstyle=none,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-5,-7)(5,7)%
+% Net Dark
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-7,-4)(7,4)%
+% Net Light Inner
+\psset{fillstyle=solid,fillcolor=white,linestyle=solid,linecolor=white,linewidth=\lineWidth}%
+\psframe(-3,-2)(3,2)%
+% Net Lines White
+\psset{fillstyle=none,linestyle=solid,linecolor=white}%
+\psline(-6.8,-2)(6.8,-2)%
+\psline(-6.8,2)(6.8,2)%
+\psline(-3,-2)(-3,2)%
+\psline(3,-2)(3,2)%
+% Net Lines Center
+\psset{linecolor=\lineColor}%
+\psline(-1,0)(1,0)%
+\psline(0,-1)(0,1)%
+% Net Lines Outer
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=solid,linecolor=\lineColor,linewidth=\lineWidth}%
+\multirput(-3,4)(2,0){4}{\psline(0,0)(0,1)\pscircle(0,1.1){0.2}}%
+\multirput(-3,-4)(2,0){4}{\psline(0,0)(0,-1)\pscircle(0,-1.1){0.2}}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(-10,0)(-7.5,0)%
+\psline(10,0)(7.5,0)%
+\psline(0,10)(0,6)%
+\psline(0,-10)(0,-6)%
+}}%
+% endregion Trampoline
+
+% region 43 Triathlon
+\newcommand{\psOlympicXxivTriathlon}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Cross Lines
+\newcommand{\crossLines}{\psline(-8,-8)(8,8)\psline(8,-8)(-8,8)}%
+% Waves
+\newcommand{\waterWaves}{%
+\rput(-10,-6){\psplot[algebraic]{0}{4.2}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,-4){\psplot[algebraic]{0}{6.1}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,-2){\psplot[algebraic]{0}{7.6}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,0){\psplot[algebraic]{0}{10.0}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,2){\psplot[algebraic]{0}{8.3}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,4){\psplot[algebraic]{0}{5.8}{0.4*sin(x * -3/\FPpi)}}%
+\rput(-10,6){\psplot[algebraic]{0}{3.9}{0.4*sin(x * -3/\FPpi)}}%
+}%
+% Road
+\newcommand{\roadA}{%
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+% \pscustom{%
+% \psline(0,0)(4,0)%
+% \psarc(4,4.5){4.5}{270}{90}%
+% \psline(4,9)(0,9)(0,6.5)%
+% \psarcn(4,4.5){2}{90}{270}%
+% \psline(4,2.5)(0,2.5)%
+% }%
+\pscustom{%
+% \psline(0,0)(4,0)%
+\psarc(4,4.5){4.5}{290}{90}%
+\psline(4,9)(0,9)(0,6.5)%
+\psarcn(4,4.5){2}{90}{310}%
+% \psline(4,2.5)(0,2.5)%
+}%
+% Center line
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC,dash=\lineDashC}%
+\pscustom{%
+% \psline(0,1.25)(4,1.25)%
+% \psarc(4,4.5){3.25}{270}{90}%
+% \psline(4,7.75)(0,7.75)%
+\psarc(4,4.5){3.25}{310}{90}%
+\psline(4,7.75)(0,7.75)%
+}}%
+%
+% Road
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput{-45}(0,0){\roadA}%
+% waves
+\psset{fillstyle=none,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\waterWaves}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput(0,0){\crossLines}%
+% Cycle
+\rput(0,0){\psscalebox{-1 1}{\psOlympicXxivCycleRoadA{12}}}%
+% Shoe
+\rput{135}(1,-7){\psscalebox{1 -1}{\psOlympicXxivRunningShoeA{6.6}}}%
+% Cap
+\rput(0,7){\psOlympicXxivTriathlonCapA{4}}%
+}}%
+% endregion Triathlon
+
+% region 44 Volleyball
+\newcommand{\psOlympicXxivVolleyball}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Vertical Line
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\psline(0,-10)(0,10)%
+% Court
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\psframe(-6,1.5)(0,6)\psframe(0,-1)(6,-6)%
+\psline(0,3)(-6,3)\psline(0,-3)(6,-3)%
+% Net
+\psset{fillstyle=\fillStyleNetBand,fillcolor=\fillColorNetBand,linestyle=\lineStyleNetBand,linecolor=\lineColorNetBand,linewidth=\lineWidthNetBand}%
+\psframe(-10,1)(10,1.5)%
+\psset{fillstyle=\fillStyleNet,fillcolor=\fillColorNet,linestyle=\lineStyleNet,linecolor=\lineColorNet,linewidth=\lineWidthNet}%
+\rput{90}(0,0){\psframe(-1,-10)(1,10)\psline(0,-10)(0,10)%
+\multirput(0,0)(0,1){20}{\psline(-1,-10)(1,-10)}}%
+% Ball
+\psset{linestyle=\lineStyleBallLines,linecolor=\lineColorBallLines,linewidth=\lineWidthBallLines,fillstyle=\fillStyleStrip}%
+\rput(4.5,5.5){\psOlympicXxivVolleyballBallA{5}}%
+\rput(-4.5,-5.5){\psOlympicXxivVolleyballBallA{5}}%
+}}%
+% endregion Volleyball
+
+% region 45 Water Polo
+\newcommand{\psOlympicXxivWaterPolo}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\newcommand{\waterDiamond}{\pspolygon(-7,0)(0,-7)(7,0)(0,7)}%
+\newcommand{\crossLines}{\psline(-8,-8)(8,8)\psline(8,-8)(-8,8)}%
+% Water Waves
+\newcommand{\waterWaves}{%
+\rput(0,-9.5){\psplot[algebraic]{-8.0}{8.0}{0.4*sin(x * -3/\FPpi)}}%
+\rput(0,-8.0){\psplot[algebraic]{-7.8}{7.8}{0.4*sin(x * -3/\FPpi)}}%
+\rput(0,-6.5){\psplot[algebraic]{-6.5}{6.5}{0.4*sin(x * -3/\FPpi)}}%
+\rput(0,-5.0){\psplot[algebraic]{-5.5}{4.5}{0.4*sin(x * -3/\FPpi)}}%
+}%
+\newcommand{\waterNetA}{\psframe(-8.5,-4)(-5,4)}%
+\newcommand{\waterNetAline}{\psline(-5,-2)(-5,2)}%
+\newcommand{\waterNetB}{\psline(-8.9,-1.5)(-10,-1.5)(-10,1.5)(-8.9,1.5)}%
+% waves
+\psset{fillstyle=none,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\rput(0,0){\waterWaves}\rput{180}(0,0){\psscalebox{-1 1}{\waterWaves}}%
+% Cross Lines
+\psset{fillstyle=none,linestyle=\lineStyleH,linecolor=\lineColorH,linewidth=\lineWidthH}%
+\rput(0,0){\crossLines}%
+% Net A
+\psset{fillstyle=\fillStyleE,fillcolor=\fillColorE,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\rput(0,0){\waterNetA}\rput{180}(0,0){\waterNetA}%
+% Diamond
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\rput(0,0){\waterDiamond}%
+% Net A line
+\psset{fillstyle=none,linestyle=\lineStyleF,linecolor=\lineColorF,linewidth=\lineWidthF,dash=\lineDashF}%
+\rput(0,0){\waterNetAline}\rput{180}(0,0){\waterNetAline}%
+% Net B
+\psset{fillstyle=\fillStyleG,fillcolor=\fillColorG,linestyle=\lineStyleG,linecolor=\lineColorG,linewidth=\lineWidthG}%
+\rput(0,0){\waterNetB}\rput{180}(0,0){\waterNetB}%
+% Cap
+\rput(0,0){\psOlympicXxivWaterPoloCapA{5}}%
+% Ball
+\rput(0,7){\psOlympicXxivBeachVolleyballBallA{4}}%
+\rput(0,-7){\psOlympicXxivBeachVolleyballBallA{4}}%
+}}%
+% endregion Water Polo
+
+% region 46 Weightlifting
+\newcommand{\psOlympicXxivWeightlifting}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/80:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+% Bar
+\newcommand{\weightBar}{\pspolygon(-135,-14)(-130,-14)(-130,-7)(130,-7)(130,-14)(135,-14)(135,14)(130,14)(130,7)(-130,7)(-130,14)(-135,14)}%
+% Bar Hole
+\newcommand{\weightBarHole}{\pspolygon(-130,-2)(130,-2)(130,2)(-130,2)}%
+% Bar End
+\newcommand{\weightBarEnd}{\pspolygon(0,-7)(33,-7)(33,-14)(38,-14)(38,14)(33,14)(33,7)(0,7)}%
+% Bar End Hole
+\newcommand{\weightBarEndHole}{\pspolygon(5,-2)(33,-2)(33,2)(5,2)}%
+% Weight One
+\newcommand{\weightOne}{\pspolygon(0,0)(15,0)(15,100)(0,100)}%
+%
+% Full Weight Bar with Weights
+\newcommand{\weightLift}[1]{\psscalebox{\fpeval{round(##1/480,3)}}{%
+% Bar + Bar End
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\weightBar}%
+\rput(-240,0){\weightBarEnd}%
+\rput{180}(240,0){\weightBarEnd}%
+% Weights
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(-155,-50){\weightOne}%
+\rput(-176,-50){\weightOne}%
+\rput(-197,-50){\weightOne}%
+\rput(140,-50){\weightOne}%
+\rput(161,-50){\weightOne}%
+\rput(182,-50){\weightOne}%
+% Holes
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\rput(0,0){\weightBarHole}%
+\rput(-240,0){\weightBarEndHole}%
+\rput{180}(240,0){\weightBarEndHole}%
+}}%
+%
+\rput(0,0){\weightLift{80}}%
+\rput{90}(0,0){\weightLift{80}}%
+}}%
+% endregion Weightlifting
+
+% region 47 Wrestling
+\newcommand{\psOlympicXxivWrestling}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/40:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+% outer square - B
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psframe(-12,-12)(12,12)%
+% outer circle - C
+\psset{fillstyle=\fillStyleC,fillcolor=\fillColorC,linestyle=\lineStyleC,linecolor=\lineColorC,linewidth=\lineWidthC}%
+\pscircle(0,0){9}%
+% center circle
+\psset{fillstyle=\fillStyleD,fillcolor=\fillColorD,linestyle=\lineStyleD,linecolor=\lineColorD,linewidth=\lineWidthD}%
+\pscircle(0,0){1.5}%
+% Line Mask
+\psset{fillstyle=none,linestyle=\lineStyleE,linecolor=\lineColorE,linewidth=\lineWidthE}%
+\psline(-20,0)(20,0)%
+% Line
+\psset{fillstyle=\fillStyleB,fillcolor=\fillColorB,linestyle=\lineStyleB,linecolor=\lineColorB,linewidth=\lineWidthB}%
+\psline(-20,0)(20,0)%
+%
+% Wrestling Costume
+\newcommand{\costumeA}{\pscustom{%
+\psbezier(2,14)(2,12)(-2,12)(-2,14)%
+\psline(-2,14)(-2,20)(-7,20)(-10,3)(-8,-2)(-10,-8)(-9,-20)%(-9,-20)
+\psbezier(-9,-20)(-5,-18)(0,-19)%\psbezier(0,-19)
+(5,-18)(9,-20)(9,-20)%
+\psline(9,-20)(10,-8)(8,-2)(10,3)(7,20)(2,20)(2,14)%
+\closepath}%
+% Line Vertical
+\psline(0,-6)(0,-19)}%
+% Pant
+\newcommand{\pantA}{\pscustom{%
+\psbezier(-9,-20)(-9,-20)(-5,-18)(0,-19)%
+\psline(0,-19)(0,-13)%(0,-13)
+\psbezier(-5,-12)(-9.5,-14)(-9.5,-14)%
+\psline(-9.5,-14)(-9,-20)}}%
+% Pant Line
+\newcommand{\pantLines}{\psbezier(-9.5,-14)(-9.5,-14)(-5,-12)(0,-13)%
+\psbezier(0,-13)(5,-12)(9.5,-14)(9.5,-14)}%
+% Costume All
+\newcommand{\wrestlingCostume}[1]{\psscalebox{\fpeval{round(##1/20,3)}}{%
+% Costume -
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\costumeA}%
+% Pant - A
+\psset{fillstyle=\fillStyleA,fillcolor=\fillColorA,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+\rput(0,0){\pantA}%
+\rput{180}(0,0){\psscalebox{1 -1}{\pantA}}%
+% Pant Lines
+\psset{fillstyle=none,linestyle=\lineStyleA,linecolor=\lineColorA,linewidth=\lineWidthA}%
+\rput(0,0){\pantLines}%
+}}%
+\rput(0,9){\wrestlingCostume{6}}%
+\rput{180}(0,-9){\wrestlingCostume{6}}%
+}}%
+% endregion Wrestling
+
+
+\endinput
+%===============================================================================
+
+% region
+%-------------------------------------------------------------------------------
+\newcommand{\psOlympicXxiv}[1][]{\setkeys{\kvf}{#1}%
+\FPeval{\wide}{round(\iconWidth/20:3)}\psscalebox{\wide}{%
+\psset{unit=1mm,dimen=middle,cornersize=absolute,linearc=0,framearc=0,linejoin=1}%
+\FPset{\pushAaX}{10.68}%
+\psset{fillstyle=none,linecolor=red}%
+\pscircle[linestyle=none,fillstyle=\fillStyle,fillcolor=\fillColor](0,0){10}%
+%
+\psset{fillstyle=\fillStyle,fillcolor=\fillColor,linestyle=\lineStyle,linecolor=\lineColor,linewidth=\lineWidth}%
+%
+\pscircle[fillstyle=none,linestyle=\lineStyleCircle,linecolor=\lineColorCircle,linewidth=\lineWidthCircle](0,0){10}%
+}}%
+% endregion
