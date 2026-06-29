@@ -91,12 +91,15 @@ To use this package, add the following to the preamble of your document:
 
 \begin{document}
 
-This is inline character A lit by \psLedDisplay[ledWidth=10]
+\psset{unit=1mm}
 
-\psset{unit=1mm,fillstyle=solid,linestyle=none}%
-\psset{ledColorOn=yellow,ledWidth=8,ledDistance=0}%
+\rput{0}(0,-10){\psOlympicXxivLogo[iconWidth=20]}%
 
-\rput(0,-8mm){\psLedDisplay{Volt ~ : ~ 0123 V}}
+\vspace{-20mm}
+
+\rput{0}(0,-10){\psOlympicXxivArchery[
+fillStyle=solid,fillColor=black,fillColorA=white,lineColor=black,lineWidth=1]}%
+
 
 \end{document}
 ```

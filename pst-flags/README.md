@@ -74,6 +74,16 @@ Flag colors are defined using country code appended with color name which can be
 
 ```
 
+## Compilation
+
+PSTricks generates PostScript code, which standard pdflatex or lualatex compilers cannot process directly. You typically use the following workflow:
+
+* The DVI -> PS -> PDF chain: Compile your document using the latex command, followed by dvips, and finally ps2pdf (e.g., latex file.tex && dvips file.dvi && ps2pdf file.ps).
+
+## Documentation
+
+Full documentation with all configuration options and examples can be found in `doc/pst-flags-doc.pdf`.
+
 ## Support
 
 If you run into any issue then please raise it at out [project page on GitHub](ttps://github.com/manthanwar/pst-flags).
@@ -81,3 +91,10 @@ If you run into any issue then please raise it at out [project page on GitHub](t
 ## Collaboration
 
 For all collaboration related queries please contact the author via email provided in the style file.
+
+## License
+
+This package is released under the [LaTeX Project Public License](https://latex-project.org) v1.3c or later.
+
+Amit M. Manthanwar
+26 June 2026
