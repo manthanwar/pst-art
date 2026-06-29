@@ -16,12 +16,11 @@
 
 * [pst-art-flags](https://github.com/manthanwar/pst-art/tree/main/pst-flags) - Flags of Countries
 * [pst-art-led](https://github.com/manthanwar/pst-art/tree/main/pst-art-led) - LED Displays and Pixel Art
-
+* [pst-olympic](https://github.com/manthanwar/pst-art/tree/main/pst-olympic) - Olympic Games Pictograms
 
 ## Introduction
 
 We investigate the intersection of computational design, algorithmic aesthetics, and mathematical typesetting. This repository is an evolving collection of research innovations in generative art and design intelligence. It explores the interfaces and commits efforts in blending of algorithmic design, vector data visualization, and procedural drafting, implemented natively in PostScript and $\LaTeX$. It bridges traditional mathematical programming with modern creative coding, enabling machines to interpret logic-driven scripts into physical pen-and-ink masterpieces for print. Additionally, these highly efficient, lightweight outputs are perfect for rendering dynamic screen publications, infographics, and business intelligence dashboards.
-
 
 ### Core Highlights
 
@@ -37,8 +36,7 @@ many data types and chart types including ability to export output results in
 PDF, PNG, JPG, SVG or EPS file formats as well as ability to export input data
 to CSV, XLS, or HTML table formats.
 
-
- ### What is Inside?
+### What is Inside?
 
 This repository acts as a bridge between pure mathematical logic and visual beauty. It contains:
 
@@ -46,7 +44,7 @@ This repository acts as a bridge between pure mathematical logic and visual beau
 * Mathematical Typesetting Art: $LaTeX$ documents utilizing packages like PSTricks to produce publication-ready geometric art.
 * Design Intelligence: Experimental workflows bridging human-guided algorithmic generation with intelligent design systems.
 
-###  Key Features
+### Key Features
 
 * Resolution-Independent Art: All designs are rendered as vector graphics, meaning they can scale infinitely without pixelation.
 * Algorithmic Transparency: Every piece of art is backed entirely by its code, exposing the raw mathematical, functional, and iterative logic behind the final visual.
@@ -64,7 +62,6 @@ Feel free to [ask questions](https://github.com/manthanwar/pst-art/discussions),
 For more information about this project and how to use this package, please
 check out our detailed [documentation](doc/DOCUMENTATION.md).
 
-
 ## License
 
 Please check the [Software Licenses](LICENSE.md) for details.
@@ -74,7 +71,6 @@ Please check the [Software Licenses](LICENSE.md) for details.
 This GitHub repository of package is located at
 
 <https://github.com/manthanwar/pst-art.git>
-
 
 ## Code Languages
 
