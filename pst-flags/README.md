@@ -5,7 +5,7 @@ LaTeX package for drawing flags of countries using PSTricks
 ## Metadata
 
 | Field Name     | Value                                                        |
-| -------------- | ------------------------------------------------------------ |
+| :------------- | :----------------------------------------------------------- |
 | Package Name   | pst-flags                                                    |
 | Version Number | 1.0.0                                                        |
 | Release Date   | 2026/01/09                                                   |
