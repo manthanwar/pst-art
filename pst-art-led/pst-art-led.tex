@@ -86,16 +86,16 @@
 % \clearpage
 
 \section{Introduction}
-An LED 5 x 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. It acts as a single, highly customizable display module used to show alphanumeric characters, simple graphics, or symbols in electronic projects. Because they are bright, compact, and affordable, they are widely used in hobbyist DIY builds and industrial panels as information boards or displays.
+An LED $5 \times 7$ dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. It acts as a single, highly customizable display module used to show alphanumeric characters, simple graphics, or symbols in electronic projects. Because they are bright, compact, and affordable, they are widely used in hobbyist DIY builds and industrial panels as information boards or displays.
 
 This PostScript package handles the input string and maps character data, translating text strings into precise column and row signals to lit the led using simple \verb|ledColorOn=<color-name>| option passed to the \verb|\psLed<csname>[<options>]{<string>}| command. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
 
 \section{String to LED Display}
 \subsection{Example 1}
 \begin{minipage}{0.8\textwidth}
-\begin{verbatim}\psset{unit=1mm,fillstyle=solid,linestyle=none}
-\psset{ledColorOn=yellow,ledWidth=8,ledDistance=12}
-\rput(10mm,-8mm){\psLedDisplay{Volt}}
+\begin{verbatim}\psset{unit=1mm,fillstyle=solid,linestyle=none,dimen=middle}
+\psset{ledColorOn=yellow,ledWidth=8,ledDistance=0}
+\rput(10mm,-8mm){\psLedDisplay{Volt ~ : ~ 0123 V}}
 \end{verbatim}\end{minipage}
 
 \psset{unit=1mm,fillstyle=solid,linestyle=none,dimen=middle}%
