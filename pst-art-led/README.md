@@ -24,7 +24,7 @@ Breakthroughs in electronics and innovations in circuitry are driving the AI rev
 
 ## Introduction
 
-An LED 5 x 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. This pstricks-based graphic package converts the input text string and maps character data into precise column and row signals to lit the led using simple option passed to the commands. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
+An LED 5 × 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. This pstricks-based graphic package converts the input text string and maps character data into precise column and row signals to lit the led using simple option passed to the commands. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
 
 ## Files Included
 
