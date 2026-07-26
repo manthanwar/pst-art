@@ -65,6 +65,7 @@ So, the command can be modified as:
 ```latex
 \newcommand{\psLedA}{\createMatrixDots{14,17,17,31,17,17,17}}
 ```
+
 with a generalized command `\createMatrixDots` (to be created).
 
 As you present your code as: We investigate the intersection of computational design, algorithmic aesthetics, it would be better than a list like `\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%`.
