@@ -21,10 +21,13 @@
 %---------------+---------+----------------------------------------------------
 % 09-Jan-2023   | AMM     | Removed xcolor
 %---------------+---------+----------------------------------------------------
+% 26-Jul-2026   | AMM     | fixed the order of loading packages /issues/2
+%---------------+---------+----------------------------------------------------
 %---------------+---------+----------------------------------------------------
 %---------------+---------+----------------------------------------------------
 %===============================================================================
 \documentclass{amm-pst-doc}
+\usepackage[nomessages]{fp}
 \usepackage{pst-flags}
 \title{\vspace*{-10mm}
 \texttt{pst-flags}: A PSTricks Package for Drawing Flags of Countries\\[2mm]
@@ -63,8 +66,8 @@ find it.
 \paragraph{Dependencies:} This packages requires expl3, fp, xfp, pstricks and pst-all.
 
 \paragraph{Usage:}
-Load the packages \texttt{pstricks} and \texttt{pst-flags}
-in that order via the \texttt{usepackage} macro. Now you are ready to use the \texttt{pst-flags} macros within your document body. This macro is described in the next section with all its options. With the help of the following simple \LaTeX-source code, you can test whether you have correctly installed the package:
+Load the package \texttt{pst-flags} via the \verb|\usepackage| macro. 
+Now you are ready to use the \texttt{pst-flags} macros within your document body. This macro is described in the next section with all its options. With the help of the following simple \LaTeX-source code, you can test whether you have correctly installed the package:
 
 \begin{verbatim}
 \documentclass{article}
