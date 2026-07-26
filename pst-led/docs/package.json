@@ -8,10 +8,10 @@
     "watch": "latexmk -silent -pdfps -synctex=-1 -pvc -time pst-art-led.tex",
     "clean": "latexmk -c",
     "clean:all": "latexmk -C && rm *.out.ps",
-    "lint": "chktex main.tex",
-    "format": "latexindent -w -s main.tex",
-    "latex" : "make -f ../../scripts/makefile file=pst-art-led runlatex",
-    "latexc" : "make -f ../../scripts/makefile file=pst-art-led runlatexc",
+    "lint": "chktex pst-led.tex",
+    "format": "latexindent -w -s pst-led.tex",
+    "latex" : "make -f ../../scripts/makefile file=pst-led runlatex",
+    "latexc" : "make -f ../../scripts/makefile file=pst-led runlatexc",
     "zip" : "zip pst-led-art.zip *",
     "zipc" : "find . -type f ! -name '*.zip' -delete"
   },
@@ -27,7 +27,7 @@
     "npm run lint: Runs chktex (if installed on your system) to check your style, typos, and common formatting mistakes.",
     "npm run format: Automatically fixes indentation and code alignment using latexindent.",
     "npm run zip: create .zip",
-    "npm run zipc: clean everything except .zip" 
+    "npm run zipc: clean everything except .zip"
   ],
   "keywords": [
     "latex",

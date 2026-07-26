@@ -29,7 +29,7 @@
 %===============================================================================
 % region article preamble - pst-art
 %------------------------------------------------------------------------------
-\documentclass[11pt,a4paper]{pst-art}
+\documentclass[11pt,a4paper]{../../code/pst-art}
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
 % Packages by Amit M. Manthanwar
@@ -93,9 +93,10 @@ This PostScript package handles the input string and maps character data, transl
 \section{String to LED Display}
 \subsection{Example 1}
 \begin{minipage}{0.8\textwidth}
-\begin{verbatim}\psset{unit=1mm,fillstyle=solid,linestyle=none}
-\psset{ledColorOn=yellow,ledWidth=8,ledDistance=12}
-\rput(10mm,-8mm){\psLedDisplay{Volt}}
+\begin{verbatim}
+\psset{unit=1mm,fillstyle=solid,linestyle=none,dimen=middle}
+\psset{ledColorOn=yellow,ledWidth=8,ledDistance=0}
+\rput(10mm,-8mm){\psLedDisplay{Volt ~ : ~ 0123 V}}
 \end{verbatim}\end{minipage}
 
 \psset{unit=1mm,fillstyle=solid,linestyle=none,dimen=middle}%

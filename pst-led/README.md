@@ -93,10 +93,9 @@ PSTricks generates PostScript code, which standard pdflatex or lualatex compiler
 
 ## Documentation
 
-A full documentation with all configuration options and examples can be found in `pst-art-led.pdf`.
+A full documentation with all configuration options and examples can be found in [pst-led.pdf](docs/pst-led.pdf).
 
 To build from the source, look at the compilation guide: [How to compile?](../docs/compile.md)
-
 
 ## Issues and Contributions
 
@@ -111,12 +110,13 @@ pst-led/
 ├── code/                          # Source code
 │   ├── pst-led-o.sty              # Style file original with comments
 ├── comm/                          # Communications
-│   └── communications.md/    
+│   └── communications.md/
 ├── ctan/                          # Submission to CTAN: zip sent for uploads
 │   └── pst-art-led-20260626.zip   #
 ├── docs/                          # Documentation files
-│   ├── pst-art.cls                # Class file for documentation
-│   └── pst-led.tex                # Documentation 
+│   ├── pst-art.cls                # Class file moved to ../../code/
+│   └── pst-led.tex                #
+│   └── pst-led.pdf                #
 ├── test/                          # Unit and integration tests
 │   └── test_main.js
 ├── .gitignore                     # Files to ignore in Git
@@ -124,7 +124,6 @@ pst-led/
 ├── package.json                   # Dependencies and scripts
 └── README.md                      # Project overview
 ```
-
 
 ## License
 
