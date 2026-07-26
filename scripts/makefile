@@ -117,7 +117,7 @@ build:	dvi ps pdf
 
 ls:
 	@echo
-	@ls --color=auto --group-directories-first -sh *.pdf
+	@ls --color=auto --group-directories-first -sh
 
 clear:
 	@clear

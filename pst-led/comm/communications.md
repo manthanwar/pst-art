@@ -9,7 +9,7 @@ Your name                  : Amit Manohar Manthanwar
 Your email                 : <manthanwar@hotmail.com>
 Summary:                   : A PSTricks Art Package to Generate LED Displays
 Description:
-An LED 5 x 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. This pstricks-based graphic art package converts the input text string and maps character data into precise column and row signals to lit the led display using simple option passed to the commands. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
+An LED 5 × 7 dot matrix is a rectangular grid of 35 light-emitting diodes arranged in 5 columns and 7 rows. This pstricks-based graphic art package converts the input text string and maps character data into precise column and row signals to lit the led display using simple option passed to the commands. It bridges the gap between retro aesthetic design and professional document typesetting. It allows users to programmatically generate scalable, clean matrix-style graphics, such as custom alphanumeric characters or pixel art, without relying on external image editors. It integrates pixel or matrix-style graphics natively into standard documents, making it ideal for technical documentation, science tutorials, or retro-computing projects.
 
 Suggested CTAN directory   : /graphics/pstricks/contrib/pst-art/
 

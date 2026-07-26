@@ -1,0 +1,40 @@
+{
+  "name": "pst-art-led",
+  "version": "1.0.0",
+  "description": "A LaTeX project to Print Dot Matrix LED Displays",
+  "main": "pst-art-led.tex",
+  "scripts": {
+    "build": "latexmk -silent -pdfps -synctex=-1 -pvc -time pst-art-led.tex",
+    "watch": "latexmk -silent -pdfps -synctex=-1 -pvc -time pst-art-led.tex",
+    "clean": "latexmk -c",
+    "clean:all": "latexmk -C && rm *.out.ps",
+    "lint": "chktex main.tex",
+    "format": "latexindent -w -s main.tex",
+    "latex" : "make -f ../../scripts/makefile file=pst-art-led runlatex",
+    "latexc" : "make -f ../../scripts/makefile file=pst-art-led runlatexc",
+    "zip" : "zip pst-led-art.zip *",
+    "zipc" : "find . -type f ! -name '*.zip' -delete"
+  },
+  "scripts-doc" :[
+    "The scripts object contains custom shortcut commands that you can execute from your terminal using npm run <script-name>.",
+    "npm run latex: Uses make to compile .tex file into a PDF.",
+    "npm run latex n=3: Uses make to compile .tex file 3 times into a PDF.",
+    "npm run latexc: Uses make to clean generated files",
+    "npm run build: Uses latexmk to compile .tex file into a PDF. The -interaction=nonstopmode flag ensures the build won't freeze if it encounters a minor compilation error.",
+    "npm run watch: Keeps the compiler running in the background. It watches your files for changes and automatically re-compiles the PDF every time you save.",
+    "npm run clean: Cleans up temporary auxiliary files (like .aux, .log, .toc) generated during the compilation process.",
+    "npm run clean:all: Removes all auxiliary files plus the generated output PDF, giving you a completely fresh state.",
+    "npm run lint: Runs chktex (if installed on your system) to check your style, typos, and common formatting mistakes.",
+    "npm run format: Automatically fixes indentation and code alignment using latexindent.",
+    "npm run zip: create .zip",
+    "npm run zipc: clean everything except .zip" 
+  ],
+  "keywords": [
+    "latex",
+    "art",
+    "design",
+    "LED"
+  ],
+  "author": "Amit Manohar Manthanwar",
+  "license": "The LaTeX Project Public License (LPPL) Version 1.3c"
+}

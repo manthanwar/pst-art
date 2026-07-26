@@ -1,4 +1,4 @@
-PST-Flags – Draw flags of world countries using PSTricks
+# PST-Flags – Draw flags of world countries using PSTricks
 
 This package provides a number of macros for rendering flags of world countries and their associated artefacts using PSTricks that allow the inclusion of PostScript drawings directly inside TeX or LaTeX source code. Formatting of the resulting drawings is entirely controlled by TeX macros. A good working knowledge of LaTeX should be sufficient to design flags of sovereign countries and adapt them to create new designs. Features such as color or shape customisation and dynamic modifications are possible by cleverly adjusting the options supplied to the TeX macros, see the documentation for examples.
 
@@ -6,7 +6,13 @@ This package requires expl3, fp, xfp, xcolor, pstricks and pst-all.
 
 Announcement: The package pst-flags provides micros for drawing flags of world countries using PSTricks.
 
-Sources	    /graphics/pstricks/contrib/pst-flags
-Repository	https://github.com/manthanwar/PST-Flags
-Licenses	The LaTeX Project Public License 1.3c
-Copyright	2023 Amit M. Manthanwar
+Sources: /graphics/pstricks/contrib/pst-flags
+Repository: https://github.com/manthanwar/PST-Flags
+Licenses: The LaTeX Project Public License 1.3c
+Copyright: 2023 Amit M. Manthanwar
+
+## Version History
+
+| Version | Date        | Source                 | Remarks                     |
+| :-----: | :---------: | :--------------------- | :-------------------------- |
+| 1.0.0   | 09-Jan-2023 | pst-flags-20230109.zip | Initial version             |
