@@ -15,7 +15,7 @@
 ## List of Packages
 
 * [pst-art-flags](https://github.com/manthanwar/pst-art/tree/main/pst-flags) - Flags of Countries
-* [pst-art-led](https://github.com/manthanwar/pst-art/tree/main/pst-art-led) - LED Displays and Pixel Art
+* [pst-art-led](https://github.com/manthanwar/pst-art/tree/main/pst-led) - LED Displays and Pixel Art
 * [pst-olympic](https://github.com/manthanwar/pst-art/tree/main/pst-olympic) - Olympic Games Pictograms
 
 ## Introduction
