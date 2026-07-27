@@ -10,5 +10,5 @@ This is a new PSTricks contribution to generate dot matrix style LED displays fo
 
 | Version | Date        | Source                   | Remarks                     |
 | :-----: | :---------: | :----------------------- | :-------------------------- |
-| 1.0.0   | 09-Jan-2023 | pst-art-led-20260627.zip | Initial version             |
-| 1.0.1   | 09-Jan-2023 | pst-art-led-20260726.zip | Updated documentation       |
+| 1.0.0   | 27-Jun-2026 | pst-art-led-20260627.zip | Initial version             |
+| 1.0.1   | 26-Jul-2026 | pst-art-led-20260726.zip | Updated documentation       |

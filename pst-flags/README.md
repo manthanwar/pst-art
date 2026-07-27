@@ -8,7 +8,7 @@ LaTeX package for drawing flags of countries using PSTricks
 | :------------- | :----------------------------------------------------------- |
 | Package Name   | pst-flags                                                    |
 | Version Number | 1.0.0                                                        |
-| Release Date   | 2026/01/09                                                   |
+| Release Date   | 2023/01/09                                                   |
 | Description    | A PostScript TeX Art Package for Generating Country Flags    |
 | Topics         | LaTeX, PostScript, PSTricks, Graphics, Decorations, flags    |
 | Dependencies   | xcolor, pstricks, pst-xkey                                   |
@@ -26,11 +26,6 @@ This package and its user manual are available at [ctan archive](https://ctan.or
 ### About pst-flags
 
 This package provides a number of macros for rendering flags of world countries and their associated artefacts drawn using LaTeX PSTricks package that allow the inclusion of PostScript drawings directly inside TeX or LaTeX source code. This package further contributes towards a complete implementation of the vector drawing capabilities provided by PSTricks. Formatting of the resulting drawings is entirely controlled by the TeX macros. A good working knowledge of LaTeX should be sufficient to design flags of sovereign countries and adapt them to create new designs. Features such as color or shape customisation and dynamic modifications are possible by cleverly adjusting the options supplied to the TeX macros.
-
-### License
-
-Copyright © 2022 Amit M. Manthanwar. Permission is granted to
-copy, distribute and/or modify this software under the terms of the LaTeX Project Public License, [LPPL Version 1.3c](https://www.latex-project.org/lppl.txt).
 
 ### Feedback
 
@@ -92,9 +87,19 @@ If you run into any issue then please raise it at out [project page on GitHub](t
 
 For all collaboration related queries please contact the author via email provided in the style file.
 
-## License
+### License
+
+Copyright © 2023 Amit M. Manthanwar.
 
 This package is released under the [LaTeX Project Public License](https://latex-project.org) v1.3c or later.
 
+Permission is granted to copy, distribute and/or modify this software under the terms of the LaTeX Project Public License, [LPPL Version 1.3c](https://www.latex-project.org/lppl.txt).
+
 Amit M. Manthanwar
-26 June 2026
+26 June 2023
+
+## Sponsors
+
+These [GitHub Sponsors](../SPONSORS.md) help push this project forward 🎉.
+
+Please consider [donating](../SPONSORS.md) to sustain our activities!

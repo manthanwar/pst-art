@@ -125,9 +125,19 @@ pst-led/
 └── README.md                      # Project overview
 ```
 
-## License
+### License
+
+Copyright © 2026 Amit M. Manthanwar.
 
 This package is released under the [LaTeX Project Public License](https://latex-project.org) v1.3c or later.
 
+Permission is granted to copy, distribute and/or modify this software under the terms of the LaTeX Project Public License, [LPPL Version 1.3c](https://www.latex-project.org/lppl.txt).
+
 Amit M. Manthanwar
 26 June 2026
+
+## Sponsors
+
+These [GitHub Sponsors](../SPONSORS.md) help push this project forward 🎉.
+
+Please consider [donating](../SPONSORS.md) to sustain our activities!
