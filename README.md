@@ -74,7 +74,7 @@ This GitHub repository of package is located at
 
 ## Code Languages
 
-All codes are implemented in $\PostScript$ $\Tex$, $\LaTeX$, and friends.
+All codes are implemented in PostScript $\TeX$, $\LaTeX$, and friends.
 
 ## Contribution Guidelines
 
