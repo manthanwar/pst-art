@@ -1,22 +1,20 @@
 # <span style="font-weight:bold;"> pst-art</span> - PostScript TeX Art
 
-## The Home of Art and Design Intelligence
+## The Home of Design Intelligence
 
 ![Static Badge](https://img.shields.io/badge/version-2026--06--26-blue) &nbsp;
 &nbsp;
 ![GitHub repo size](https://img.shields.io/github/repo-size/manthanwar/pst-art?&color=purple)
 &nbsp;
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/manthanwar)
-&nbsp;
-[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/manthanwar)
-<!-- &nbsp; -->
 <!-- ![GitHub Downloads](https://img.shields.io/github/downloads/manthanwar/pst-art/total) -->
 
 ## List of Packages
 
-* [pst-art-flags](https://github.com/manthanwar/pst-art/tree/main/pst-flags) - Flags of Countries
-* [pst-art-led](https://github.com/manthanwar/pst-art/tree/main/pst-led) - LED Displays and Pixel Art
-* [pst-olympic](https://github.com/manthanwar/pst-art/tree/main/pst-olympic) - Olympic Games Pictograms
+| Name                                                                       | Description                             |
+| :------------------------------------------------------------------------- | :-------------------------------------- |
+| [pst-flags](https://github.com/manthanwar/pst-art/tree/main/pst-flags)     | Flags of World Countries                |
+| [pst-led](https://github.com/manthanwar/pst-art/tree/main/pst-led)         | LED Displays and Pixel Art              |
+| [pst-olympic](https://github.com/manthanwar/pst-art/tree/main/pst-olympic) | Pictograms of 2024 Paris Olympic Games  |
 
 ## Introduction
 
@@ -27,14 +25,8 @@ We investigate the intersection of computational design, algorithmic aesthetics,
 * Algorithmic Vector Art: Generates pure vector files that are entirely scalable and perfect for printers, machines, and physical pen plotters.
 * Design Intelligence: Explores automated composition, symmetry, tiling, and emergent patterns through straightforward, rule-based programming.
 * Declarative Codebase: Allows users to build highly complex artistic layouts using lightweight, human-readable code.
-* Using this library you can make elegant, lightweight, super-fast, fully
-customizable and interactive user interfaces, vector graphics, and artworks for
-your data rich websites/commercial/academic/research projects using appropriate
-[license](LICENSE.md).
-* This library is intuitive, interactive and easy to use. It supports
-many data types and chart types including ability to export output results in
-PDF, PNG, JPG, SVG or EPS file formats as well as ability to export input data
-to CSV, XLS, or HTML table formats.
+* Using this library you can make elegant, lightweight, super-fast, fully customizable and interactive user interfaces, vector graphics, and artworks for your data rich websites/commercial/academic/research projects using appropriate [license](LICENSE.md).
+* This library is intuitive, interactive and easy to use. It supports many data types and chart types including ability to export output results in PDF, PNG, JPG, SVG or EPS file formats as well as ability to export input data to CSV, XLS, or HTML table formats.
 
 ### What is Inside?
 
@@ -82,15 +74,15 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ## Supporting this project
 
-This project is released under the [Source License](LICENSE.md). Its ongoing
-development is made possible thanks to the support by these awesome
-[sponsors](SPONSORS.md#sponsors). You can help make this project better by
-[reporting issues](https://github.com/manthanwar/pst-art/issues) and
-supporting us at [Patreon](https://patreon.com/manthanwar) or
-[Bye Me a Coffee](https://buymeacoffee.com/manthanwar). Thank you!
+This project is released under the [Source License](LICENSE.md). Its ongoing development is made possible thanks to the support by these awesome [sponsors](SPONSORS.md#sponsors). You can help make this project better by [reporting issues](https://github.com/manthanwar/pst-art/issues) and supporting us at [Patreon](https://patreon.com/manthanwar) or [Bye Me a Coffee](https://buymeacoffee.com/manthanwar). Thank you!
 
 ## Sponsors
 
 These [GitHub Sponsors](SPONSORS.md) help push this project forward 🎉.
 
 Please consider [donating](SPONSORS.md) to sustain our activities!
+
+&nbsp;
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/manthanwar)
+&nbsp;
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/manthanwar)
