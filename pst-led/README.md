@@ -1,12 +1,20 @@
 # pst-art-led – A PostScript LED Display
 
+![CTAN Version](https://img.shields.io/ctan/v/pst-art-led)
+&nbsp;
+![GitHub repo size](https://img.shields.io/github/repo-size/manthanwar/pst-art?&color=purple)
+&nbsp;
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/manthanwar/pst-art/main?path=pst-led)
+&nbsp;
+![CTAN License](https://img.shields.io/ctan/l/pst-art-led)
+
 ## Metadata
 
 | Field Name     | Value                                                        |
 | :------------- | :----------------------------------------------------------- |
 | Package Name   | pst-art-led                                                  |
 | Version Number | 1.0.0                                                        |
-| Release Date   | 2026/06/26                                                   |
+| Release Date   | 2026/06/27                                                   |
 | Package File   | pst-art-led.sty                                              |
 | Description    | A PostScript TeX Art Package for Generating LED Displays     |
 | Topics         | LaTeX, PostScript, PSTricks, Graphics, Decorations, Circuits |

@@ -2,6 +2,16 @@
 
 LaTeX package for drawing flags of countries using PSTricks
 
+![CTAN Version](https://img.shields.io/ctan/v/pst-flags)
+&nbsp;
+![GitHub repo size](https://img.shields.io/github/repo-size/manthanwar/pst-art?&color=purple)
+&nbsp;
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/manthanwar/pst-art/main?path=pst-flags)
+&nbsp;
+![CTAN License](https://img.shields.io/ctan/l/pst-flags)
+
+
+
 ## Metadata
 
 | Field Name     | Value                                                        |

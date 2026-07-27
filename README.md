@@ -6,6 +6,7 @@
 &nbsp;
 ![GitHub repo size](https://img.shields.io/github/repo-size/manthanwar/pst-art?&color=purple)
 &nbsp;
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/manthanwar/pst-art/main)
 <!-- ![GitHub Downloads](https://img.shields.io/github/downloads/manthanwar/pst-art/total) -->
 
 ## List of Packages
