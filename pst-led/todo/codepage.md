@@ -81,7 +81,7 @@ There are 256 unique 8-digit binary combinations, starting from 00000000, ending
 * Total combinations: 256 (2⁸)
 * Bit length: 8 bits per sequence
 * Decimal range: 0 through 255
-  
+
 #### Example Patterns
 
 * Start: 00000000 (Decimal 0)
@@ -232,3 +232,523 @@ The binary representation of 42 is \tobin{42}. % Outputs: 101010
 ```
 
 ### Step 4: Generate Code Page Character Set
+
+```latex
+\newcommand{\unicodeDecToLed}[1]{%
+\ifcase#1
+%  000  <control>: NULL
+\or
+%  001  <control>: START OF HEADING
+\or
+%  002  <control>: START OF TEXT
+\or
+%  003  <control>: END OF TEXT
+\or
+%  004  <control>: END OF TRANSMISSION
+\or
+%  005  <control>: ENQUIRY
+\or
+%  006  <control>: ACKNOWLEDGE
+\or
+%  007  <control>: BELL
+\or
+%  008  <control>: BACKSPACE
+\or
+%  009  <control>: HORIZONTAL TABULATION
+\or
+%  010  <control>: LINE FEED
+\or
+%  011  <control>: VERTICAL TABULATION
+\or
+%  012  <control>: FORM FEED
+\or
+%  013  <control>: CARRIAGE RETURN
+\or
+%  014  <control>: SHIFT OUT
+\or
+%  015  <control>: SHIFT IN
+\or
+%  016  <control>: DATA LINK ESCAPE
+\or
+%  017  <control>: DEVICE CONTROL ONE
+\or
+%  018  <control>: DEVICE CONTROL TWO
+\or
+%  019  <control>: DEVICE CONTROL THREE
+\or
+%  020  <control>: DEVICE CONTROL FOUR
+\or
+%  021  <control>: NEGATIVE ACKNOWLEDGE
+\or
+%  022  <control>: SYNCHRONOUS IDLE
+\or
+%  023  <control>: END OF TRANSMISSION BLOCK
+\or
+%  024  <control>: CANCEL
+\or
+%  025  <control>: END OF MEDIUM
+\or
+%  026  <control>: SUBSTITUTE
+\or
+%  027  <control>: ESCAPE
+\or
+% 028  <control>: FILE SEPARATOR
+\or
+% 029  <control>: GROUP SEPARATOR
+\or
+% 030  <control>: RECORD SEPARATOR
+\or
+% 031  <control>: UNIT SEPARATOR
+\or
+\psLedOff           % 032     SPACE
+\or
+\psLedExclamation   % 033  !  EXCLAMATION MARK
+\or
+\psLedQuoteR        % 034  "  QUOTATION MARK
+\or
+\psLedHash          % 035  #  NUMBER SIGN
+\or
+\psLedUSD           % 036  $  DOLLAR SIGN
+\or
+\psLedPercent       % 037  %  PERCENT SIGN
+\or
+\psLedAmpersand     % 038  &  AMPERSAND
+\or
+\psLedQuoteR        % 039  '  APOSTROPHE
+\or
+\psLedBracketLeft   % 040  (  LEFT PARENTHESIS
+\or
+\psLedBracketRight  % 041  )  RIGHT PARENTHESIS
+\or
+% 042  *  ASTERISK
+\or
+\psLedPlus          % 043  +  PLUS SIGN
+\or
+\psLedComma         % 044  ,  COMMA
+\or
+\psLedDash          % 045  -  HYPHEN-MINUS
+\or
+\psLedPeriod        %  046  .  FULL STOP
+\or
+\psLedSlash         %  047  /  SOLIDUS
+\or
+\psLedNJ %  048  0  DIGIT ZERO
+\or
+\psLedNA %  049  1  DIGIT ONE
+\or
+\psLedNB %  050  2  DIGIT TWO
+\or
+\psLedNC %  051  3  DIGIT THREE
+\r
+\psLedND %  052  4  DIGIT FOUR
+\or
+\psLedNE %  053  5  DIGIT FIVE
+\or
+\psLedNF %  054  6  DIGIT SIX
+\or
+\psLedNG %  055  7  DIGIT SEVEN
+\or
+\psLedNH %  056  8  DIGIT EIGHT
+\or
+\psLedNI %  057  9  DIGIT NINE
+\or
+\psLedColon        %  058  :  COLON
+\or
+\psLedSemiColon       %  059  ;  SEMICOLON
+\or
+% 060  <  LESS-THAN SIGN
+\or
+\psLedEqual           %  061  =  EQUALS SIGN
+\or
+% 062  >  GREATER-THAN SIGN
+\or
+\psLedQuestion       %  063  ?  QUESTION MARK
+\or
+\psLedCommercialAt    % 064  @  COMMERCIAL AT
+\or
+\psLedA  %  065  A  LATIN CAPITAL LETTER A
+\or
+\psLedB  %  066  B  LATIN CAPITAL LETTER B
+\or
+\psLedC  %  067  C  LATIN CAPITAL LETTER C
+\or
+\psLedD  %  068  D  LATIN CAPITAL LETTER D
+\or
+\psLedE  % 069  E  LATIN CAPITAL LETTER E
+\or
+\psLedF  % 070  F  LATIN CAPITAL LETTER F
+\or
+\psLedG  % 071  G  LATIN CAPITAL LETTER G
+\or
+\psLedH  %  072  H  LATIN CAPITAL LETTER H
+\or
+\psLedI  %  073  I  LATIN CAPITAL LETTER I
+\or
+\psLedJ  %  074  J  LATIN CAPITAL LETTER J
+\or
+\psLedK  %  075  K  LATIN CAPITAL LETTER K
+\or
+\psLedL  %  076  L  LATIN CAPITAL LETTER L
+\or
+\psLedM  %  077  M  LATIN CAPITAL LETTER M
+\or
+\psLedN  %  078  N  LATIN CAPITAL LETTER N
+\or
+\psLedO  %  079  O  LATIN CAPITAL LETTER O
+\or
+\psLedP  %  080  P  LATIN CAPITAL LETTER P
+\or
+\psLedQ  %  081  Q  LATIN CAPITAL LETTER Q
+\or
+\psLedR  %  082  R  LATIN CAPITAL LETTER R
+\or
+\psLedS  %  083  S  LATIN CAPITAL LETTER S
+\or
+\psLedT  %  084  T  LATIN CAPITAL LETTER T
+\or
+\psLedU  %  085  U  LATIN CAPITAL LETTER U
+\or
+\psLedV  %  086  V  LATIN CAPITAL LETTER V
+\or
+\psLedW  %  087  W  LATIN CAPITAL LETTER W
+\or
+\psLedX  %  088  X  LATIN CAPITAL LETTER X
+\or
+\psLedY  %  089  Y  LATIN CAPITAL LETTER Y
+\or
+\psLedZ  %  090  Z  LATIN CAPITAL LETTER Z
+\or
+\psLedBracketSquareLeft % 091  [  LEFT SQUARE  BRACKET
+\or
+\psLedBackslash       % 092  \  REVERSE SOLIDUS
+\or
+\psLedBracketSquareRight % 093  ]  RIGHT SQUARE BRACKET
+\or
+%  094  ^  CIRCUMFLEX ACCENT
+\or
+\psLedUnderscore   %  095  _  LOW LINE
+\or
+\psLedQuoteL       %  096  `  GRAVE ACCENT
+\or
+\psLeda  %  097  a  LATIN SMALL LETTER A
+\or
+\psLedb  %  098  b  LATIN SMALL LETTER B
+\or
+\psLedc  %  099  c  LATIN SMALL LETTER C
+\or
+\psLedd  %  100  d  LATIN SMALL LETTER D
+\or
+\psLede  %  101  e  LATIN SMALL LETTER E
+\or
+\psLedf  %  102  f  LATIN SMALL LETTER F
+\or
+\psLedg  %  103  g  LATIN SMALL LETTER G
+\or
+\psLedh  %  104  h  LATIN SMALL LETTER H
+\or
+\psLedi  %  105  i  LATIN SMALL LETTER I
+\or
+\psLedj  %  106  j  LATIN SMALL LETTER J
+\or
+\psLedk  %  107  k  LATIN SMALL LETTER K
+\or
+\psLedl  %  108  l  LATIN SMALL LETTER L
+\or
+\psLedm  %  109  m  LATIN SMALL LETTER M
+\or
+\psLedn  %  110  n  LATIN SMALL LETTER N
+\or
+\psLedo  %  111  o  LATIN SMALL LETTER O
+\or
+\psLedp  %  112  p  LATIN SMALL LETTER P
+\or
+\psLedq  %  113  q  LATIN SMALL LETTER Q
+\or
+\psLedr  %  114  r  LATIN SMALL LETTER R
+\or
+\psLeds  %  115  s  LATIN SMALL LETTER S
+\or
+\psLedt  %  116  t  LATIN SMALL LETTER T
+\or
+\psLedu  %  117  u  LATIN SMALL LETTER U
+\or
+\psLedv  %  118  v  LATIN SMALL LETTER V
+\or
+\psLedw  %  119  w  LATIN SMALL LETTER W
+\or
+\psLedx  %  120  x  LATIN SMALL LETTER X
+\or
+\psLedy  %  121  y  LATIN SMALL LETTER Y
+\or
+\psLedz  %  122  z  LATIN SMALL LETTER Z
+\or
+%  123  {  LEFT CURLY BRACKET
+\or
+%  124  |  VERTICAL LINE
+\or
+%  125  }  RIGHT CURLY BRACKET
+\or
+%  126  ~  TILDE
+\or
+%  127     <control>: DELETE
+\or
+\psLedEUR    % 128  €  <control>:
+\or
+% 129  <control>:
+\or
+%  130  ‚  <control>: BREAK PERMITTED HERE
+\or
+%  131  ƒ  <control>: NO BREAK HERE
+\or
+%  132  „  <control>:
+\or
+%  133  …  <control>: NEXT LINE
+\or
+%  134  †  <control>: START OF SELECTED AREA
+\or
+%  135  ‡  <control>: END OF SELECTED AREA
+\or
+%  136  ˆ  <control>: CHARACTER TABULATION SET
+\or
+%  137  ‰  <control>: CHARACTER TABULATION WITH JUSTIFICATION
+\or
+%  138  Š  <control>: LINE TABULATION SET
+\or
+%  139  ‹  <control>: PARTIAL LINE DOWN
+\or
+%  140  Œ  <control>: PARTIAL LINE UP
+\or
+%  141     <control>: REVERSE LINE FEED
+\or
+%  142  Ž  <control>: SINGLE SHIFT TWO
+\or
+%  143     <control>: SINGLE SHIFT THREE
+\or
+%  144     <control>: DEVICE CONTROL STRING
+\or
+%  145  ‘  <control>: PRIVATE USE ONE
+\or
+%  146  ’  <control>: PRIVATE USE TWO
+\or
+%  147  “  <control>: SET TRANSMIT STATE
+\or
+%  148  ”  <control>: CANCEL CHARACTER
+\or
+%  149  •  <control>: MESSAGE WAITING
+\or
+%  150  –  <control>: START OF GUARDED AREA
+\or
+%  151  — <control>: END OF GUARDED AREA
+\or
+%  152  ˜ <control>: START OF STRING
+\or
+%  153  ™ <control>:
+\or
+%  154  š  <control>: SINGLE CHARACTER INTRODUCER
+\or
+%  155  ›  <control>: CONTROL SEQUENCE INTRODUCER
+\or
+%  156  œ  <control>: STRING TERMINATOR
+\or
+%  157  <control>: OPERATING SYSTEM COMMAND
+\or
+%  158  ž  <control>: PRIVACY MESSAGE
+\or
+%  159  Ÿ  <control>: APPLICATION PROGRAM COMMAND
+\or
+%  160     NO-BREAK SPACE
+\or
+%  161  ¡  INVERTED EXCLAMATION MARK
+\or
+%  162  ¢  CENT SIGN
+\or
+\psLedGBP           %  163  £  POUND SIGN
+\or
+%  164  ¤  CURRENCY SIGN
+\or
+\psLedYEN                %  165  ¥  YEN SIGN
+\or
+%  166  ¦  BROKEN BAR
+\or
+%  167  §  SECTION SIGN
+\or
+%  168  ¨  DIAERESIS
+\or
+%  169  ©  COPYRIGHT SIGN
+\or
+%  170  ª  FEMININE ORDINAL INDICATOR
+\or
+%  171  «  LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+\or
+%  172  ¬  NOT SIGN
+\or
+%  173     SOFT HYPHEN
+\or
+%  174  ®  REGISTERED SIGN
+\or
+%  175  ¯  MACRON
+\or
+\psLedDegree %  176  °  DEGREE SIGN
+\or
+%  177  ±  PLUS-MINUS SIGN
+\or
+%  178  ²  SUPERSCRIPT TWO
+\or
+%  179  ³  SUPERSCRIPT THREE
+\or
+%  180  ´  ACUTE ACCENT
+\or
+%  181  µ  MICRO SIGN
+\or
+%  182  ¶  PILCROW SIGN
+\or
+%  183  ·  MIDDLE DOT
+\or
+%  184  ¸  CEDILLA
+\or
+%  185  ¹  SUPERSCRIPT ONE
+\or
+%  186  º  MASCULINE ORDINAL INDICATOR
+\or
+%  187  »  RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+\or
+%  188  ¼  VULGAR FRACTION ONE QUARTER
+\or
+%  189  ½  VULGAR FRACTION ONE HALF
+\or
+%  190  ¾  VULGAR FRACTION THREE QUARTERS
+\or
+%  191  ¿  INVERTED QUESTION MARK
+\or
+%  192  À  LATIN CAPITAL LETTER A WITH GRAVE
+\or
+%  193  Á  LATIN CAPITAL LETTER A WITH ACUTE
+\or
+%  194  Â  LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+\or
+%  195  Ã  LATIN CAPITAL LETTER A WITH TILDE
+\or
+%  196  Ä  LATIN CAPITAL LETTER A WITH DIAERESIS
+\or
+%  197  Å  LATIN CAPITAL LETTER A WITH RING ABOVE
+\or
+%  198  Æ  LATIN CAPITAL LETTER AE
+\or
+%  199  Ç  LATIN CAPITAL LETTER C WITH CEDILLA
+\or
+%  200  È  LATIN CAPITAL LETTER E WITH GRAVE
+\or
+%  201  É  LATIN CAPITAL LETTER E WITH ACUTE
+\or
+%  202  Ê  LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+\or
+%  203  Ë  LATIN CAPITAL LETTER E WITH DIAERESIS
+\or
+%  204  Ì  LATIN CAPITAL LETTER I WITH GRAVE
+\or
+%  205  Í  LATIN CAPITAL LETTER I WITH ACUTE
+\or
+%  206  Î  LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+\or
+%  207  Ï  LATIN CAPITAL LETTER I WITH DIAERESIS
+\or
+%  208  Ð  LATIN CAPITAL LETTER ETH
+\or
+%  209  Ñ  LATIN CAPITAL LETTER N WITH TILDE
+\or
+%  210  Ò  LATIN CAPITAL LETTER O WITH GRAVE
+\or
+%  211  Ó  LATIN CAPITAL LETTER O WITH ACUTE
+\or
+%  212  Ô  LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+\or
+%  213  Õ  LATIN CAPITAL LETTER O WITH TILDE
+\or
+%  214  Ö  LATIN CAPITAL LETTER O WITH DIAERESIS
+\or
+\psLedMultiply   % 215  ×  MULTIPLICATION SIGN
+\or
+%  216  Ø  LATIN CAPITAL LETTER O WITH STROKE
+\or
+%  217  Ù  LATIN CAPITAL LETTER U WITH GRAVE
+\or
+%  218  Ú  LATIN CAPITAL LETTER U WITH ACUTE
+\or
+%  219  Û  LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+\or
+%  220  Ü  LATIN CAPITAL LETTER U WITH DIAERESIS
+\or
+%  221  Ý  LATIN CAPITAL LETTER Y WITH ACUTE
+\or
+%  222  Þ  LATIN CAPITAL LETTER THORN
+\or
+%  223  ß  LATIN SMALL LETTER SHARP S
+\or
+%  224  à  LATIN SMALL LETTER A WITH GRAVE
+\or
+%  225  á  LATIN SMALL LETTER A WITH ACUTE
+\or
+%  226  â  LATIN SMALL LETTER A WITH CIRCUMFLEX
+\or
+%  227  ã  LATIN SMALL LETTER A WITH TILDE
+\or
+%  228  ä  LATIN SMALL LETTER A WITH DIAERESIS
+\or
+%  229  å  LATIN SMALL LETTER A WITH RING ABOVE
+\or
+%  230  æ  LATIN SMALL LETTER AE
+\or
+%  231  ç  LATIN SMALL LETTER C WITH CEDILLA
+\or
+%  232  è  LATIN SMALL LETTER E WITH GRAVE
+\or
+%  233  é  LATIN SMALL LETTER E WITH ACUTE
+\or
+%  234  ê  LATIN SMALL LETTER E WITH CIRCUMFLEX
+\or
+%  235  ë  LATIN SMALL LETTER E WITH DIAERESIS
+\or
+%  236  ì  LATIN SMALL LETTER I WITH GRAVE
+\or
+%  237  í  LATIN SMALL LETTER I WITH ACUTE
+\or
+%  238  î  LATIN SMALL LETTER I WITH CIRCUMFLEX
+\or
+%  239  ï  LATIN SMALL LETTER I WITH DIAERESIS
+\or
+%  240  ð  LATIN SMALL LETTER ETH
+\or
+%  241  ñ  LATIN SMALL LETTER N WITH TILDE
+\or
+%  242  ò  LATIN SMALL LETTER O WITH GRAVE
+\or
+ %  243  ó  LATIN SMALL LETTER O WITH ACUTE
+\or
+%  244  ô  LATIN SMALL LETTER O WITH CIRCUMFLEX
+\or
+%  245  õ  LATIN SMALL LETTER O WITH TILDE
+\or
+%  246  ö  LATIN SMALL LETTER O WITH DIAERESIS
+\or
+\psLedDivide % 247  ÷  DIVISION SIGN
+\or
+%  248  ø  LATIN SMALL LETTER O WITH STROKE
+\or
+%  249  ù  LATIN SMALL LETTER U WITH GRAVE
+\or
+%  250  ú  LATIN SMALL LETTER U WITH ACUTE
+\or
+%  251  û  LATIN SMALL LETTER U WITH CIRCUMFLEX
+\or
+%  252  ü  LATIN SMALL LETTER U WITH DIAERESIS
+\or
+%  253  ý  LATIN SMALL LETTER Y WITH ACUTE
+\or
+%  254  þ  LATIN SMALL LETTER THORN
+\or
+%  255  ÿ  LATIN SMALL LETTER Y WITH DIAERESIS
+\else
+% Default fallback
+\fi
+}%
+```

@@ -922,6 +922,42 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedExclamation
 %-------------------------------------------------------------------------------
+% region \psLedQuoteL
+\newcommand{\psLedQuoteL}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+% endregion \psLedQuoteL
+%-------------------------------------------------------------------------------
+% region \psLedQuoteR
+\newcommand{\psLedQuoteR}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+% endregion \psLedQuoteR
+%-------------------------------------------------------------------------------
+% region \psLedHash -> # = \c_hash_str
+\newcommand{\psLedHash}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
+\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+% endregion \psLedHash
+%-------------------------------------------------------------------------------
 % region \psLedQuestion
 \newcommand{\psLedQuestion}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
@@ -946,17 +982,29 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedColon
 %-------------------------------------------------------------------------------
-% region \psLedPeriod
-\newcommand{\psLedPeriod}[1][]{\rput(0,0){\psLedBack}%
+% region \psLedSemiColon
+\newcommand{\psLedSemiColon}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+}%
+% endregion \psLedSemiColon
+%-------------------------------------------------------------------------------
+% region \psLedComma
+\newcommand{\psLedComma}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
 \ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
 \ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
 \ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
-\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
-\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
-\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
 }%
-% endregion \psLedPeriod
+% endregion \psLedComma
 %-------------------------------------------------------------------------------
 % region \psLedDash
 \newcommand{\psLedDash}[1][]{\rput(0,0){\psLedBack}%
@@ -970,17 +1018,17 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedDash
 %-------------------------------------------------------------------------------
-% region \psLedComma
-\newcommand{\psLedComma}[1][]{\rput(0,0){\psLedBack}%
+% region \psLedPeriod
+\newcommand{\psLedPeriod}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
 \ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
 \ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
 \ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
-\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
-\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[1](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
-\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
+\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
+\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
 }%
-% endregion \psLedComma
+% endregion \psLedPeriod
 %-------------------------------------------------------------------------------
 % region \psLedBracketLeft
 \newcommand{\psLedBracketLeft}[1][]{\rput(0,0){\psLedBack}%
@@ -1066,7 +1114,7 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedPercent
 %-------------------------------------------------------------------------------
-% region \psLedSlash
+% region \psLedSlash => / => Solidus
 \newcommand{\psLedSlash}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[1](4,6)%
 \ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
@@ -1078,7 +1126,7 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedSlash
 %-------------------------------------------------------------------------------
-% region \psLedBackslash
+% region \psLedBackslash => \
 \newcommand{\psLedBackslash}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[1](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
 \ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
@@ -1181,30 +1229,6 @@ Repository & \fileG \\\hline
 \ledOn[1](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[1](4,0)%
 }%
 % endregion \psLedUnderscore
-%-------------------------------------------------------------------------------
-% region \psLedQuoteL
-\newcommand{\psLedQuoteL}[1][]{\rput(0,0){\psLedBack}%
-\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
-\ledOn[0](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
-\ledOn[0](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[1](4,4)%
-\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
-\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
-\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
-\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
-}%
-% endregion \psLedQuoteL
-%-------------------------------------------------------------------------------
-% region \psLedQuoteR
-\newcommand{\psLedQuoteR}[1][]{\rput(0,0){\psLedBack}%
-\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
-\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
-\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[0](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
-\ledOn[0](0,3) \ledOn[0](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
-\ledOn[0](0,2) \ledOn[0](1,2) \ledOn[0](2,2) \ledOn[0](3,2) \ledOn[0](4,2)%
-\ledOn[0](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
-\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
-}%
-% endregion \psLedQuoteR
 %-------------------------------------------------------------------------------
 % region \psLedQuoteLD
 \newcommand{\psLedQuoteLD}[1][]{\rput(0,0){\psLedBack}%
@@ -1418,20 +1442,20 @@ Repository & \fileG \\\hline
 }%
 % endregion \psLedWON
 %-------------------------------------------------------------------------------
-% region \psLedHash -> # = \c_hash_str
-\newcommand{\psLedHash}[1][]{\rput(0,0){\psLedBack}%
-\ledOn[0](0,6) \ledOn[0](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
-\ledOn[0](0,5) \ledOn[1](1,5) \ledOn[0](2,5) \ledOn[1](3,5) \ledOn[0](4,5)%
-\ledOn[1](0,4) \ledOn[1](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
-\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[1](3,3) \ledOn[0](4,3)%
-\ledOn[1](0,2) \ledOn[1](1,2) \ledOn[1](2,2) \ledOn[1](3,2) \ledOn[1](4,2)%
-\ledOn[0](0,1) \ledOn[1](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
-\ledOn[0](0,0) \ledOn[0](1,0) \ledOn[0](2,0) \ledOn[0](3,0) \ledOn[0](4,0)%
-}%
-% endregion \psLedHash
-%-------------------------------------------------------------------------------
 % region \psLedAmpersand
 \newcommand{\psLedAmpersand}[1][]{\rput(0,0){\psLedBack}%
+\ledOn[0](0,6) \ledOn[1](1,6) \ledOn[0](2,6) \ledOn[0](3,6) \ledOn[0](4,6)%
+\ledOn[1](0,5) \ledOn[0](1,5) \ledOn[1](2,5) \ledOn[0](3,5) \ledOn[0](4,5)%
+\ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[0](3,4) \ledOn[0](4,4)%
+\ledOn[0](0,3) \ledOn[1](1,3) \ledOn[0](2,3) \ledOn[0](3,3) \ledOn[0](4,3)%
+\ledOn[1](0,2) \ledOn[0](1,2) \ledOn[1](2,2) \ledOn[0](3,2) \ledOn[1](4,2)%
+\ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[1](3,1) \ledOn[0](4,1)%
+\ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[0](3,0) \ledOn[1](4,0)%
+}%
+% endregion \psLedAmpersand
+%-------------------------------------------------------------------------------
+% region \psLedCommercialAt => @
+\newcommand{\psLedCommercialAt}[1][]{\rput(0,0){\psLedBack}%
 \ledOn[0](0,6) \ledOn[1](1,6) \ledOn[1](2,6) \ledOn[1](3,6) \ledOn[0](4,6)%
 \ledOn[1](0,5) \ledOn[0](1,5) \ledOn[0](2,5) \ledOn[0](3,5) \ledOn[1](4,5)%
 \ledOn[1](0,4) \ledOn[0](1,4) \ledOn[1](2,4) \ledOn[1](3,4) \ledOn[1](4,4)%
@@ -1440,7 +1464,7 @@ Repository & \fileG \\\hline
 \ledOn[1](0,1) \ledOn[0](1,1) \ledOn[0](2,1) \ledOn[0](3,1) \ledOn[0](4,1)%
 \ledOn[0](0,0) \ledOn[1](1,0) \ledOn[1](2,0) \ledOn[1](3,0) \ledOn[0](4,0)%
 }%
-% endregion \psLedAmpersand
+% endregion \psLedCommercialAt
 %-------------------------------------------------------------------------------
 % region \psLedSmiley
 \newcommand{\psLedSmiley}[1][]{\rput(0,0){\psLedBack}%
